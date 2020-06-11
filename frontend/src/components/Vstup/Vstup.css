@@ -1,0 +1,195 @@
+.vstup .padd-block {
+    margin-top: 80px;
+}
+
+.vstup-text {
+    margin-top: 75px;
+}
+
+.vstup-desc {
+    font-size: 21px;
+    margin-top: 55px;
+    margin-bottom: 0;
+}
+
+.vstup-icon-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 90px;
+    justify-content: center;
+}
+
+.vstup-icon-block .padd-icon {
+    margin-right: 53px;
+    margin-bottom: 53px;
+    cursor: pointer;
+}
+
+.vstup-icon-block .padd-icon:nth-child(4n) {
+    margin-right: 0;
+}
+
+
+.vstup-icon .front, .vstup-icon .back {
+    width: 215px;
+    height: 315px;
+    box-shadow: 0px 0px 14px 19px rgba(238, 238, 238, 0.36);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 25px;
+    margin-bottom: 60px;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.vstup-icon img {
+    align-self: center;
+    /* justify-self: center; */
+}
+
+.icon-desc {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.vstup-icon:nth-child(4n) {
+    margin-right: 0;
+}
+
+.idcons {
+    margin-top: 90px;
+}
+
+.padd-block .punkt {
+    margin-right: 15px;
+}
+
+.add-block {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.add-block .buttons {
+    display: flex;
+}
+
+.add-block .go-to-button:nth-child(1) {
+    margin-right: 15px;
+}
+
+.padd-block .posylannia {
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.vstup-block span {
+    margin-left: 5px;
+    margin-right: 30px;
+    font-size: 18px;
+    color: #717171;
+}
+
+.vstup-spec {
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.vstup-spec .punkt {
+    margin-right: 10px;
+}
+
+.vstup-block-head-text {
+    font-size: 24px;
+    margin: 0;
+}
+
+.vstup-sub-spec {
+    font-weight: normal;
+    font-size: 21px;
+    margin-left: 25px;
+}
+
+.go-to-ab {
+    margin-top: 15px;
+    font-size: 21px;
+}
+
+.teaching-in-college {
+    margin-bottom: 40px;
+}
+
+.go-to-button {
+    background: #DE3737;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.wanna-go-to-college {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-info {
+    margin: 0;
+}
+
+.add-info a {
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (max-width: 1200px) {
+    .vstup-icon {
+        margin-right: 0;
+    }
+
+    .vstup-icon-block {
+        justify-content: space-between;
+    }
+
+    .vstup-icon-block .padd-icon {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .vstup-icon-block {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .vstup-icon:nth-child(1n) {
+        margin-right: 15px;
+    }
+
+    .padd-icon  {
+        margin: 15px;
+    }
+}
+   
+
+@media screen and (max-width: 576px) {
+    .vstup-block span {
+        font-size: 14px;
+    }
+
+    .add-block .buttons {
+        flex-direction: column;
+    }
+
+    .add-block .go-to-button:nth-child(1) {
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,314 @@
+.admin-of-college-padd-block {
+    padding: 20px 40px;
+}
+
+.admin-of-college-padd-block .sub-head-text {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.admin-of-college-grid {
+    display: grid;
+    grid-template-areas: ". director ."
+        "admin-icon1 admin-icon2 admin-icon3";
+    justify-items: center;
+    grid-row-gap: 40px;
+}
+
+.admin-icon {
+    position: relative;
+    perspective: 1000px;
+}
+
+.chairmans-icon {
+    position: relative;
+    perspective: 1000px;
+}
+
+.teachers-icon {
+    position: relative;
+    perspective: 1000px;
+}
+
+.admin-icon {
+    width: 176px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-icon img {
+    border-radius: 25px;
+}
+
+.admin-icon p {
+    text-align: center;
+}
+
+.admin-icon .sub-main-text {
+    margin-bottom: 10px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.admin-icon .sub-text {
+    margin-top: 0;
+    color: #616161;
+    font-weight: 400;
+}
+
+.structure img {
+    max-width: 176px;
+    border-radius: 25px;
+}
+
+.director {
+    grid-area: director;
+}
+
+.admin-icon1 {
+    grid-area: admin-icon1;
+}
+
+.admin-icon2 {
+    grid-area: admin-icon2;
+}
+
+.admin-icon3 {
+    grid-area: admin-icon3;
+}
+
+.chairmans-padd-block {
+    padding: 20px 40px;
+}
+
+.chairmans-padd-block .sub-head-text {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.chairmans-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.chairmans-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 176px;
+}
+
+.chairmans-icon p {
+    text-align: center;
+}
+
+.chairmans-icon .sub-main-text {
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.chairmans-icon .sub-text {
+    margin-top: 0;
+    color: #616161;
+}
+
+.teachers-padd-block .sub-head-text {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.teachers-block {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-row-gap: 40px;
+    justify-content: space-between;
+}
+
+.teachers-icon {
+    max-width: 176px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teachers-icon .sub-main-text {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.teachers-icon .sub-text {
+    text-align: center;
+    margin-top: 0;
+    color: #616161;
+}
+
+.teachers-icon img {
+    border-radius: 25px;
+}
+
+.mobile-teachers-block {
+    display: none;
+}
+
+.mobile-teachers-icon {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+}
+
+.mobile-teachers-icon .main-text {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.mobile-teachers-icon .button {
+    background: #DE3737;
+    padding: 10px 35px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .teachers-icon img,
+    .admin-icon img,
+    .chairmans-icon img {
+        width: 150px;
+    }
+
+    .teachers-icon,
+    .admin-icon,
+    .chairmans-icon {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .teachers-block {
+        grid-template-columns: repeat(4, auto);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .admin-of-college-grid {
+        grid-template-areas: ". director ."
+            "admin-icon1 admin-icon2 admin-icon3";
+    }
+
+    .admin-of-college-padd-block .sub-head-text {
+        text-align: center;
+    }
+
+    .admin-icon {
+        max-width: 140px;
+    }
+
+    .admin-icon1 {
+        justify-self: left;
+    }
+
+    .admin-icon3 {
+        justify-self: right;
+    }
+
+    .admin-icon img {
+        max-width: 140px;
+    }
+
+    .admin-icon .sub-main-text {
+        font-size: 18px;
+    }
+
+    .admin-icon .sub-text {
+        font-size: 16px;
+    }
+
+    .teachers-block {
+        display: none;
+    }
+
+    .chairmans-padd-block .sub-head-text {
+        text-align: center;
+    }
+
+    .teachers-padd-block .sub-head-text {
+        text-align: center;
+    }
+
+    .mobile-teachers-block {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .admin-of-college-grid {
+        grid-template-areas: "director"
+            "admin-icon1"
+            "admin-icon2"
+            "admin-icon3";
+        justify-items: center;
+    }
+
+    .admin-icon1 {
+        justify-self: center;
+    }
+
+    .admin-icon2 {
+        justify-self: center;
+    }
+
+    .admin-icon3 {
+        justify-self: center;
+    }
+
+    .mobile-teachers-icon .main-text {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .mobile-teachers-icon {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .chairmans-block {
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-around;
+    }
+
+    .chairmans-icon {
+        width: 140px;
+    }
+
+    .chairmans-icon img {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .chairmans-block {
+        grid-template-columns: 1fr;
+    }
+
+    .chairmans-icon {
+        width: 130px;
+    }
+
+    .chairmans-icon .sub-main-text {
+        font-size: 18px;
+    }
+
+    .chairmans-icon .sub-text {
+        font-size: 16px;
+    }
+}

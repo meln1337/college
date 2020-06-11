@@ -1,0 +1,175 @@
+.footer {
+    margin-top: 50px;
+    width: 100%;
+    background: #F6F6F6;
+    position: relative;
+    height: 250px;
+}
+
+.footer-container {
+    display: flex;
+}
+
+.footer-content {
+    display: flex;
+    margin-top: 40px;
+}
+
+.footer-contact p {
+    margin-top: 0;
+    margin-bottom: 13px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact p img {
+    margin-right: 20px;
+}
+
+.footer-contact a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-contact p .pin {
+    margin-right: 26px;
+}
+
+.footer-icons {
+    margin-top: 25px;
+}
+
+.footer-icons img {
+    margin-right: 25px;
+}
+
+.footer-HKFK p {
+    margin-top: 0;
+}
+
+.footer-contact-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-HKFK {
+    margin: 0 50px;
+    font-size: 18px;
+}
+
+.map {
+    position: absolute;
+    right: 0;
+    width: 47.5%;
+    height: 250px;
+
+}
+
+.footer-container-mobile {
+    display: none;
+}
+
+.mobile-map {
+    display: none;
+    height: 250px;
+}
+
+/* @media screen and (max-width: 1200px) {
+    .footer-container {
+        display: none;
+    }
+
+    .map {
+        margin-top: 15px;
+        height: 250px;
+    }
+
+    .footer-container-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-content {
+        margin-left: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-map {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer-content {
+        margin-bottom: 15px;
+    }
+    
+    .mobile-map {
+        height: 200px;
+    }
+} */
+
+@media screen and (max-width: 1200px) {
+    .footer-content {
+        justify-content: space-between;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .map {
+        position: absolute;
+        bottom: -250px;
+        left: 0;
+        width: 100%;
+        height: 272px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content p {
+        font-size: 16px;
+    }
+
+    .footer-HKFK p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .map {
+        position: absolute;
+        bottom: -450px;
+        left: 0;
+        width: 100%;
+    }
+
+    .footer-container {
+        background: #F6F6F6;
+    }
+
+    .footer-HKFK {
+        margin-top: 50px;
+    }
+
+    .footer-HKFK p {
+        text-align: center;
+    }
+
+    .footer-container {
+        height: 450px;
+    }
+
+    .footer-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

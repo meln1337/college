@@ -1,0 +1,35 @@
+.open-day-red-padd-block {
+    margin-bottom: 50px;
+}
+
+.open-day-head-text {
+    color: #fff;
+    margin: 0;
+}
+
+.open-day-sub-head-text {
+    margin-top: 0;
+}
+
+.open-day-main-text {
+    margin-top: 0;
+}
+
+.open-day-add-info {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.place {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .open-day-sub-main-text {
+        text-align: center;
+    }
+
+    .open-day-sub-head-text, .open-day-main-text, .open-day-add-info {
+        text-align: center;
+    }
+}

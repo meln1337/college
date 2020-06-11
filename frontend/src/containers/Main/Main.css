@@ -1,0 +1,298 @@
+.hero {
+    width: 100%;
+    height: 950px;
+    position: relative;
+}
+
+.first-oval {
+    position: absolute;
+    height: 550px;
+    width: 506px;
+    background: url('../../public/Oval.png') no-repeat;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+}
+
+.second-oval {
+    position: absolute;
+    height: 902px;
+    width: 870px;
+    background: url('../../public/Oval2.png') no-repeat;
+    right: 0;
+    top: -90px;
+}
+
+.main-flex-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-texts h1 {
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+
+.to-open-day {
+    min-width: 350px;
+    padding: 15px 40px;
+    background: #fff;
+    border-radius: 25px;
+    z-index: 11;
+    margin-top: 85px;
+    max-height: 155px;
+}
+
+.to-abiturients {
+    font-size: 18px;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+.to-open-day .button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.to-open-day .button a {
+    color: #fff;
+    text-decoration: none;
+    background: #DE3737;
+    border-radius: 25px;
+    padding: 10px 40px;
+
+}
+
+.open-day-text {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+
+.at-time {
+    margin: 0;
+    font-size: 21px;
+}
+
+.bottom-text {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 150px;
+}
+
+.bottom-text p {
+    font-size: 24px;
+    max-width: 535px;
+}
+
+.icons-block {
+    padding: 50px 40px 10px 40px;
+    justify-content: space-between;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.149366);
+    border-radius: 30px;
+}
+
+.education-partners {
+    margin-top: 80px;
+}
+
+.icons-block-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 270px;
+}
+
+.icons-block-icon {
+    justify-self: center;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1450px) {
+    .second-oval {
+        width: 712px;
+    }
+
+    .first-oval {
+        left: -20px;
+    }
+
+    .left-texts h1 {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .second-oval {
+        width: 634px;
+        height: 793px;
+        z-index: 10;
+        top: -160px;
+    }
+
+    .first-oval {
+        width: 337px;
+        height: 402px;
+        left: 0;
+    }
+
+    .left-texts h1 {
+        margin-top: 70px;
+        font-size: 36px;
+    }
+
+    .bottom-text {
+        margin-top: 100px;
+    }
+
+    .bottom-text p {
+        justify-content: flex-end;
+    }
+
+    .to-open-day {
+        margin-top: 0;
+    }
+
+    .history {
+        max-width: 350px;
+    }
+
+    .icons-block-icon {
+        width: 210px;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+    .hero {
+        height: 990px;
+    }
+
+    .icons-block-list {
+        grid-gap: 15px;
+    }
+
+    .icons-block-icon img {
+        width: 170px; 
+    }
+
+    .to-open-day {
+        display: none;
+    }
+
+    .second-oval {
+        width: 500px;
+        height: 620px;
+        top: -180px;
+    }
+
+    .bottom-text {
+        justify-content: flex-end;
+    }
+
+    .bottom-text p {
+        font-size: 21px;
+    }
+}
+
+.red-btn {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .icons-block-icon img {
+        width: 140px; 
+    }
+
+    .second-oval {
+        top: -290px;
+    }
+
+    .left-texts {
+        margin-top: 120px;
+        justify-content: center;
+    }
+
+    .history {
+        max-width: none;
+    }
+
+    .left-texts h1 {
+        margin-top: 20px;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: calc(100vw / 17.8);
+        margin-right: 0;
+    }
+
+    .main-flex-block {
+        justify-content: center;
+    }
+
+    .bottom-text {
+        justify-content: flex-end;
+        margin-top: 50px;
+    }
+
+    .bottom-text p {
+        font-size: 18px;
+    }
+
+    .education-partners {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .left-texts {
+        margin-top: 180px;
+    }
+
+    .left-texts h1 {
+        margin-top: 20px;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 32px;
+        margin-right: 0;
+    }
+
+    .second-oval {
+        width: calc(100vw * 0.838);
+    }
+
+    .hero {
+        height: 1030px;
+    }
+
+    .bottom-text {
+        justify-content: center;
+    }
+
+    .bottom-text p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .hero {
+        height: 1080px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero {
+        height: 1150px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .hero {
+        height: 1200px;
+    }
+
+    .first-oval {
+        width: 300px;
+        height: 375px;
+    }
+}

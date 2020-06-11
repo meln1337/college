@@ -1,0 +1,256 @@
+.HistoryLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-size: 100%;
+    width: 100%;
+    height: 150px;
+}
+
+.Hspan {
+    color: red;
+}
+
+.History {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.HistoryLine span {
+    z-index: 5;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.HistoryInfoBlock {
+    background: yellow;
+    width: 300px;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+.HistoryLine span::after {
+    content: "●";
+    position: absolute;
+    margin-top: 30px;
+    font-size: 25px;
+    margin-left: -22px;
+}
+
+.HistoryLine span:hover {
+    color: red
+}
+
+.HistoryLine img {
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    max-width: 1200px;
+}
+
+.history-slider {
+    width: 100%;
+    height: 477px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    -webkit-transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -moz-transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -o-transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    margin-bottom: 80px;
+}
+
+.slider-container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-container img {
+    cursor: pointer;
+}
+
+.dots {
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.dots img {
+    margin-right: 10px;
+    -webkit-transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -moz-transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -o-transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: all 1.0s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+@media screen and (max-width: 1200px) {
+    .history-slider {
+        height: 420px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .history-slider {
+        height: 377px
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .history-slider {
+        height: 275px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .history-slider {
+        height: 220px;
+    }
+
+    .prev,
+    .next {
+        height: 50px;
+    }
+
+    .dots img {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .history-slider {
+        height: 170px;
+    }
+
+    .prev,
+    .next {
+        height: 40px;
+    }
+}
+
+.history-of-college-text {
+    margin-top: 0;
+}
+
+.history-line {
+    border-top: 2px solid #000;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+
+.history-line img {
+    position: absolute;
+    top: -8px;
+    right: 0;
+}
+
+.history-line span {
+    margin-top: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.history-line span::after {
+    content: '●';
+    font-size: 18px;
+    position: absolute;
+    top: -13px;
+    transform: translateX(-21px);
+}
+
+.history-line span:hover {
+    color: #DE3737;
+    font-weight: 700;
+    transition: .4s;
+}
+
+.history-line span:hover::after {
+    color: #DE3737;
+    font-size: 25px;
+    transition: .4s;
+    transform: translateX(-23px);
+    top: -18px;
+}
+
+.history-line .active-history-line {
+    color: #DE3737;
+    font-weight: 700;
+    transition: .4s;
+}
+
+.history-line .active-history-line::after {
+    color: #DE3737;
+    font-size: 25px;
+    transition: .2s;
+    transform: translateX(-23px);
+    top: -18px;
+}
+
+.history-padd-block {
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 250px;
+    margin-bottom: 0;
+}
+
+.line-block {
+    margin-top: 10px;
+}
+
+.history-padd-block-mobile {
+    display: none;
+    padding: 20px 30px;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 992px) {
+    .history-padd-block {
+        display: none;
+    }
+
+    .history-padd-block-mobile {
+        display: block;
+    }
+
+    .sub-history-of-college-text {
+        font-size: 24px;
+    }
+
+    .history-text {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .history-line span {
+        font-size: 12px;
+    }
+
+    .history-line span::after {
+        transform: translateX(-18px);
+    }
+
+    .history-line span:hover::after {
+        transform: translateX(-20px);
+    }
+    
+    .history-line .active-history-line::after {
+        transform: translateX(-20px);
+    }
+
+    .sub-history-of-college-text {
+        font-size: 18px;
+    }
+
+    .history-text {
+        font-size: 18px;
+    }
+}

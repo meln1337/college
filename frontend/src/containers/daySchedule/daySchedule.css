@@ -1,0 +1,88 @@
+.day-schedule .head-text {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.day-schedule .main-text {
+    margin-bottom: 40px;
+    margin-top: 0;
+    max-width: 500px;
+    font-weight: 500;
+}
+
+.day-sch__eng  {
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.sch-pdf {
+    display: flex;
+    margin-top: 0;
+    text-decoration: none;
+    font-size: 21px;
+    color: #000;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.sch-pdf img {
+    margin-right: 13px;
+}
+
+.day-sch-padd-block {
+    display: flex;
+    padding: 30px 50px;
+    margin-bottom: 20px;
+}
+
+.day-sch-padd-block .button {
+    background: #DE3737;
+    padding: 7px 31px;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.day-sch__computer-eng {
+    margin-top: 90px;
+    margin-bottom: 38px;
+}
+
+@media screen and (max-width: 768px) {
+    .day-schedule .main-text {
+        max-width: none;
+        text-align: center;
+    }
+
+    .sch-pdf {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sch-pdf img {
+        margin-bottom: 5px;
+    }
+
+    .day-sch__eng {
+        text-align: center;
+    }
+
+    .day-sch__computer-eng {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .day-sch-padd-block {
+        flex-direction: column;
+    }
+
+    .day-sch-padd-block img {
+        margin-bottom: 5px;
+    }
+
+    .course {
+        text-align: center;
+    }
+}

@@ -1,0 +1,39 @@
+.exam-sh-padd-block {
+    padding: 30px 50px;
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.exam-sh-padd-block .button {
+    background: #DE3737;
+    padding: 10px 35px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.exam-sh .sub-head-text {
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .exam-sh .sub-head-text {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .exam-sh-padd-block {
+        flex-direction: column;
+    }
+
+    .course {
+        margin-bottom: 5px;
+    }
+
+    .exam-sh-padd-block .button {
+        text-align: center;
+    }
+}

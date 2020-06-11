@@ -1,0 +1,115 @@
+.lesson {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+    margin-top: 0;
+}
+
+.lesson img {
+    height: 20px;
+    margin-right: 12px;
+}
+
+.padd-icon-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.padd-icon {
+    position: relative;
+    perspective: 1000px;
+    
+}
+
+.padd-icon .sub-main-text {
+    text-align: center;
+}
+
+.padd-icon .front, .padd-icon .back {
+    width: 215px;
+    height: 318px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.149366);
+    border-radius: 30px;
+    justify-content: center;
+}
+
+.padd-icon:hover .front {transform: rotateY(180deg);}
+.padd-icon:hover .back {transform: rotateY(360deg);}
+
+.padd-icon p {
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 21px;
+}
+
+.schedule-cons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 45px;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.149366);
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.schedule-cons p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.cons-button {
+    background: #DE3737;
+    padding: 8px 30px;
+    color: #fff;
+    border-radius: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.schedule-cons-text {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+    .padd-icon .front, .padd-icon .back {
+        width: 180px;
+        height: 271px;
+    }   
+}
+
+@media screen and (max-width: 992px) {
+    .padd-icon-block {
+        justify-content: space-around;
+    }
+
+    .padd-icon {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .padd-icon .front, .padd-icon .back {
+        width: 210px;
+        height: 313px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .padd-icon {
+        margin: 20px;
+    }
+
+    .schedule-cons {
+        padding: 30px 25px;
+    }
+}

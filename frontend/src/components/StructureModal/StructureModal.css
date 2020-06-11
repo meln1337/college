@@ -1,0 +1,77 @@
+.structure-padd-block {
+    margin-top: 60px;
+}
+
+.structure-padd-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.structure-padd-block .main-text {
+    align-self: start;
+    margin-top: -10px;
+}
+
+.main-head {
+    position: relative;
+    perspective: 1000px;
+    width: 176px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.main-head .front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-head .front .sub-main-text, .default-structure-icon .front .sub-main-text {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.main-head .front .sub-text, .default-structure-icon .front .sub-text {
+    text-align: center;
+    color: #616161;
+    margin-top: 0;
+}
+
+.default-structure {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-around;
+    justify-items: center;
+    grid-column-gap: 60px;
+    grid-row-gap: 40px;
+}
+
+.default-structure-icon {
+    position: relative;
+    perspective: 1000px;
+    width: 176px;
+}
+
+.default-structure-icon p {
+    text-align: center;
+}
+
+
+.default-structure-icon:hover .front {transform: rotateY(180deg);}
+.default-structure-icon:hover .back {transform: rotateY(360deg);}
+.main-head:hover .front {transform: rotateY(180deg);}
+.main-head:hover .back {transform: rotateY(360deg);}
+
+@media screen and (max-width: 576px) {
+    .default-structure {
+        grid-template-columns: 1fr;
+    }
+
+    .structure-padd-block .main-text {
+        align-self: center;
+    }
+}

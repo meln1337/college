@@ -1,0 +1,386 @@
+.header {
+    background: #fff;
+    z-index: 12;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.language {
+    font-size: 18px;
+}
+
+.logo .logo-text {
+    color: #000000;
+    font-size: 50px;
+    margin: 0;
+}
+
+.logo h1 .red {
+    color: #DE3333;
+    border: 0;
+}
+
+.stick {
+    font-size: 50px;
+    color: #000000;
+    margin-left: 5px;
+    display: flex;
+    margin-right: 10px;
+}
+
+.stick span {
+    font-size: 6px;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.more {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.more span,
+.more span::before,
+.more span::after {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 3px;
+    background-color: #222;
+}
+
+.more span::before,
+.more span::after {
+    content: '';
+    display: block;
+    transition: 0.2s;
+}
+
+.more span::before {
+    transform: translateY(-5px);
+}
+
+.more span::after {
+    transform: translateY(5px);
+}
+
+.menu-btn_active span {
+    height: 0;
+}
+
+.menu-btn_active span:before {
+    transform: rotate(45deg);
+}
+
+.menu-btn_active span:after {
+    transform: rotate(-45deg);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left {
+    display: flex;
+}
+
+.right {
+    margin-left: 10px;
+}
+
+.name-of-college {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    width: 214px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.top p a {
+    text-decoration: none;
+    color: #000;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.top-right span {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.lock {
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.search {
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.language-active {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bottom nav {
+    display: flex;
+}
+
+.bottom nav h1 {
+    margin: 0;
+    margin-left: 60px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.bottom nav h1:first-child {
+    margin-left: 30px;
+}
+
+.bottom nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.submenu:first-child {
+    margin: 0;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    display: none;
+    background: #fff;
+    position: absolute;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.149366);
+    z-index: 14;
+}
+
+.submenu a {
+    color: #000000;
+    font-size: 16px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+nav h1:hover .submenu {
+    display: flex;
+}
+
+.header-container hr {
+    border-color: #FCBEBE;
+}
+
+.mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.mobile-menu .mobile-submenu a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.mobile-menu nav h1, .mobile-menu nav a {
+    font-size: 48px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.mobile-menu nav a {
+    font-size: 48px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+
+.mobile-search-block {
+    display: flex;
+    justify-content: center; 
+}
+
+.mobile-search-wrapper {
+    border-bottom: 2px solid #000;
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mobile-search-block img {
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+.mobile-search {
+    outline: none;
+    border: 0;
+}
+
+.mobile-search::placeholder {
+    color: #898989;
+    font-size: 18px;
+}
+
+.back-to-menu {
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 11px;
+    margin-top: 70px;
+    margin-bottom: 45px;
+}
+
+.back-to-menu img {
+    margin-right: 20px;
+    width: 14px;
+}
+
+.left-wrapper {
+    display: flex;
+}
+
+.arrow {
+    height: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .bottom nav h1 {
+        margin-right: 25px;
+    }
+
+    .header {
+        background: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .bottom nav h1 {
+        margin: 0;
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        align-items: center;
+    }
+
+    .more {
+        display: block;
+    }
+
+    .bottom {
+        display: none;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .submenu {
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+        padding: 20px 0 0 0;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .mobile-search-wrapper {
+        margin-top: 40px;
+        margin-bottom: 36px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .left {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-menu nav a {
+        font-size: 24px;
+    }
+
+    .mobile-menu nav h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .left {
+        align-items: flex-end;
+    }
+}

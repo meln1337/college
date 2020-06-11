@@ -1,0 +1,28 @@
+.slider-img {
+    width: 100%;
+    border-radius: 27px;
+    height: 286px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -moz-transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -o-transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.leftArrowSpecialy {
+    margin-left: 20px;
+    cursor: pointer;
+    height: 32px;
+}
+
+.rightArrowSpecialy {
+    margin-right: 20px;
+    cursor: pointer;
+    height: 32px;
+}
+
+.dots img {
+    cursor: pointer;
+}

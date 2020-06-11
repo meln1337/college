@@ -1,0 +1,12 @@
+.video-zno {
+    display: flex;
+    justify-content: center;
+}
+
+.zno-padd-block {
+    padding-bottom: 0;
+}
+
+.video-zno img {
+    width: 100%;
+}

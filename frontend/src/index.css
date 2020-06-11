@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* .can-be-edited:not(.editing)::after {
+    content: 'змінити';
+    font-size: 10px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.can-be-edited.editing .success {
+    display: flex;
+}
+
+.can-be-edited {
+    flex-direction: column;
+    position: relative;
+}
+
+.can-be-edited .success {
+    display: none;
+}
+
+.can-be-edited .ok {
+    border: 1px solid #000;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.can-be-edited .cancel {
+    border: 1px solid #000;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.can-be-edited.editing {
+    display: flex
+}
+
+.success {
+    display: flex;
+} */
+
+.padd-block {
+    justify-content: space-between;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.149366);
+    border-radius: 30px;
+    padding: 50px;
+    margin-bottom: 80px;
+}
+
+.padd-block-head {
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.padd-block-sub {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.red-padd-block {
+    border-radius: 30px;
+    padding: 50px;
+    margin-bottom: 80px;
+    background: #DE3737;
+}
+
+.red-padd-block-sub {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.red-padd-block-text {
+    font-size: 21px;
+    color: #fff;
+    text-align: center;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.red {
+    color: #DE3737;
+}
+
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.head-text {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.sub-head-text {
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.main-text {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 7px;
+}
+
+.sub-main-text {
+    font-size: 21px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.link-to-document {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    margin-top: 20px;
+    transition: .4s;
+    font-weight: 600;
+}
+
+.link-to-document:hover {
+    color: #DE3737;
+}
+
+.link-to-document::before {
+    content: "> ";
+}
+
+.tac {
+    text-align: center;
+}
+
+.front {
+    background: #fff;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+.back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+        padding: 0 16px;
+    }
+
+    .header-container {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 738px;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: calc(100% - 30px);
+        padding: 0 15px;
+    }
+
+    .padd-block {
+        padding: 30px 60px;
+    }
+
+    .head-text,
+    .padd-block-head,
+    .link-to-document,
+    .sub-main-text {
+        text-align: center;
+    }
+
+    .red-padd-block-text {
+        font-size: 18px;
+    }
+
+    /* .head-text {
+        font-size: 36px;
+    }
+
+    .sub-head-text {
+        font-size: 28px;
+        font-weight: semibold;
+        margin-top: 90px;
+    } */
+
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: calc(100% - 30px);
+        padding: 0 15px;
+    }
+
+    .head-text {
+        font-size: 36px;
+    }
+
+    .sub-head-text {
+        font-size: 28px;
+        font-weight: semibold;
+        margin-top: 90px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .head-text {
+        font-size: 28px;
+    }
+
+    .sub-head-text {
+        font-size: 24px;
+        font-weight: semibold;
+        margin-top: 90px;
+    }
+}

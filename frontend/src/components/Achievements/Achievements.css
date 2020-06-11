@@ -1,0 +1,31 @@
+.ach-padd-block {
+    display: flex;
+}
+
+.ach-padd-block .main-text {
+    margin: 0;
+}
+
+.ach-padd-block .button {
+    background: #DE3737;
+    color: #fff;
+    font-size: 16px;
+    padding: 7px 31px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 450px) {
+    .ach-padd-block {
+        flex-direction: column;
+    }
+
+    .ach-padd-block .button {
+        margin-top: 10px;
+    }
+
+    .ach-padd-block .main-text {
+        text-align: center;
+    }
+}
