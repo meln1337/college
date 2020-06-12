@@ -10,16 +10,15 @@ import arrow from '../../public/arrow-to-right.svg'
 class History extends Component {
     state = {
         historyLine: [
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis a excepturi magni saepe odit perferendis assumenda tempora, officiis illo nobis, velit obcaecati dolorem consequuntur ipsam similique quam eaque deserunt autem itaque! Totam sunt alias, voluptas possimus magni deleniti quos ipsum velit eos voluptate mollitia quaerat, iste dicta consequatur, reprehenderit enim.1',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis a excepturi magni saepe odit perferendis assumenda tempora, officiis illo nobis, velit obcaecati dolorem consequuntur ipsam similique quam eaque deserunt autem itaque! Totam sunt alias, voluptas possimus magni deleniti quos ipsum velit eos voluptate mollitia quaerat, iste dicta consequatur, reprehenderit enim.2',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis a excepturi magni saepe odit perferendis assumenda tempora, officiis illo nobis, velit obcaecati dolorem consequuntur ipsam similique quam eaque deserunt autem itaque! Totam sunt alias, voluptas possimus magni deleniti quos ipsum velit eos voluptate mollitia quaerat, iste dicta consequatur, reprehenderit enim.3',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis a excepturi magni saepe odit perferendis assumenda tempora, officiis illo nobis, velit obcaecati dolorem consequuntur ipsam similique quam eaque deserunt autem itaque! Totam sunt alias, voluptas possimus magni deleniti quos ipsum velit eos voluptate mollitia quaerat, iste dicta consequatur, reprehenderit enim.4',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis a excepturi magni saepe odit perferendis assumenda tempora, officiis illo nobis, velit obcaecati dolorem consequuntur ipsam similique quam eaque deserunt autem itaque! Totam sunt alias, voluptas possimus magni deleniti quos ipsum velit eos voluptate mollitia quaerat, iste dicta consequatur, reprehenderit enim.5',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis a excepturi magni saepe odit perferendis assumenda tempora, officiis illo nobis, velit obcaecati dolorem consequuntur ipsam similique quam eaque deserunt autem itaque! Totam sunt alias, voluptas possimus magni deleniti quos ipsum velit eos voluptate mollitia quaerat, iste dicta consequatur, reprehenderit enim.6',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis a excepturi magni saepe odit perferendis assumenda tempora, officiis illo nobis, velit obcaecati dolorem consequuntur ipsam similique quam eaque deserunt autem itaque! Totam sunt alias, voluptas possimus magni deleniti quos ipsum velit eos voluptate mollitia quaerat, iste dicta consequatur, reprehenderit enim.7'
+            'Заснування Раднаркомом України технологічного технікуму для підготовки фахівців на рівні середньотехнічної освіти у місті Києві.',
+            'Технікум переведено з Києва до Харкова. Спочатку технікум був підпорядкований Укрпромраді, а потім управлінню кадрами Харківської ради народного господарства.',
+            'Технікум перепрофільовано на підготовку фахівців для електротехнічної галузі. З цього часу навчальний заклад одержав назву Харківського електротехнічного технікуму і підпорядкований Міністерству електротехнічної промисловості СРСР.',
+            'технікум починає підготовлювати фахівців за заочною формою навчання',
+            'технікум стає Харківським патентно-комп’ютерним коледжем. З 1991 року і до цього часу Харківський патентно-комп’ютерний коледж підпорядковано Міністерству освіти і науки, молоді та спорту України.',
+            'Харківский патентно - комп’ютерний коледж готує кваліфікованих молодших спеціалістів, які легко можуть знайти роботу за фахом та продовжити навчання у вищих навчальних закладах.'
         ],
         historyLineYears: [
-            '1922', '1934', '1942', '1952', '1974', '2020', '2022'
+            '1922', '1934', '1962', '1988', '1991', '2020'
         ],
         activeHistoryLine: 1,
         slider: {
@@ -124,7 +123,6 @@ class History extends Component {
                         {this.setLine(4)}
                         {this.setLine(5)}
                         {this.setLine(6)}
-                        {this.setLine(7)}
                         <img src={arrow} alt="arrow" />
                     </div>
                     <div className="history-padd-block-mobile padd-block">

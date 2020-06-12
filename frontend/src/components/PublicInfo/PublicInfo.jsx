@@ -6,13 +6,17 @@ export default () => (
 		<div className="container">
 			<h1 className="head-text">Доступ до публічної інформації</h1>
 			<p className="sub-main-text">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, cumque tenetur! Eos ipsam laudantium sed. Exercitationem, sit, nemo esse dicta magni quisquam ipsam fuga natus assumenda tenetur nihil commodi repellendus voluptate repellat a minus nulla similique quae aspernatur dignissimos odit quam eos voluptatibus id. Aliquam voluptates sit saepe nihil temporibus earum architecto nesciunt quam error inventore eius dolore dolorem dignissimos quo deleniti laboriosam labore, et, facilis minus rerum, rem animi odio neque vero! Id et iusto rem dicta necessitatibus repellat, delectus beatae perferendis praesentium sunt! Eius quidem odio ut, fuga deserunt officia, in illum asperiores labore natus recusandae eos eaque.
+				Метою Закону України «Про доступ до публічної інформації» є забезпечення прозорості та відкритості суб’єктів владних повноважень і створення механізмів реалізації права кожного на доступ до публічної інформації.
 			</p>
 			<p className="sub-main-text">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, cumque tenetur! Eos ipsam laudantium sed. Exercitationem, sit, nemo esse dicta magni quisquam ipsam fuga natus assumenda tenetur nihil commodi repellendus voluptate repellat a minus nulla similique quae aspernatur dignissimos odit quam eos voluptatibus id. Aliquam voluptates sit saepe nihil temporibus earum architecto nesciunt quam error inventore eius dolore dolorem dignissimos quo deleniti laboriosam labore, et, facilis minus rerum, rem animi odio neque vero! Id et iusto rem dicta necessitatibus repellat, delectus beatae perferendis praesentium sunt! Eius quidem odio ut, fuga deserunt officia, in illum asperiores labore natus recusandae eos eaque.
+			Відповідно до Закону України «Про доступ до публічної інформації» публічна інформація ‑ це відображена та задокументована будь-якими засобами та на будь-яких носіях інформація, що була отримана або створена в процесі виконання суб’єктами владних повноважень своїх обов’язків, передбачених чинним законодавством, або яка знаходиться у володінні суб’єктів владних повноважень, інших розпорядників публічної інформації, визначених цим Законом.
+
 			</p>
 			<p className="sub-main-text">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, cumque tenetur! Eos ipsam laudantium sed. Exercitationem, sit, nemo esse dicta magni quisquam ipsam fuga natus assumenda tenetur nihil commodi repellendus voluptate repellat a minus nulla similique quae aspernatur dignissimos odit quam eos voluptatibus id. Aliquam voluptates sit saepe nihil temporibus earum architecto nesciunt quam error inventore eius dolore dolorem dignissimos quo deleniti laboriosam labore, et, facilis minus rerum, rem animi odio neque vero! Id et iusto rem dicta necessitatibus repellat, delectus beatae perferendis praesentium sunt! Eius quidem odio ut, fuga deserunt officia, in illum asperiores labore natus recusandae eos eaque.
+			Цей Закон не поширюється на відносини щодо отримання інформації суб’єктами владних повноважень при здійсненні ними своїх функцій, а також на відносини у сфері звернень громадян, які регулюються спеціальним законом.
+			</p>
+			<p className="sub-main-text">
+			Публічна інформація, створена в процесі діяльності Міністерства освіти і науки України, надається у відповідь на запит на отримання публічної інформації.
 			</p>
 			<a className="link-to-document" href="https://file-examples.com/wp-content/uploads/2017/02/file-sample_100kB.doc">
 				Документ 1

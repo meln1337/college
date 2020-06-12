@@ -1,8 +1,3 @@
-import news1 from '../../public/news1.png'
-import news2 from '../../public/news2.png'
-import news3 from '../../public/news3.png'
-import news4 from '../../public/news4.png'
-
 const initialState = {
     posts: [],
     post: []

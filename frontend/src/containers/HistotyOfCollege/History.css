@@ -211,6 +211,10 @@
     margin-top: 50px;
 }
 
+.history-line {
+    min-height: 294px;
+}
+
 @media screen and (max-width: 992px) {
     .history-padd-block {
         display: none;

@@ -11,7 +11,7 @@ export default ({ post }) => (
             <p className="post-head">{post.head}</p>
             <div className="post-bottom">
                 <p className="post-text">{cutString(post.text)}</p>
-                <Link to={`/posts/${post._id}`} className="post-button">Детальніше</Link>
+                <Link to={post.link ? post.link : `/posts/${post._id}`} className="post-button">Детальніше</Link>
             </div>
         </div>
     </div>

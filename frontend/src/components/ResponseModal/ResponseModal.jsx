@@ -28,7 +28,7 @@ const ResponseModal = ({ data }) => {
 }
 
 const mapStateToProps = ({ languageReducer }, { match }) => ({
-    data: languageReducer[languageReducer.from].responsePage[match.params.id]
+    data: languageReducer[languageReducer.from].responsePage[parseInt(match.params.id) - 1]
 })
 
 export default withRouter(connect(mapStateToProps, null)(ResponseModal))

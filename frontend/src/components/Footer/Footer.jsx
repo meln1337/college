@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import './Footer.css'
-import call from '../../public/call-answer.svg'
-import mail from '../../public/mail.svg'
-import pin from '../../public/pin.svg'
-import facebook from '../../public/facebook.svg'
-import twitter from '../../public/twitter.svg'
-import instagram from '../../public/instagram.svg'
+const call = './call-answer.svg'
+const mail = './mail.svg'
+const pin = './pin.svg'
+const facebook = './facebook.svg'
+const twitter = './twitter.svg'
+const instagram = './instagram.svg'
 
 const Footer = ({ data }) => {
     return (

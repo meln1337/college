@@ -176,6 +176,10 @@
     font-size: 16px;
 }
 
+.admin-icon:hover img, .chairmans-icon:hover img, .teachers-icon:hover img {
+    transform: scale(1.1);
+}
+
 @media screen and (max-width: 1200px) {
 
     .teachers-icon img,

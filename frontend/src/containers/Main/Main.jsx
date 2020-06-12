@@ -26,7 +26,7 @@ export default () => (
 				</div>
 				<div className="bottom-text">
 					<p></p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Світ невпинно рухається у напрямку, коли його нормальне функціонування повністю залежатиме від комп’ютерів. Вже на даний момент ми можемо спостерігати, як кожна галузь нашого персонального та професійного життя пов’язані з інформаційними технологіями. Ми використовуємо смарфони, в яких завантажені соціальні мережі, месенжери, відеочати, додатки доповненої реальності. Банки, лікарні, ресторани, комунальні служби, таксі: все це під’єднане до цифрової системи.Фантастичні фільми стають реальністю, технологій для цього цілком достатньо, а їх повне втілення лише питання часу.</p>
 				</div>
 			</div>
 		</div>

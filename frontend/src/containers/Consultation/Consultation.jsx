@@ -46,25 +46,25 @@ export default () => {
 						<div className="back">Якісна освіта</div>
 					</div>
 				</div>
-				<p className="sub-main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum distinctio magni ipsum possimus quos! Aliquam consequuntur dolorem delectus enim veritatis. Molestias beatae temporibus quas praesentium dolore? Laudantium tempora quasi quos natus amet, voluptate dolore vel quibusdam eum dolorum fugit saepe! Sunt perspiciatis, non omnis praesentium modi reiciendis consequatur fuga eligendi nostrum itaque accusamus, adipisci nihil fugit labore autem quis dolorum vero nam voluptates expedita natus porro! Magni alias voluptate, ex quia itaque nobis quam incidunt in dignissimos enim dolor expedita repudiandae. Quos vitae aut maxime iusto consequatur, esse deleniti eveniet accusantium dolorem alias nam labore molestias et aperiam ipsum laboriosam.</p>
-				<p className="sub-main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum distinctio magni ipsum possimus quos! Aliquam consequuntur dolorem delectus enim veritatis. Molestias beatae temporibus quas praesentium dolore? Laudantium tempora quasi quos natus amet, voluptate dolore vel quibusdam eum dolorum fugit saepe! Sunt perspiciatis, non omnis praesentium modi reiciendis consequatur fuga eligendi nostrum itaque accusamus, adipisci nihil fugit labore autem quis dolorum vero nam voluptates expedita natus porro! Magni alias voluptate, ex quia itaque nobis quam incidunt in dignissimos enim dolor expedita repudiandae. Quos vitae aut maxime iusto consequatur, esse deleniti eveniet accusantium dolorem alias nam labore molestias et aperiam ipsum laboriosam.</p>
+				<p className="sub-main-text">Підготовчі курси для вступу в Коледж – це сприятливий старт для комфортного навчання в подальшому. Оскільки ми не повинні забувати про той факт, що майбутні студенти Коледжу насамперед є дітьми підліткового віку і дуже важливо не упустити період адаптації в новому навчальному середовищі, можливості впровадження варіативних навчальних методик в освітній процес, призвичаїтися до методики викладання викладачів вищого навчального закладу, що використовується на практиці в Коледжі до моменту вступу.</p>
+				<p className="sub-main-text">Департамент довузівської підготовки пропонує Вам навчання на підготовчих курсах два рази на тиждень. Кількість слухачів у групах – до 30-ти осіб. Заняття проводять висококваліфіковані викладачі ХПКК. Вони допомагають абітурієнтам систематизувати шкільну програму та засвоїти новий навчальний матеріал, а також успішно підготуватися до в</p>
 				<p className="sub-main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum distinctio magni ipsum possimus quos! Aliquam consequuntur dolorem delectus enim veritatis. Molestias beatae temporibus quas praesentium dolore? Laudantium tempora quasi quos natus amet, voluptate dolore vel quibusdam eum dolorum fugit saepe! Sunt perspiciatis, non omnis praesentium modi reiciendis consequatur fuga eligendi nostrum itaque accusamus, adipisci nihil fugit labore autem quis dolorum vero nam voluptates expedita natus porro! Magni alias voluptate, ex quia itaque nobis quam incidunt in dignissimos enim dolor expedita repudiandae. Quos vitae aut maxime iusto consequatur, esse deleniti eveniet accusantium dolorem alias nam labore molestias et aperiam ipsum laboriosam.</p>
 				<h2 className="schedule-cons-text sub-head-text">Розклад консультацій</h2>
 				<div className="schedule-cons">
 					<p className="main-text">П-1</p>
-					<Link target="_blank" to="/modal/unit/1" className="cons-button">Розгорнути</Link>
+					<Link to="/modal/unit/1" className="cons-button">Розгорнути</Link>
 				</div>
 				<div className="schedule-cons">
 					<p className="main-text">П-2</p>
-					<Link target="_blank" to="/modal/unit/2" className="cons-button">Розгорнути</Link>
+					<Link to="/modal/unit/2" className="cons-button">Розгорнути</Link>
 				</div>
 				<div className="schedule-cons">
 					<p className="main-text">П-3</p>
-					<Link target="_blank" to="/modal/unit/3" className="cons-button">Розгорнути</Link>
+					<Link to="/modal/unit/3" className="cons-button">Розгорнути</Link>
 				</div>
 				<div className="schedule-cons">
 					<p className="main-text">П-4</p>
-					<Link target="_blank" to="/modal/unit/4" className="cons-button">Розгорнути</Link>
+					<Link to="/modal/unit/4" className="cons-button">Розгорнути</Link>
 				</div>
 			</div>
 		</div>

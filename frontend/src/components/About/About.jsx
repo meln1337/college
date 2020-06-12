@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import './About.css'
 import RevievList from '../../components/RevievList/RevievList'
-import college_pic from '../../public/college-pic.png'
-import face1 from '../../public/face1.png'
-import face2 from '../../public/face2.png'
-import face3 from '../../public/face3.png'
-import face4 from '../../public/face4.png'
 import { Link } from 'react-router-dom'
+
+const college_pic = './college-pic.png'
+const face1 = './face1.png'
+const face2 = './face2.png'
+const face3 = './face3.png'
+const face4 = './face4.png'
 
 class Autoblock extends Component {
 	state = {
@@ -43,7 +44,7 @@ class Autoblock extends Component {
 					<h1 className="about-college head-text can-be-edited">Про коледж</h1>
 					<img alt="college-pic" src={college_pic} className="college-pic" />
 					<h2 className="why-go-to-college sub-head-text">Чому вступати до ХПКК?</h2>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+					<p> Ми переконані, якщо ви оберете навчання саме у Харківському патентно- комп’ютерному коледжі, то ваше сумлінне ставлення до навчання, цілеспрямованість у поєднанні з нашою матеріальною базою та методичним забезпеченням, кадровим педагогічним потенціалом і багаторічним досвідом освітянської діяльності забезпечать вам конкурентоспроможний рівень професійної підготовки і для фахової діяльності, і для продовження навчання. Підтвердженням цьому є відгуки наших випускників.</p>
 					<h2 className="famous-graduates sub-head-text">Відгуки випускників ХПКК</h2>
 					<div className="main-review">
 						<RevievList graduateData={this.state.graduateData} />

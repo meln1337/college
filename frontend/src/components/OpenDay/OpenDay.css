@@ -24,6 +24,10 @@
     margin-top: 50px;
 }
 
+.place.main-text, .open-day-main-text.main-text {
+    margin-bottom: 15px;
+}
+
 @media screen and (max-width: 768px) {
     .open-day-sub-main-text {
         text-align: center;
