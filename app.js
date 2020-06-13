@@ -30,6 +30,8 @@ app.use(cors());
 app.use('/api', require('./routes/financial-link.routes'));
 app.use('/api', require('./routes/post.routes'));
 app.use('/auth', require('./routes/user.routes'));
+app.use('/api', require('./routes/schedule.routes'));
+app.use('/api', require('./routes/zaminy.router'));
 
 if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static('frontend/build'))

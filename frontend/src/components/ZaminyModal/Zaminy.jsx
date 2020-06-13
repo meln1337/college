@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 import { parse } from 'qs'
-import './CourseModal.css'
+import './Zaminy.css'
 
 // function calcUnit (i, course, part) {
 //     if (part == 121) {
@@ -13,7 +13,7 @@ import './CourseModal.css'
 //     }
 // }
 
-const CourseModal = ({ data, course }) => {
+const ZaminyModal = ({ data, course }) => {
     debugger
     return (
         <div className="course-modal">
@@ -38,10 +38,10 @@ const mapStateToProps = ({ languageReducer }, { location }) => {
     });
 
     return {
-        data: languageReducer[languageReducer.from].coursePage[part][course],
+        data: languageReducer[languageReducer.from].zaminyPage[part][course],
         course,
         part
     };
 }
 
-export default withRouter(connect(mapStateToProps, null)(CourseModal))
+export default withRouter(connect(mapStateToProps, null)(ZaminyModal))

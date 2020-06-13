@@ -3,11 +3,17 @@ import thunk from 'redux-thunk';
 import languageReducer from './reducers/language.reducer';
 import newsReducer from './reducers/news.reducer';
 import financialReportReducer from './reducers/financialreport.reducer';
+import scheduleReducer from './reducers/schedule.reducer';
+import zaminyReducer from './reducers/zaminy.reducer';
+import authReducer from './reducers/auth.reducer';
 
 const rootReducer = combineReducers({
     languageReducer,
     newsReducer,
-    financialReportReducer
+    financialReportReducer,
+    scheduleReducer,
+    zaminyReducer,
+    authReducer
 })
 
 const composeEnhancers =

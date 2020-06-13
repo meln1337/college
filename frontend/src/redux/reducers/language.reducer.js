@@ -199,46 +199,84 @@ const initialState = {
         coursePage: {
             "121": {
                 "1": {
-                    "1": 91,
-                    "2": 92,
-                    "3": 93
+                    "1": "/schedules?course=1&group=1",
+                    "2": "/schedules?course=1&group=2",
+                    "3": "/schedules?course=1&group=3",
                 },
                 "2": {
-                    "4": 91,
-                    "5": 92,
-                    "6": 93
+                    "1": "/schedules?course=2&group=1",
+                    "2": "/schedules?course=2&group=2",
+                    "3": "/schedules?course=2&group=3",
                 },
                 "3": {
-                    "7": 91,
-                    "8": 92,
-                    "9": 93
+                    "1": "/schedules?course=3&group=1",
+                    "2": "/schedules?course=3&group=2",
+                    "3": "/schedules?course=3&group=3",
                 },
                 "4": {
-                    "10": 91,
-                    "11": 92,
-                    "12": 93
+                    "1": "/schedules?course=4&group=1",
+                    "2": "/schedules?course=4&group=2",
+                    "3": "/schedules?course=4&group=3",
                 }
             },
             "123": {
                 "1": {
-                    "13": 91,
-                    "14": 92,
-                    "15": 93
+                    "4": "/schedules?course=1&group=4",
+                    "5": "/schedules?course=1&group=5",
                 },
                 "2": {
-                    "16": 91,
-                    "17": 92,
-                    "18": 93
+                    "4": "/schedules?course=2&group=4",
+                    "5": "/schedules?course=2&group=5",
                 },
                 "3": {
-                    "19": 91,
-                    "20": 92,
-                    "21": 93
+                    "4": "/schedules?course=3&group=4",
+                    "5": "/schedules?course=3&group=5",
                 },
                 "4": {
-                    "22": 91,
-                    "23": 92,
-                    "24": 93
+                    "4": "/schedules?course=4&group=4",
+                    "5": "/schedules?course=4&group=5",
+                }
+            }
+        },
+        zaminyPage: {
+            "121": {
+                "1": {
+                    "1": "/replacementPage?course=1&group=1",
+                    "2": "/replacementPage?course=1&group=2",
+                    "3": "/replacementPage?course=1&group=3",
+                },
+                "2": {
+                    "1": "/replacementPage?course=2&group=1",
+                    "2": "/replacementPage?course=2&group=2",
+                    "3": "/replacementPage?course=2&group=3",
+                },
+                "3": {
+                    "1": "/replacementPage?course=3&group=1",
+                    "2": "/replacementPage?course=3&group=2",
+                    "3": "/replacementPage?course=3&group=3",
+                },
+                "4": {
+                    "1": "/replacementPage?course=4&group=1",
+                    "2": "/replacementPage?course=4&group=2",
+                    "3": "/replacementPage?course=4&group=3",
+                }
+            },
+            "123": {
+                "1": {
+                    "4": "/replacementPage?course=1&group=4",
+                    "5": "/replacementPage?course=1&group=5",
+                },
+                "2": {
+                    "4": "/replacementPage?course=2&group=4",
+                    "5": "/replacementPage?course=2&group=5",
+                },
+                "3": {
+                    "4": "/replacementPage?course=3&group=4",
+                    "5": "/replacementPage?course=3&group=5",
+                },
+                "4": {
+                    "4": "/replacementPage?course=4&group=4",
+                    "5": "/replacementPage?course=4&group=5",
                 }
             }
         },

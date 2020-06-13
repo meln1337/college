@@ -1,0 +1,94 @@
+.unit-modal {
+    margin-top: 58px;
+}
+
+.unit-schedule-block {
+    display: grid;
+    grid-template-columns: repeat(3, 290px);
+    grid-gap: 85px;
+}
+
+.unit-modal__head {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.unit-item {
+    padding: 30px;
+    position: relative;
+}
+
+.unit-item__date {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.unit-item__day {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 21px;
+    max-width: 100%;
+}
+
+.unit-no-consultation {
+    text-align: center;
+    font-size: 24px;
+    max-width: 200px;
+}
+
+.unit-schedule__text {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: flex;
+}
+
+.unit__schedule__text-medium {
+    font-weight: 500;
+}
+
+.unit-item:hover .edit {
+    display: block;
+}
+
+.edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .unit-schedule-block {
+        grid-template-columns: repeat(3, 230px);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .unit-schedule-block {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .unit-schedule-block {
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+    }
+
+    .unit-modal p {
+        text-align: center;
+    }
+
+    .unit-schedule__text {
+        justify-content: center;
+    }
+}

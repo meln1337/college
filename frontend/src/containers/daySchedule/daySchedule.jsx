@@ -12,36 +12,36 @@ export default () => (
 			<h2 className="sub-head-text day-sch__eng">121 "Інженерія програмного забезпечення"</h2>
 			<div className="padd-block day-sch-padd-block">
 				<p className="course">1 курс</p>
-				<Link to="/modal/course/121/1" className="button">Перейти</Link>
+				<Link to="/course?part=121&course=1" className="button">Перейти</Link>
 			</div>
 			<div className="padd-block day-sch-padd-block">
 				<p className="course">2 курс</p>
-				<Link to="/modal/course/121/2" className="button">Перейти</Link>
+				<Link to="/course?part=121&course=2" className="button">Перейти</Link>
 			</div>
 			<div className="padd-block day-sch-padd-block">
 				<p className="course">3 курс</p>
-				<Link to="/modal/course/121/3" className="button">Перейти</Link>
+				<Link to="/course?part=121&course=3" className="button">Перейти</Link>
 			</div>
 			<div className="padd-block day-sch-padd-block">
 				<p className="course">4 курс</p>
-				<Link to="/modal/course/121/4" className="button">Перейти</Link>
+				<Link to="/course?part=121&course=4" className="button">Перейти</Link>
 			</div>
 			<h2 className="sub-head-text day-sch__computer-eng">123 "Комп'ютерна інженерія"</h2>
 			<div className="padd-block day-sch-padd-block">
 				<p className="course">1 курс</p>
-				<Link to="/modal/course/123/1" className="button">Перейти</Link>
+				<Link to="/course?part=123&course=1" className="button">Перейти</Link>
 			</div>
 			<div className="padd-block day-sch-padd-block">
 				<p className="course">2 курс</p>
-				<Link to="/modal/course/123/2" className="button">Перейти</Link>
+				<Link to="/course?part=123&course=2" className="button">Перейти</Link>
 			</div>
 			<div className="padd-block day-sch-padd-block">
 				<p className="course">3 курс</p>
-				<Link to="/modal/course/123/3" className="button">Перейти</Link>
+				<Link to="/course?part=123&course=3" className="button">Перейти</Link>
 			</div>
 			<div className="padd-block day-sch-padd-block">
 				<p className="course">4 курс</p>
-				<Link to="/modal/course/123/4" className="button">Перейти</Link>
+				<Link to="/course?part=123&course=4" className="button">Перейти</Link>
 			</div>
 		</div>
 	</div>

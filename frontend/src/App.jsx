@@ -33,6 +33,10 @@ import Login from './components/Login/Login';
 import FullPost from './components/FullPost/FullPost';
 import AwardModal from './components/AwardModal/AwardModal';
 import FinancialReportContainer from './containers/FinancialReportContainer/FinancialReportContainer';
+import ScheduleModalContainer from './containers/ScheduleModal/ScheduleModalContainer';
+import Zaminy from './components/ZaminyModal/Zaminy';
+import ZaminyContainer from './containers/ZaminyContainer/ZaminyContainer';
+import Register from './components/Register/Register';
 
 const App = () => (
 	<Switch>
@@ -157,11 +161,17 @@ const App = () => (
 		<Route path="/modal/structure">
 			<StructureModal />
 		</Route>
-		<Route path="/modal/course/:part/:course">
+		<Route path="/zaminy">
+			<Zaminy />
+		</Route>
+		<Route path="/course">
 			<CourseModal />
 		</Route>
-		<Route path="/modal/unit/:subgroup">
-			<UnitModal />
+		<Route path="/replacementPage">
+			<ZaminyContainer />
+		</Route>
+		<Route path="/schedules">
+			<ScheduleModalContainer />
 		</Route>
 		<Route path="/modal/award/:year">
 			<AwardModal />
@@ -174,6 +184,11 @@ const App = () => (
 		<Route path="/posts/:id">
 			<Layout>
 				<FullPost />
+			</Layout>
+		</Route>
+		<Route path="/register">
+			<Layout>
+				<Register />
 			</Layout>
 		</Route>
 		<Redirect to="/404" />
