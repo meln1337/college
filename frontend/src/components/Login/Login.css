@@ -22,3 +22,16 @@
 .input-login::placeholder, .input-password::placeholder {
     color: #A7A7A7;
 }
+
+.login-button {
+    border: 0;
+    background: green;
+    padding: 5px 30px;
+    width: 300px;
+    height: 60px;
+    max-width: 100%;
+    font-size: 21px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px;
+}

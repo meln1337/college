@@ -6,7 +6,7 @@ const router = Router();
 router.post('/schedules', async (req, res) => {
     const { date, text, day, course, group } = req.body;
     const schedule = new Schedule({ date, text, day, course, group });
-    schedule.save();
+    await schedule.save();
     res.status(201).json(schedule);
 });
 

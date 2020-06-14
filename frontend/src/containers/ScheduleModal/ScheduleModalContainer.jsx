@@ -18,19 +18,21 @@ class ScheduleModalContainer extends React.Component {
                                     data={this.props.data} 
                                     course={this.props.course} 
                                     group={this.props.group}
+                                    admin={this.props.admin}
                                     changeSchedules={this.props.changeSchedules}
                                 /> : <div className="container">Loading...</div>
     }
 }
 
-const mapStateToProps = ({ scheduleReducer }, { location }) => {
+const mapStateToProps = (state, { location }) => {
     debugger;
     const { group, course } = parse(location.search, {
         ignoreQueryPrefix: true
     })
 
     return {
-        data: scheduleReducer.schedules?.[course]?.[group],
+        data: state.scheduleReducer.schedules?.[course]?.[group],
+        admin: state.authReducer.user.admin,
         course,
         group
     }

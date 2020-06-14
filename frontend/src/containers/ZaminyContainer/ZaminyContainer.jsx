@@ -20,17 +20,20 @@ class ZaminyContainer extends React.Component {
                                     course={this.props.course} 
                                     group={this.props.group}
                                     changeZaminy={this.props.changeZaminy}
+                                    admin={this.props.admin}
                                 /> : <div className="container">Loading...</div>
     }
 }
 
-const mapStateToProps = ({ zaminyReducer }, { location }) => {
+const mapStateToProps = (state, { location }) => {
+    debugger
     const { group, course } = parse(location.search, {
         ignoreQueryPrefix: true
     })
 
     return {
-        data: zaminyReducer.zaminy?.[course]?.[group],
+        data: state.zaminyReducer.zaminy?.[course]?.[group],
+        admin: state.authReducer.user.admin,
         course,
         group
     }

@@ -37,19 +37,19 @@ export default () => {
 				<h2 className="schedule-cons-text sub-head-text">Розклад консультацій</h2>
 				<div className="schedule-cons">
 					<p className="main-text">П-1</p>
-					<Link to="/modal/unit/1" className="cons-button">Розгорнути</Link>
+					<Link to="/consultationModal?group=1" className="cons-button">Розгорнути</Link>
 				</div>
 				<div className="schedule-cons">
 					<p className="main-text">П-2</p>
-					<Link to="/modal/unit/2" className="cons-button">Розгорнути</Link>
+					<Link to="/consultationModal?group=2" className="cons-button">Розгорнути</Link>
 				</div>
 				<div className="schedule-cons">
 					<p className="main-text">П-3</p>
-					<Link to="/modal/unit/3" className="cons-button">Розгорнути</Link>
+					<Link to="/consultationModal?group=3" className="cons-button">Розгорнути</Link>
 				</div>
 				<div className="schedule-cons">
 					<p className="main-text">П-4</p>
-					<Link to="/modal/unit/4" className="cons-button">Розгорнути</Link>
+					<Link to="/consultationModal?group=4" className="cons-button">Розгорнути</Link>
 				</div>
 			</div>
 		</div>

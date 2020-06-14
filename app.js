@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const connectMongo = require('connect-mongo');
+const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const path = require('path')
@@ -27,11 +28,13 @@ app.use(session({
 
 app.use(express.json());
 app.use(cors());
+app.use(cookieParser());
 app.use('/api', require('./routes/financial-link.routes'));
 app.use('/api', require('./routes/post.routes'));
 app.use('/auth', require('./routes/user.routes'));
 app.use('/api', require('./routes/schedule.routes'));
-app.use('/api', require('./routes/zaminy.router'));
+app.use('/api', require('./routes/zaminy.routes'));
+app.use('/api', require('./routes/cons.routes'))
 
 if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static('frontend/build'))

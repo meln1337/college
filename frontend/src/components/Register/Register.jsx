@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Recaptcha from 'react-recaptcha';
 import './Register.css';
+import { connect } from 'react-redux';
+import { setRegister } from '../../redux/actions/auth.actions';
 
-export default () => {
+const Register = ({ setRegister }) => {
     const [form, setForm] = useState({
         email: '',
         password: '',
@@ -33,11 +35,18 @@ export default () => {
                         <span>Пароль</span>
                         <input type="text" id="password" className="input-password" placeholder="Пароль..." onChange={onChange} value={form.password} />
                     </div>
+                    <button onClick={() => setRegister(form)} className="login-button" type="submit">Зареєструватися</button>
                 </div>
-                <Recaptcha
+                {/* <Recaptcha
                     sitekey="6LevuQEVAAAAAFYM5DZd1ALAL5V1Bxwfw7MWjwIG"
-                />
+                /> */}
             </div>
         </div>
     )
 }
+
+const mapDispatchToProps = {
+    setRegister: user => setRegister(user)
+}
+
+export default connect(null, mapDispatchToProps)(Register);

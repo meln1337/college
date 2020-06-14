@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import './SchedulesModal.css';
 const edit = './edit.svg';
+const back = './back.svg';
+const deleteIcon = './delete.svg';
+const plus = './plus.svg';
 
-export default ({ data, course, group, changeSchedules }) => {
+export default ({ data, course, group, changeSchedules, admin }) => {
     const [active, setActive] = useState({
         0: false,
         1: false,
@@ -13,6 +17,8 @@ export default ({ data, course, group, changeSchedules }) => {
     });
 
     const [scheduleList, setScheduleList] = useState(data);
+
+    const part = group => (parseInt(group) === 1 || parseInt(group) === 2 || parseInt(group) === 3) ? 121 : 123;
 
     const changeScheduleFunc = i => {
         changeSchedules({ id: scheduleList[i]._id, date: scheduleList[i].date, day: scheduleList[i].day, text: scheduleList[i].text, course, group });
@@ -44,9 +50,11 @@ export default ({ data, course, group, changeSchedules }) => {
         <div className="unit-modal">
             <div className="container">
                 <div className="padd-block">
+                <Link className="back-to-news" to={`/course?part=${part(group)}&course=${course}`}><img src={back} alt="back"/></Link>
                     <p className="unit-modal__head">Курс - {course} &nbsp; Група - {group}</p>
                     <div className="unit-schedule-block">
-                        {data.map((el, i) => {
+                        {admin ? 
+                        data.map((el, i) => {
                             return !active[i] ? (
                                 <div className="unit-item padd-block" key={i}>
                                     <img src={edit} alt="edit" className="edit" onClick={() => {
@@ -73,27 +81,44 @@ export default ({ data, course, group, changeSchedules }) => {
                                         setActive({ ...active, [i]: false })
                                         console.log(active)
                                     }} />
-                                    <input className="unit-item__date" id="date" value={scheduleList[i].date} onChange={e => changeFunc(i, e)} />
-                                    <input className="unit-item__day" id="day" value={scheduleList[i].day} onChange={e => changeFunc(i, e)} />
+                                    <input className="unit-item__date edited-input" id="date" value={scheduleList[i].date} onChange={e => changeFunc(i, e)} />
+                                    <input className="unit-item__day edited-input" id="day" value={scheduleList[i].day} onChange={e => changeFunc(i, e)} />
                                     <div className="unit-schedule">
-                                        {scheduleList[i].text.length === 0
+                                        <Fragment>
+                                            {
+                                                scheduleList[i].text.map((sch, index) => (
+                                                    <p className="unit-schedule__text" key={index}>
+                                                        <input className="unit__schedule__text-medium edited-input" onChange={e => changeText(i, e, index)} value={sch} /><img src={deleteIcon} onClick={() => deleteFunc(i, index)} />
+                                                    </p>
+                                                ))
+                                            }
+                                            <img onClick={() => addFunc(i)} className="plus" src={plus} alt="plus" />
+                                        </Fragment>
+                                    </div>
+                                    <div className="unit-buttons">
+                                        <button className="unit-buttons__save" onClick={() => changeScheduleFunc(i)}>зберегти</button>
+                                        <button className="unit-buttons__cancel" onClick={() => { setActive({ ...active, [i]: false }); setScheduleList(data) }}>відмінити</button>
+                                    </div>
+                                </div>
+                        }) : data.map((el, i) => (
+                            <div className="unit-item padd-block" key={i}>
+                                    <p className="unit-item__date">{el.date}</p>
+                                    <p className="unit-item__day">{el.day}</p>
+                                    <div className="unit-schedule">
+                                        {el.text.length === 0
                                             ?
-                                            <div className="unit-no-consultation">
-                                                <p>Замін немає</p>
-                                                <p onClick={() => addFunc(i)}>Добавити</p>
-                                            </div>
+                                            <p className="unit-no-consultation">Консультацій немає</p>
                                             :
-                                            scheduleList[i].text.map((sch, index) => (
+                                            el.text.map((sch, index) => (
                                                 <p className="unit-schedule__text" key={index}>
-                                                    <input className="unit__schedule__text-medium" onChange={e => changeText(i, e, index)} value={sch} /><div onClick={() => deleteFunc(i, index)}>видалити</div>
+                                                    <span className="unit__schedule__text-medium">{sch}</span>
                                                 </p>
                                             ))
                                         }
                                     </div>
-                                    <button onClick={() => changeScheduleFunc(i)}>зберегти</button>
-                                    <button onClick={() => { setActive({ ...active, [i]: false }); setScheduleList(data) }}>відмінити</button>
                                 </div>
-                        })}
+                        ))
+                    }
                     </div>
                 </div>
             </div>

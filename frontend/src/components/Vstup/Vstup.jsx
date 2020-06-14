@@ -74,7 +74,7 @@ export default () => (
             <div className="padd-block wanna-go-to-college">
                 <h3 className="vstup-block-head-text tac">Бажаєте вступити до коледжу?</h3>
                 <p className="tac go-to-ab">Відвідайте розділ «Абітурієнтам» щоб дізнатися як вступити до коледжу, ознайомитися з правиламу прийому та документацією</p>
-                <Link className="go-to-button" to="/entrants">Перейти</Link>
+                <Link className="go-to-button" to="/consultation">Перейти</Link>
             </div>
         </div>
     </div>

@@ -6,7 +6,7 @@ const router = Router();
 router.post('/zaminy', async (req, res) => {
     const { date, text, day, course, group } = req.body;
     const zamina = new Zaminy({ date, text, day, course, group });
-    zamina.save();
+    await zamina.save();
     res.status(201).json(zamina);
 });
 

@@ -38,165 +38,182 @@ import Zaminy from './components/ZaminyModal/Zaminy';
 import ZaminyContainer from './containers/ZaminyContainer/ZaminyContainer';
 import Register from './components/Register/Register';
 import Profilcation from './components/Profilcation/Profilcation';
+import ConsultationContainer from './containers/ConsultationContainer/ConsultationContainer';
+import { connect } from 'react-redux';
+import { isAuth } from './redux/actions/auth.actions';
+import { useEffect } from 'react';
 
-const App = () => (
-	<Switch>
-		<Route path="/" exact>
-			<Layout>
-				<Main />
-			</Layout>
-		</Route>
-		<Route path="/about">
-			<Layout>
-				<About />
-			</Layout>
-		</Route>
-		<Route path="/vstup">
-			<Layout>
-				<Vstup />
-			</Layout>
-		</Route>
-		<Route path="/consultation">
-			<Layout>
-				<Consultation />
-			</Layout>
-		</Route>
-		<Route path="/galery/:id">
-			<Layout>
-				<Galery />
-			</Layout>
-		</Route>
-		<Route path="/open-day">
-			<Layout>
-				<OpenDay />
-			</Layout>
-		</Route>
-		<Route path="/structure">
-			<Layout>
-				<Structure />
-			</Layout>
-		</Route>
-		<Route path="/news">
-			<Layout>
-				<News />
-			</Layout>
-		</Route>
-		<Route path="/history-of-college">
-			<Layout>
-				<History />
-			</Layout>
-		</Route>
-		<Route path="/work">
-			<Layout>
-				<Work />
-			</Layout>
-		</Route>
-		<Route path="/day-schedule">
-			<Layout>
-				<DaySchedule />
-			</Layout>
-		</Route>
-		<Route path="/rights">
-			<Layout>
-				<Rights />
-			</Layout>
-		</Route>
-		<Route path="/replacements">
-			<Layout>
-				<Replacements />
-			</Layout>
-		</Route>
-		<Route path="/specialty">
-			<Layout>
-				<Specialty />
-			</Layout>
-		</Route>
-		<Route path="/contacts">
-			<Layout>
-				<Contacts />
-			</Layout>
-		</Route>
-		<Route path="/financial-report">
-			<Layout>
-				<FinancialReportContainer />
-			</Layout>
-		</Route>
-		<Route path="/achievements">
-			<Layout>
-				<Achievements />
-			</Layout>
-		</Route>
-		<Route path="/contract">
-			<Layout>
-				<Contract />
-			</Layout>
-		</Route>
-		<Route path="/zno">
-			<Layout>
-				<ZNO />
-			</Layout>
-		</Route>
-		<Route path="/public-info">
-			<Layout>
-				<PublicInfo />
-			</Layout>
-		</Route>
-		<Route path="/exam-schedule">
-			<Layout>
-				<ExamSchedule />
-			</Layout>
-		</Route>
-		<Route path="/rating">
-			<Layout>
-				<Rating />
-			</Layout>
-		</Route>
-		<Route path="/404">
-			<Layout>
-				<P404 />
-			</Layout>
-		</Route>
-		<Route path="/response">
-			<ResponseModal />
-		</Route>
-		<Route path="/modal/structure">
-			<StructureModal />
-		</Route>
-		<Route path="/zaminy">
-			<Zaminy />
-		</Route>
-		<Route path="/course">
-			<CourseModal />
-		</Route>
-		<Route path="/replacementPage">
-			<ZaminyContainer />
-		</Route>
-		<Route path="/schedules">
-			<ScheduleModalContainer />
-		</Route>
-		<Route path="/modal/award/:year">
-			<AwardModal />
-		</Route>
-		<Route path="/login">
-			<Layout>
-				<Login />
-			</Layout>
-		</Route>
-		<Route path="/posts/:id">
+const App = ({ isAuth }) => {
+	useEffect(() => {
+		isAuth();
+	}, [])
+
+	return (
+		<Switch>
+			<Route path="/" exact>
+				<Layout>
+					<Main />
+				</Layout>
+			</Route>
+			<Route path="/about">
+				<Layout>
+					<About />
+				</Layout>
+			</Route>
+			<Route path="/vstup">
+				<Layout>
+					<Vstup />
+				</Layout>
+			</Route>
+			<Route path="/consultation">
+				<Layout>
+					<Consultation />
+				</Layout>
+			</Route>
+			<Route path="/galery/:id">
+				<Layout>
+					<Galery />
+				</Layout>
+			</Route>
+			<Route path="/open-day">
+				<Layout>
+					<OpenDay />
+				</Layout>
+			</Route>
+			<Route path="/structure">
+				<Layout>
+					<Structure />
+				</Layout>
+			</Route>
+			<Route path="/news">
+				<Layout>
+					<News />
+				</Layout>
+			</Route>
+			<Route path="/history-of-college">
+				<Layout>
+					<History />
+				</Layout>
+			</Route>
+			<Route path="/work">
+				<Layout>
+					<Work />
+				</Layout>
+			</Route>
+			<Route path="/day-schedule">
+				<Layout>
+					<DaySchedule />
+				</Layout>
+			</Route>
+			<Route path="/rights">
+				<Layout>
+					<Rights />
+				</Layout>
+			</Route>
+			<Route path="/replacements">
+				<Layout>
+					<Replacements />
+				</Layout>
+			</Route>
+			<Route path="/specialty">
+				<Layout>
+					<Specialty />
+				</Layout>
+			</Route>
+			<Route path="/contacts">
+				<Layout>
+					<Contacts />
+				</Layout>
+			</Route>
+			<Route path="/financial-report">
+				<Layout>
+					<FinancialReportContainer />
+				</Layout>
+			</Route>
+			<Route path="/achievements">
+				<Layout>
+					<Achievements />
+				</Layout>
+			</Route>
+			<Route path="/contract">
+				<Layout>
+					<Contract />
+				</Layout>
+			</Route>
+			<Route path="/zno">
+				<Layout>
+					<ZNO />
+				</Layout>
+			</Route>
+			<Route path="/public-info">
+				<Layout>
+					<PublicInfo />
+				</Layout>
+			</Route>
+			<Route path="/exam-schedule">
+				<Layout>
+					<ExamSchedule />
+				</Layout>
+			</Route>
+			<Route path="/rating">
+				<Layout>
+					<Rating />
+				</Layout>
+			</Route>
+			<Route path="/404">
+				<Layout>
+					<P404 />
+				</Layout>
+			</Route>
+			<Route path="/response">
+				<ResponseModal />
+			</Route>
+			<Route path="/modal/structure">
+				<StructureModal />
+			</Route>
+			<Route path="/zaminy">
+				<Zaminy />
+			</Route>
+			<Route path="/course">
+				<CourseModal />
+			</Route>
+			<Route path="/consultationModal">
+				<ConsultationContainer />
+			</Route>
+			<Route path="/replacementPage">
+				<ZaminyContainer />
+			</Route>
+			<Route path="/schedules">
+				<ScheduleModalContainer />
+			</Route>
+			<Route path="/modal/award/:year">
+				<AwardModal />
+			</Route>
+			<Route path="/login">
+				<Layout>
+					<Login />
+				</Layout>
+			</Route>
+			{/* <Route path="/posts/:id">
 			<Layout>
 				<FullPost />
 			</Layout>
-		</Route>
-		<Route path="/register">
-			<Layout>
-				<Register />
-			</Layout>
-		</Route>
-		<Route path="/profilaction">
-			<Profilcation />
-		</Route>
-		<Redirect to="/404" />
-	</Switch>
-)
+		</Route> */}
+			<Route path="/register">
+				<Layout>
+					<Register />
+				</Layout>
+			</Route>
+			<Route path="/profilaction">
+				<Profilcation />
+			</Route>
+			<Redirect to="/404" />
+		</Switch>
+	)
+}
 
-export default App;
+const mapDispatchToProps = {
+	isAuth: () => isAuth()
+}
+
+export default connect(null, mapDispatchToProps)(App);

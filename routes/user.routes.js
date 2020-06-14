@@ -1,22 +1,41 @@
-const { Router } = require('express');
-const { check, validationResult } = require('express-validator');
+const {
+    Router
+} = require('express');
+const {
+    check,
+    validationResult
+} = require('express-validator');
 const bcrypt = require('bcrypt');
 const User = require('../models/user.model');
 
 const router = Router();
 
 router.post('/register', [
-    check('name', 'Name length must be greather than 1').isLength({ min: 2, max: 100 }),
-    check('surname', 'Surname length must be greather than 1').isLength({ min: 2, max: 100 }),
-    check('email', 'Email is incorrect or already exists').isLength({ min: 2, max: 100 }).isEmail(),
-    check('password', 'Password length must be greather than 7').isLength({ min: 8, max: 100 })
+    check('name', 'Name length must be greather than 1').isLength({
+        min: 2,
+        max: 100
+    }),
+    check('surname', 'Surname length must be greather than 1').isLength({
+        min: 2,
+        max: 100
+    }),
+    check('email', 'Email is incorrect or already exists').isLength({
+        min: 2,
+        max: 100
+    }).isEmail(),
+    check('password', 'Password length must be greather than 7').isLength({
+        min: 8,
+        max: 100
+    })
 ], async (req, res) => {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
         return res.status(400).json(errors)
     }
 
-    const emailExits = await User.findOne({ email: req.body.email })
+    const emailExits = await User.findOne({
+        email: req.body.email
+    })
     if (emailExits) {
         return res.status(400).send('Email already exists')
     }
@@ -33,7 +52,9 @@ router.post('/register', [
 
     try {
         await user.save();
-        res.status(201).json({ message: 'User has been created' });
+        res.status(201).json({
+            message: 'User has been created'
+        });
     } catch (e) {
         res.status(400).json(e);
     }
@@ -42,11 +63,16 @@ router.post('/register', [
 router.post('/login', async (req, res) => {
     console.log(req.session)
 
-    const { email, password } = req.body
+    const {
+        email,
+        password
+    } = req.body
 
     console.log(req.body)
 
-    const user = await User.findOne({ email })
+    const user = await User.findOne({
+        email
+    })
     console.log(user)
     if (!user || !bcrypt.compareSync(password, user.password)) {
         return res.status(403).json('Incorrect data')
@@ -56,6 +82,7 @@ router.post('/login', async (req, res) => {
         req.session.user = {
             email: user.email,
             name: user.name,
+            admin: user.admin,
             id: user._id
         }
 
@@ -64,17 +91,22 @@ router.post('/login', async (req, res) => {
         })
     }
 
-    res.cookie('sessionID', req.sessionID, { maxAge: 1000 * 60 * 60 * 24 * 31, httpOnly: true })
-    res.json({ token })
+    res.cookie('sessionID', req.sessionID, {
+        maxAge: 1000 * 60 * 60 * 24 * 31,
+        httpOnly: true
+    })
+    res.json({
+        message: 'Success'
+    });
 })
 
 router.post('/me', (req, res) => {
-    if (req.session) {
-        if (req.sessionID === req.cookies.sessionID) {
-            res.json({ user: req.session.user })
-        } else {
-            res.status(403).json('You are not authorized')
-        }
+    console.log(req.sessionID)
+    console.log(req.cookies)
+    if (req.sessionID === req.cookies.sessionID) {
+        res.json(req.session.user)
+    } else {
+        res.status(403).json('You are not authorized')
     }
 })
 

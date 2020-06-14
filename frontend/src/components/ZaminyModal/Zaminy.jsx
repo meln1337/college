@@ -3,15 +3,7 @@ import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 import { parse } from 'qs'
 import './Zaminy.css'
-
-// function calcUnit (i, course, part) {
-//     if (part == 121) {
-//         return course * (i + 1)
-//     }
-//     else {
-//         return course * (i + 1) + 12
-//     }
-// }
+const back = './back.svg';
 
 const ZaminyModal = ({ data, course }) => {
     debugger
@@ -19,7 +11,8 @@ const ZaminyModal = ({ data, course }) => {
         <div className="course-modal">
             <div className="container">
                 <div className="padd-block course-modal_padd-block">
-                <p className="main-text">{course} курс</p>
+                    <Link className="back-to-news" to="/replacements"><img src={back} alt="back" /></Link>
+                    <p className="main-text">{course} курс</p>
                     {Object.keys(data).map((unit, i) => (
                         <div key={i} className="padd-block course__padd-block">
                             <p className="sub-main-text course-name">П-{unit}</p>
