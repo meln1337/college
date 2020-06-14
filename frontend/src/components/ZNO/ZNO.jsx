@@ -1,6 +1,5 @@
 import React from 'react'
 import './ZNO.css'
-import zno from '../../public/YouTube Player_ F1.png'
 
 export default () => {
     return (
@@ -10,14 +9,9 @@ export default () => {
                 <div className="zno-padd-block padd-block">
                     <h3 className="padd-block-head">Пробне ЗНО</h3>
                     <div className="video-zno">
-                        <img src={zno} alt="video-zno" />
-                    </div>
-                </div>
-
-                <div className="zno-padd-block padd-block">
-                    <h3 className="padd-block-head">Реєстрація на ЗНО 2020 року</h3>
-                    <div className="video-zno">
-                        <img src={zno} alt="video-zno" />
+                        <div className="video">
+                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/1SszKgA0g8U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>

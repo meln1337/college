@@ -7,8 +7,8 @@ export default () => {
             <div className="container">
                 <h1 className="head-text">Контакти</h1>
                 <div className="red-padd-block">
-                    <p className="red-padd-block-sub">Зв'яжітся з нами сьогодні</p>
-                    <p className="red-padd-block-text">У вас є питання, у нас відповідь. Просто подзвоніть за вказаними номерами телефону, крім вихідних та святкових днів</p>
+                    <p className="sub-head-text">Зв'яжітся з нами сьогодні</p>
+                    <p className="main-text">У вас є питання, у нас відповідь. Просто подзвоніть за вказаними номерами телефону, крім вихідних та святкових днів</p>
                 </div>
                 <h2 className="sub-head-text">Наша адреса</h2>
                 <h4 className="main-text">61002, м.Харків, вул. Ярослава Мудрого 18</h4>

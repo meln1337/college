@@ -1,6 +1,6 @@
 .hero {
     width: 100%;
-    height: 950px;
+    height: 1100px;
     position: relative;
 }
 
@@ -82,7 +82,7 @@
 
 .bottom-text p {
     font-size: 24px;
-    max-width: 535px;
+    max-width: 735px;
 }
 
 .icons-block {
@@ -109,6 +109,12 @@
     justify-content: center;
 }
 
+@media screen and (max-width: 1590px) {
+    .bottom-text p {
+        max-width: 635px;
+    }
+}
+
 @media screen and (max-width: 1450px) {
     .second-oval {
         width: 712px;
@@ -123,6 +129,12 @@
     }
 }
 
+@media screen and (max-width: 1400px) {
+    .bottom-text p {
+        max-width: 535px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .second-oval {
         width: 634px;
@@ -132,8 +144,8 @@
     }
 
     .first-oval {
-        width: 337px;
-        height: 402px;
+        width: 350px;
+        height: 420px;
         left: 0;
     }
 
@@ -161,12 +173,12 @@
     .icons-block-icon {
         width: 210px;
     }
-    
+
 }
 
 @media screen and (max-width: 992px) {
     .hero {
-        height: 990px;
+        height: 1100px;
     }
 
     .icons-block-list {
@@ -174,7 +186,7 @@
     }
 
     .icons-block-icon img {
-        width: 170px; 
+        width: 170px;
     }
 
     .to-open-day {
@@ -202,7 +214,7 @@
 
 @media screen and (max-width: 768px) {
     .icons-block-icon img {
-        width: 140px; 
+        width: 140px;
     }
 
     .second-oval {
@@ -231,12 +243,13 @@
     }
 
     .bottom-text {
-        justify-content: flex-end;
+        justify-content: center;
         margin-top: 50px;
     }
 
     .bottom-text p {
         font-size: 18px;
+        text-align: center;
     }
 
     .education-partners {
@@ -262,7 +275,7 @@
     }
 
     .hero {
-        height: 1030px;
+        height: 1170px;
     }
 
     .bottom-text {
@@ -276,19 +289,19 @@
 
 @media screen and (max-width: 450px) {
     .hero {
-        height: 1080px;
+        height: 1250px;
     }
 }
 
 @media screen and (max-width: 400px) {
     .hero {
-        height: 1150px;
+        height: 1300px;
     }
 }
 
 @media screen and (max-width: 350px) {
     .hero {
-        height: 1200px;
+        height: 1400px;
     }
 
     .first-oval {

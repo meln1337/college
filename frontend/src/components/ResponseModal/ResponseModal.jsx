@@ -1,8 +1,10 @@
 import React from 'react'
-import './ResponseModal.css'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import { parse } from 'qs'
+import './ResponseModal.css'
 import tail from '../../public/Tail.svg'
+
 
 const ResponseModal = ({ data }) => {
     return (
@@ -27,8 +29,15 @@ const ResponseModal = ({ data }) => {
     )
 }
 
-const mapStateToProps = ({ languageReducer }, { match }) => ({
-    data: languageReducer[languageReducer.from].responsePage[parseInt(match.params.id) - 1]
-})
+const mapStateToProps = ({ languageReducer }, { location }) => {
+    debugger
+    const { post } = parse(location.search, {
+        ignoreQueryPrefix: true
+    })
+
+    return {
+        data: languageReducer[languageReducer.from].responsePage[parseInt(post) - 1]
+    }
+}
 
 export default withRouter(connect(mapStateToProps, null)(ResponseModal))

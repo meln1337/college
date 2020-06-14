@@ -16,34 +16,20 @@ export default () => {
 				<p className="lesson main-text"><img src={arrow} alt="arrow" />Математика</p>
 				<div className="padd-icon-block">
 					<div className="padd-icon">
-						<div className="front">
-							<img src={time} alt="padd-icon" />
-							<p className="sub-main-text">Зручний графік</p>
-						</div>
-						<div className="back">
-							back
-						</div>
+						<img src={time} alt="padd-icon" />
+						<p className="sub-main-text">Зручний графік</p>
 					</div>
 					<div className="padd-icon">
-						<div className="front">
-							<img src={subway} alt="padd-icon" />
-							<p className="sub-main-text">Поруч із метро</p>
-						</div>
-						<div className="back">back</div>
+						<img src={subway} alt="padd-icon" />
+						<p className="sub-main-text">Поруч із метро</p>
 					</div>
 					<div className="padd-icon">
-						<div className="front">
-							<img src={smile} alt="padd-icon" />
-							<p className="sub-main-text">Привабливі умови</p>
-						</div>
-						<div className="back">back</div>
+						<img src={smile} alt="padd-icon" />
+						<p className="sub-main-text">Привабливі умови</p>
 					</div>
 					<div className="padd-icon">
-						<div className="front">
-							<img src={mortarboard} alt="padd-icon" />
-							<p className="sub-main-text">Якісна освіта</p>
-						</div>
-						<div className="back">Якісна освіта</div>
+						<img src={mortarboard} alt="padd-icon" />
+						<p className="sub-main-text">Якісна освіта</p>
 					</div>
 				</div>
 				<p className="sub-main-text">Підготовчі курси для вступу в Коледж – це сприятливий старт для комфортного навчання в подальшому. Оскільки ми не повинні забувати про той факт, що майбутні студенти Коледжу насамперед є дітьми підліткового віку і дуже важливо не упустити період адаптації в новому навчальному середовищі, можливості впровадження варіативних навчальних методик в освітній процес, призвичаїтися до методики викладання викладачів вищого навчального закладу, що використовується на практиці в Коледжі до моменту вступу.</p>

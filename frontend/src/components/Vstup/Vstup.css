@@ -20,6 +20,16 @@
     justify-content: center;
 }
 
+.vstup-link {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.vstup-link:hover {
+    color: #DE3737;
+    transition: .4s;
+}
+
 .vstup-icon-block .padd-icon {
     margin-right: 53px;
     margin-bottom: 53px;

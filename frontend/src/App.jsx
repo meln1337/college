@@ -37,6 +37,7 @@ import ScheduleModalContainer from './containers/ScheduleModal/ScheduleModalCont
 import Zaminy from './components/ZaminyModal/Zaminy';
 import ZaminyContainer from './containers/ZaminyContainer/ZaminyContainer';
 import Register from './components/Register/Register';
+import Profilcation from './components/Profilcation/Profilcation';
 
 const App = () => (
 	<Switch>
@@ -155,7 +156,7 @@ const App = () => (
 				<P404 />
 			</Layout>
 		</Route>
-		<Route path="/modal/response/:id">
+		<Route path="/response">
 			<ResponseModal />
 		</Route>
 		<Route path="/modal/structure">
@@ -190,6 +191,9 @@ const App = () => (
 			<Layout>
 				<Register />
 			</Layout>
+		</Route>
+		<Route path="/profilaction">
+			<Profilcation />
 		</Route>
 		<Redirect to="/404" />
 	</Switch>

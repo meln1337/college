@@ -6,6 +6,8 @@ import leftArrow from '../../public/arrow-point-to-right-red.svg';
 import rightArrow from '../../public/arrow-point-to-left-red.svg';
 import activeOval from '../../public/fill-oval.svg';
 import oval from '../../public/oval.svg';
+const spec1 = './специальности .jpg';
+const spec2 = './специальности 1.jpg';
 
 const Specialty = () => {
 	const [sliderN, setSliderN] = useState(1);
@@ -72,7 +74,7 @@ const Specialty = () => {
 		<div className="specialty">
 			<div className="container">
 				<h1 className="head-text">Спеціальності</h1>
-				<div className="slider-img" style={{ background: `url("${slider[sliderN - 1]}") no-repeat center top / cover` }}>
+				{/* <div className="slider-img" style={{ background: `url("${slider[sliderN - 1]}") no-repeat center top / cover` }}>
 					<img onClick={() => prevSlide()} className="leftArrowSpecialy" src={leftArrow} alt="leftArrow" />
 					<div className="dots">
 						{setSlide(1)}
@@ -82,15 +84,16 @@ const Specialty = () => {
 						{setSlide(5)}
 					</div>
 					<img onClick={() => nextSlide()} className="rightArrowSpecialy" src={rightArrow} alt="rightArrow" />
-				</div>
+				</div> */}
+				<img className="spec-img" src={spec1} alt="spec1" />
 				<h2 className="sub-head-text">121 «Інженерія програмного забезпечення</h2>
 				<p className="sub-main-text"> Програма спеціальності 121 «Інженерія програмного забезпечення» орієнтована на підготовку кваліфікованих фахівців в галузі інженерії програмного забезпечення, котра спрямована на розробку програмних систем, які працюють надійно та ефективно, вартість розробки та супроводу яких є доступною, і які задовольняють вимогам, висунутим до них замовниками. Сьогодні фахівці з інженерії програмного забезпечення є найбільш затребуваними на ринку праці серед інших фахівців з інформаційних технологій, вони приймають участь у розробці вітчизняних і міжнародних програмних проектів, і мають достойну оплату своєї праці. Попит на фахівців з інженерії програмного забезпечення у майбутньому буде тільки зростати.</p>
 				<p className="sub-main-text">Основні спеціалізації: <br />
 				&#9679; &nbsp; Прикладне програмування (з поглибленим вивченням спеціалізованих дисциплін) <br />
 				&#9679; &nbsp; Web-програмування: розробка сайтів <br />
 				&#9679; &nbsp; Блокчейн та прикладне програмне забезпечення
-</p>
-				<div className="slider-img" style={{ background: `url("${slider2[slider2N - 1]}") no-repeat center top / cover` }}>
+				</p>
+				{/* <div className="slider-img" style={{ background: `url("${slider2[slider2N - 1]}") no-repeat center top / cover` }}>
 					<img onClick={() => prevSlide2()} className="leftArrowSpecialy" src={leftArrow} alt="leftArrow" />
 					<div className="dots">
 						{setSlide2(1)}
@@ -100,18 +103,19 @@ const Specialty = () => {
 						{setSlide2(5)}
 					</div>
 					<img onClick={() => nextSlide2()} className="rightArrowSpecialy" src={rightArrow} alt="rightArrow" />
-				</div>
+				</div> */}
+				<img className="spec-img" src={spec2} alt="spec2"/>
 				<h2 className="sub-head-text">123 "Комп'ютерна інженерія"</h2>
 				<p className="sub-main-text">Технологічна сфера: знання комп’ютерів, їх збирання, тестування та ремонту, програмування, інтернет-сервісів і мобільних технологій.</p>
 				<p className="sub-main-text">Математична сфера: проектування програмних додатків і розумних апаратних пристроїв, кібер-безпека, антивіруси, проектування цифрових систем на кристалах і комп’ютерних мереж.</p>
 				<p className="sub-main-text"> Сфера програмування для ринку праці: C ++, Java, Python, .NET, C #, VHDL, Verilog, System C.</p>
 				<p className="sub-main-text">Вміння і компетентності, якими буде володіти випускник за спеціальністю Комп’ютерна інженерія:</p>
 				<p className="sub-main-text">
-					1. Розробка і обслуговування систем і мереж під управлінням Windows, Unix, Linux; <br/>
-					2. Створення бездротових засобів комунікації, розробка програмних продуктів за допомогою мовних засобів високого і низького рівнів C ++, С #, Java, Python, Assembler і мікромініатюрних цифрових систем на кристалах; <br/>
-					3. Розробка користувальницьких і системних інтерфейсів, апаратних і програмних компіляторів, інтелектуальних систем програмування та проектування баз знань; <br/>
-					4. Аналітика великих даних; <br/>
-					5. Проектування хмарних сервісів і мобільних додатків, розумних пристроїв, інтегрованих з Інтернет мережами. <br/>
+					1. Розробка і обслуговування систем і мереж під управлінням Windows, Unix, Linux; <br />
+					2. Створення бездротових засобів комунікації, розробка програмних продуктів за допомогою мовних засобів високого і низького рівнів C ++, С #, Java, Python, Assembler і мікромініатюрних цифрових систем на кристалах; <br />
+					3. Розробка користувальницьких і системних інтерфейсів, апаратних і програмних компіляторів, інтелектуальних систем програмування та проектування баз знань; <br />
+					4. Аналітика великих даних; <br />
+					5. Проектування хмарних сервісів і мобільних додатків, розумних пристроїв, інтегрованих з Інтернет мережами. <br />
 
 				</p>
 			</div>

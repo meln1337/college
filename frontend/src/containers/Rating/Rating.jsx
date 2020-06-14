@@ -7,7 +7,7 @@ export default () => (
 	<div className="rating">
 		<div className="container">
 			<h1 className="head-text">Cтипендіальний рейтинг</h1>
-			<Link className="pdf" to="/" target="_blank"><img src={pdf} alt="pdf"/>Положення про <br/>стипендіальне забезпечення ХПКК</Link>
+			<Link className="pdf" to="\w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank"><img src={pdf} alt="pdf"/>Положення про <br/>стипендіальне забезпечення ХПКК</Link>
 			<h2 className="sub-head-text">121 "Інженерія програмного забезпечення"</h2>
 			<p className="last-update">Останне оновлення 20.20.2020</p>
 			<div className="padd-block rating__padd-block">

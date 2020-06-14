@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './Header.css';
 import { setLanguage } from '../../redux/actions/language.actions';
-import lock from '../../public/icons8-lock.svg';
 import search from '../../public/icons8-search.svg'
 import arrow from '../../public/arrow-point-to-right.svg'
 
@@ -69,7 +68,6 @@ const Header = ({ data, setLanguage, from }) => {
                                             <span className="language" onClick={() => setLanguage('UA')}>UA</span>
                                             <span className="language-active" onClick={() => setLanguage('EN')}>EN</span>
                                         </Fragment>}
-                                    <img src={lock} alt="lock" className="lock" />
                                     <img src={search} alt="search" className="search" onClick={() => setSearching(true)} />
                                 </Fragment>
                                 :
@@ -116,7 +114,6 @@ const Header = ({ data, setLanguage, from }) => {
                                     <span className="language" onClick={() => setLanguage('UA')}>UA</span>
                                     <span className="language-active" onClick={() => setLanguage('EN')}>EN</span>
                                 </Fragment>}
-                            <img src={lock} alt="lock" className="lock" />
                         </div>
                     </div>
                         : <div className="back-to-menu" onClick={() => setFirstLayer(true)}><img src={arrow} alt="back" />Меню</div>

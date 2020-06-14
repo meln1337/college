@@ -50,6 +50,11 @@
     cursor: pointer;
 }
 
+.submenu a:hover {
+    color: #DE3333;
+    transition: .4s;
+}
+
 .more span,
 .more span::before,
 .more span::after {

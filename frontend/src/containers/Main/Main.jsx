@@ -16,7 +16,7 @@ export default () => (
 						<h1 className="head-text red">Десятки тисяч фахівців.</h1>
 					</div>
 					<div className="to-open-day">
-						<p className="to-abiturients">#Абітурієнтам_ХКФК</p>
+						<p className="to-abiturients">#Абітурієнтам_ХПКК</p>
 						<h4 className="open-day-text">День відкритих дверей</h4>
 						<p className="at-time">23 лютого о 17:00</p>
 						<div className="button">
@@ -34,7 +34,7 @@ export default () => (
 		<div className="container">
 			<h1 className="education-partners head-text">Освітні партнери</h1>
 			<PartnersBlock type={1} />
-			<h1 className="head-text">Комерційні партнери</h1>
+			<h1 className="head-text">Наші партнери</h1>
             <PartnersBlock type={2} />
 		</div>
 	</main>

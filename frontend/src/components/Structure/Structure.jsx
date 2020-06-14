@@ -27,9 +27,7 @@ const kor = './LRM_EXPORT_199997970777411_20190604_211803111.jpeg'
 const sal = './LRM_EXPORT_200001587526485_20190604_211806728.jpeg'
 const pod = './Poddyakonova.jpg'
 const gam = './Gamaliy.jpg'
-const adminPhoto1 = './admin-photo1.png'
-const adminPhoto2 = './admin-photo2.png'
-const adminPhoto3 = './admin-photo3.png'
+const tes = '2020-06-11 23.15.30.jpg'
 
 export default () => {
     return (
@@ -55,9 +53,9 @@ export default () => {
                             <p className="sub-text">заступник директора з чогось</p>
                         </div>
                         <div className="admin-icon admin-icon3">
-                            <img src={adminPhoto3} alt="adminPhoto3" />
-                            <p className="sub-main-text">Ім'я Прізвище По-батькові</p>
-                            <p className="sub-text">заступник директора з чогось</p>
+                            <img src={gam} alt="teachers-icon" />
+                            <p className="sub-main-text">Гамалєй Володимир Васильович</p>
+                            <p className="sub-text">заступник директора з адміністративно-господарської роботи</p>
                         </div>
                     </div>
                 </div>
@@ -162,11 +160,6 @@ export default () => {
                             <p className="sub-text">викладач мікропроцесорних систем</p>
                         </div>
                         <div className="teachers-icon">
-                            <img src={gam} alt="teachers-icon" />
-                            <p className="sub-main-text">Гамалєй Володимир Васильович</p>
-                            <p className="sub-text">заступник директора з адміністративно-господарської роботи</p>
-                        </div>
-                        <div className="teachers-icon">
                             <img src={gry} alt="teachers-icon" />
                             <p className="sub-main-text">Грищенко Олександр Іванович</p>
                             <p className="sub-text">фізичне виховання</p>
@@ -195,6 +188,16 @@ export default () => {
                             <img src={pod} alt="teachers-icon" />
                             <p className="sub-main-text">Поддяконова Валентина Григоріївна</p>
                             <p className="sub-text">викладач хімії</p>
+                        </div>
+                        <div className="teachers-icon">
+                            <img src={tes} alt="teachers-icon" />
+                            <p className="sub-main-text">Тресницький Владислав Олександрович</p>
+                            <p className="sub-text">викладач інструментів зовнішньо- візуального програмування</p>
+                        </div>
+                        <div className="teachers-icon">
+                            <img src={net} alt="teachers-icon" />
+                            <p className="sub-main-text">Прізвище ім'я по-батькові </p>
+                            <p className="sub-text">викладач з чогось</p>
                         </div>
                     </div>
                     <div className="mobile-teachers-block">

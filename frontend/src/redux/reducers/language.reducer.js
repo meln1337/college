@@ -2,6 +2,11 @@ import photo1 from '../../public/Avatar1.png'
 import r36 from '../../public/Rectangle36.png'
 import bitmap from '../../public/Bitmap.png'
 
+const face1 = './face1.png'
+const face2 = './face2.png'
+const face3 = './face3.png'
+const face4 = './face4.png'
+
 const initialState = {
     from: "UA",
     UA: {
@@ -136,19 +141,19 @@ const initialState = {
         },
         responsePage: [{
                 text: 'Закінчив в 2012 році за спеціальністю "Обслуговування комп\'ютерних систем і мереж". Вступив в ХАІ на "інженер програмного забезпечення" і з тих пір працюю по "інститутській" спеціальності. Що можу сказати з власного досвіду: ті, хто не хоче вчитися - не навчаться ніде. Ті, хто хочуть вчитися - тих навчать. Тут не вистачить місця, щоб повністю висловитися, але навіть зараз я по роботі періодично торкаюся того матеріалу, якому навчали в коледжі і дуже шкодую, що не приділяв навчанню більше часу',
-                img: photo1
+                img: face2
             },
             {
                 text: 'Коледж кращає. Благо, люди, які приходять сюди, намагаються донести студентам істини новіше, ніж ті, які студенти вивчали ще року 3 назад. Навчатися тут нескладно, головне - прагнення до цього. Більшість викладачів хороші фахівці і чудові люди. Коледж дав мені необхідний мінімум. Хороші викладачі, якщо щось не зрозумів пояснять на перерві або після пар. Пояснюють добре. Багато комп\'ютерів, не як в інших коледжах сидять по 3 людини.',
-                img: photo1
+                img: face1
             },
             {
                 text: 'Люблю свій рідний ХПКК!  Мені тут подобається абсолютно все, хороша атмосфера, професіні викладачі і зручне місце розташування! Я дуже рада що обрала саме Харківський патентно- комп’ютерний коледж серед всіх інших коледжів Харкова.',
-                img: photo1
+                img: face4
             },
             {
                 text: 'ХПКК мені подобається. Випустилась рік тому. Головне влитися в навчальний процес. Тоді все буде: знання, успішність, упевненість в майбутньому. Пари проходять цікаво, професійні викладачі, цікаво спілкуватися з такими людьми. Взагалі все в колледжі классно !!! Якість навчання на гідному рівні, ХПКК рекомендую. Взагалі, все залежить тільки від вас самих: ніхто за вас не буде вивчати матеріал, складати іспити. Всім удачі!',
-                img: photo1
+                img: face3
             },
         ],
         structureModalPage: {
@@ -648,22 +653,22 @@ const initialState = {
             headerText: 'Kharkiv Patent and Computer College'
         },
         responsePage: [{
-                text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum alias quos voluptates at adipisci accusantium vel, eaque blanditiis fuga facilis quidem eligendi natus consequuntur quo. Maxime, reiciendis. Dolore nulla quibusdam nemo soluta earum quia est, consequuntur repellat quidem fugit fugiat nesciunt, dicta officia, laboriosam iure autem totam. Quaerat natus animi veniam. Totam tenetur quod minima repellat, assumenda veniam perspiciatis nemo accusantium officia architecto ipsum, praesentium, dolor numquam et laboriosam. Soluta suscipit deleniti debitis at natus, dolore quidem exercitationem nihil aliquam sint magni ratione illo explicabo ipsa nemo quod laboriosam placeat ad ullam totam culpa quia veritatis pariatur. Aliquam, rerum animi!',
-                img: photo1
-            },
-            {
-                text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum alias quos voluptates at adipisci accusantium vel, eaque blanditiis fuga facilis quidem eligendi natus consequuntur quo. Maxime, reiciendis. Dolore nulla quibusdam nemo soluta earum quia est, consequuntur repellat quidem fugit fugiat nesciunt, dicta officia, laboriosam iure autem totam. Quaerat natus animi veniam. Totam tenetur quod minima repellat, assumenda veniam perspiciatis nemo accusantium officia architecto ipsum, praesentium, dolor numquam et laboriosam. Soluta suscipit deleniti debitis at natus, dolore quidem exercitationem nihil aliquam sint magni ratione illo explicabo ipsa nemo quod laboriosam placeat ad ullam totam culpa quia veritatis pariatur. Aliquam, rerum animi!',
-                img: photo1
-            },
-            {
-                text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum alias quos voluptates at adipisci accusantium vel, eaque blanditiis fuga facilis quidem eligendi natus consequuntur quo. Maxime, reiciendis. Dolore nulla quibusdam nemo soluta earum quia est, consequuntur repellat quidem fugit fugiat nesciunt, dicta officia, laboriosam iure autem totam. Quaerat natus animi veniam. Totam tenetur quod minima repellat, assumenda veniam perspiciatis nemo accusantium officia architecto ipsum, praesentium, dolor numquam et laboriosam. Soluta suscipit deleniti debitis at natus, dolore quidem exercitationem nihil aliquam sint magni ratione illo explicabo ipsa nemo quod laboriosam placeat ad ullam totam culpa quia veritatis pariatur. Aliquam, rerum animi!',
-                img: photo1
-            },
-            {
-                text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum alias quos voluptates at adipisci accusantium vel, eaque blanditiis fuga facilis quidem eligendi natus consequuntur quo. Maxime, reiciendis. Dolore nulla quibusdam nemo soluta earum quia est, consequuntur repellat quidem fugit fugiat nesciunt, dicta officia, laboriosam iure autem totam. Quaerat natus animi veniam. Totam tenetur quod minima repellat, assumenda veniam perspiciatis nemo accusantium officia architecto ipsum, praesentium, dolor numquam et laboriosam. Soluta suscipit deleniti debitis at natus, dolore quidem exercitationem nihil aliquam sint magni ratione illo explicabo ipsa nemo quod laboriosam placeat ad ullam totam culpa quia veritatis pariatur. Aliquam, rerum animi!',
-                img: photo1
-            },
-        ],
+            text: 'Закінчив в 2012 році за спеціальністю "Обслуговування комп\'ютерних систем і мереж". Вступив в ХАІ на "інженер програмного забезпечення" і з тих пір працюю по "інститутській" спеціальності. Що можу сказати з власного досвіду: ті, хто не хоче вчитися - не навчаться ніде. Ті, хто хочуть вчитися - тих навчать. Тут не вистачить місця, щоб повністю висловитися, але навіть зараз я по роботі періодично торкаюся того матеріалу, якому навчали в коледжі і дуже шкодую, що не приділяв навчанню більше часу',
+            img: face2
+        },
+        {
+            text: 'Коледж кращає. Благо, люди, які приходять сюди, намагаються донести студентам істини новіше, ніж ті, які студенти вивчали ще року 3 назад. Навчатися тут нескладно, головне - прагнення до цього. Більшість викладачів хороші фахівці і чудові люди. Коледж дав мені необхідний мінімум. Хороші викладачі, якщо щось не зрозумів пояснять на перерві або після пар. Пояснюють добре. Багато комп\'ютерів, не як в інших коледжах сидять по 3 людини.',
+            img: face1
+        },
+        {
+            text: 'Люблю свій рідний ХПКК!  Мені тут подобається абсолютно все, хороша атмосфера, професіні викладачі і зручне місце розташування! Я дуже рада що обрала саме Харківський патентно- комп’ютерний коледж серед всіх інших коледжів Харкова.',
+            img: face4
+        },
+        {
+            text: 'ХПКК мені подобається. Випустилась рік тому. Головне влитися в навчальний процес. Тоді все буде: знання, успішність, упевненість в майбутньому. Пари проходять цікаво, професійні викладачі, цікаво спілкуватися з такими людьми. Взагалі все в колледжі классно !!! Якість навчання на гідному рівні, ХПКК рекомендую. Взагалі, все залежить тільки від вас самих: ніхто за вас не буде вивчати матеріал, складати іспити. Всім удачі!',
+            img: face3
+        },
+    ],
         footerPage: {
             contactsText: "Contacts",
             telephoneNumber: "+380 50 700 48 15",

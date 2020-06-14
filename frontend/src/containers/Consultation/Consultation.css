@@ -30,7 +30,7 @@
     text-align: center;
 }
 
-.padd-icon .front, .padd-icon .back {
+.padd-icon , .padd-icon  {
     width: 215px;
     height: 318px;
     padding: 15px;
