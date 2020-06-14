@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import './FinancialReport.css';
 
-const FinancialReport = ({ data, addLink }) => {
+const FinancialReport = ({ data, addLink, admin }) => {
     const [form, setForm] = useState({
         financial_text: '',
-        financial_link: '' 
+        financial_link: ''
     });
 
     const onChange = e => setForm({ ...form, [e.target.id]: e.target.value });
@@ -29,18 +29,20 @@ const FinancialReport = ({ data, addLink }) => {
                         <a key={i} className="link-to-document" href={el.link}>{el.text}</a>
                     ))}
                 </div>
-                <p className="sub-head-text">Добавити посилання</p>
-                <div className="financial-report__add-link">
-                    <div className="financial-report__add-link__text">
-                        <span>Text</span>
-                        <input id="financial_text" placeholder="text" type="text" onChange={onChange} />
+                {admin && <Fragment>
+                    <p className="sub-head-text">Добавити посилання</p>
+                    <div className="financial-report__add-link">
+                        <div className="financial-report__add-link__text">
+                            <span>Text</span>
+                            <input id="financial_text" placeholder="text" type="text" onChange={onChange} />
+                        </div>
+                        <div className="financial-report__add-link__link">
+                            <span>Link</span>
+                            <input id="financial_link" placeholder="link" type="text" onChange={onChange} />
+                        </div>
+                        <button onClick={AddLink} className="financial-report__add-link__submit">Добавити</button>
                     </div>
-                    <div className="financial-report__add-link__link">
-                        <span>Link</span>
-                        <input id="financial_link" placeholder="link" type="text" onChange={onChange} />
-                    </div> 
-                    <button onClick={AddLink} className="financial-report__add-link__submit">Добавити</button>
-                </div>
+                </Fragment>}
             </div>
         </div>
     )

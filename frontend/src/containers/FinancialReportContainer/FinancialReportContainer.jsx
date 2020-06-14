@@ -12,12 +12,13 @@ class FinancialReportContainer extends React.Component {
     }
 
     render() {
-        return this.props.data.length !== 0 ? <FinancialReport addLink={this.props.addFinancialLinks} data={this.props.data} /> : <div className="container">Loading...</div> 
+        return this.props.data.length !== 0 ? <FinancialReport admin={this.props.admin} addLink={this.props.addFinancialLinks} data={this.props.data} /> : <div className="container">Loading...</div> 
     }
 }
 
-const mapStateToProps = ({ financialReportReducer }) => ({
-    data: financialReportReducer.links
+const mapStateToProps = state => ({
+    data: state.financialReportReducer.links,
+    admin: state.authReducer.user.admin
 });
 
 const mapDispatchToProps = {
