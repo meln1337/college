@@ -13,18 +13,18 @@ export default ({ type }) => (
     <div className="partners-block padd-block">
         {type === 1 &&
             <Fragment>
-                <img src={kpi} alt="img" />
-                <img src={kire} alt="img" />
-                <img src={kai} alt="img" />
-                <img src={knure} alt="img" />
+                <img className="kpi" src={kpi} alt="img" />
+                <img className="kire" src={kire} alt="img" />
+                <img className="kai" src={kai} alt="img" />
+                <img className="knure" src={knure} alt="img" />
             </Fragment>
         }
         {type === 2 &&
             <Fragment>
-                <img src={epam} alt="img" />
-                <img src={gs} alt="img" />
-                <img src={nix} alt="img" />
-                <img src={sim} alt="img" />
+                <img className="epam" src={epam} alt="img" />
+                <img className="gs" src={gs} alt="img" />
+                <img className="nix" src={nix} alt="img" />
+                <img className="sim" src={sim} alt="img" />
             </Fragment>
         }
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Post.css';
 
-const cutString = s => s.length > 100 ? `${s.substring(0, 97)}...` : s;
+const cutString = s => s.length > 150 ? `${s.substring(0, 147)}...` : s;
 
 export default ({ post }) => (
     <div className="post" style={{ backgroundImage: `url(${post.img})` }}>

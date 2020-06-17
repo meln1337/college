@@ -5,7 +5,7 @@ export default () => (
 	<div className="open-day">
 		<div className="container">
 			<div className="open-day-red-padd-block red-padd-block">
-				<h2 className="open-day-head-text head-text">День відкритих дверей</h2>
+				<h2 className="open-day-head-text head-text tac">День відкритих дверей</h2>
 			</div>
 			<h2 className="open-day-sub-head-text sub-head-text">Запрошуємо</h2>
 			<p className="open-day-sub-main-text sub-main-text">День відкритих дверей — це традиційний захід, у рамках якого вступники мають змогу отримати необхідну інформацію про навчання в коледжі  та зробити перший крок до своєї освіти в Харківському патентно- комп’ютерний коледжі.</p>

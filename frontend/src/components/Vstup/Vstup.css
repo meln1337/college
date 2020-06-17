@@ -80,7 +80,7 @@
     font-weight: 600;
 }
 
-.icon-desc a {
+.icon-desc a, .add-info a.vstup-link {
     text-decoration: none;
     color: #DE3737;
 }

@@ -43,15 +43,7 @@ const initialState = {
                     {
                         label: 'Працевлаштування',
                         link: '/work'
-                    },
-                    {
-                        label: 'Увійти',
-                        link: '/login'
-                    },
-                    {
-                        label: 'Зареєструватися',
-                        link: '/register'
-                    },
+                    }
                 ],
                 "Студентам": [{
                         link: "/rating",
@@ -590,14 +582,6 @@ const initialState = {
                     {
                         label: 'Employment',
                         link: '/work'
-                    },
-                    {
-                        label: 'Sign in',
-                        link: '/login'
-                    },
-                    {
-                        label: 'Sign up',
-                        link: '/register'
                     },
                 ],
                 "To students": [{
