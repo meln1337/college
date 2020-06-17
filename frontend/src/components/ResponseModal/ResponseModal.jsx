@@ -1,16 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import { parse } from 'qs'
 import './ResponseModal.css'
 import tail from '../../public/Tail.svg'
-
+const back = './back.svg';
 
 const ResponseModal = ({ data }) => {
     return (
         <div className="modal">
             <div className="container">
                 <div className="response-padd-block padd-block">
+                    <Link className="back-to-news" to="/about"><img src={back} alt="back"/></Link>
                     <p className="main-text">Відгук випускника</p>
                     <div className="response-block">
                         <p className="response-text">{data.text}</p>

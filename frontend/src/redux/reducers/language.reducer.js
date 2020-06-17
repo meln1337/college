@@ -6,6 +6,10 @@ const face1 = './face1.png'
 const face2 = './face2.png'
 const face3 = './face3.png'
 const face4 = './face4.png'
+const ach1 = './sunny-1.png'
+const ach2 = './sunny-2.png'
+const ach3 = './sunny-3.png'
+const ach4 = './sunny-4.png'
 
 const initialState = {
     from: "UA",
@@ -546,6 +550,49 @@ const initialState = {
                 text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus officia a aperiam reiciendis provident enim. Tenetur rerum reprehenderit deserunt dolorem earum vitae? Ipsum quaerat corrupti voluptates reiciendis corporis cupiditate molestias consectetur quod porro iste architecto, culpa, tempora laborum. In dolorem asperiores excepturi ipsam culpa minus iusto porro accusamus illum voluptates suscipit vitae inventore error facilis, dignissimos corrupti unde! Nesciunt ipsam sapiente aperiam laudantium? Magni corrupti nisi quia natus temporibus in exercitationem veritatis reprehenderit esse? Modi ad repudiandae molestias asperiores non odit incidunt! Error aut, odio officia dignissimos obcaecati, ipsa nam vitae atque qui maiores nostrum ipsam soluta rerum illum.',
                 year: 2015
             }
+        },
+        achievementsPage: {
+            "2017": {
+                head: "Участь у Міжнародній олімпіаді з програмування Кубок Вєкуа",
+                text: [
+                    '<p class="sub-main-text">28-29 жовтня 2017 року студенти коледжу приймали участь у Міжнародній олімпіаді з програмування «Кубок «Вєкуа»».</p>',
+                    '<p class="sub-main-text">Олімпіада проводилася в 2 тури: індивідуальний та командний. В олімпіаді приймали участь студенти Вищих навчальних закладів Грузії, України, Білорусі, Азербайджану, Росії. Харківським студентам базову площадку для участі в олімпіаді надав ХНУРЕ.</p>',
+                    '<p class="sub-main-text">Студенти патентно-комп’ютерного коледжу приймали участь в обох турах та показали чудові результати.</p>',
+                    '<p class="sub-main-text">В індивідуальному турі студенти Дмитро Дородних (гр.П-41), Костянтин Кравчик (гр.П-41), В’ячеслав Коцюба (гр.П-52), Константинов Владислав (гр.П-52), Марина Кудрявцева (гр.П-42) увійшли до сотні кращих.</p>',
+                    '<p class="sub-main-text">В командному турі від коледжу приймали участь 4 команди: DeusVult (Кравчик Костянтин, Дородних Дмитро та Радченко Владислава), GoldSun (Коцюба В’ячеслав, Константинов Владислав та Мусієнко Олексій), HPPTeam (Мамедов Тимур, Кудрявцева Марина, Кіяшкін Максим), CyberCloud (Хамідов Далер , Подопригора Данило).</p>',
+                    '<p class="sub-main-text">Наші команди DeusVult та GoldSun випередили команди НТУ «ХПІ» та ХНЕУ та всього на дві позиції відстали від команди ХНУРЕ «ZeroDay».</p>',
+                    '<p class="sub-main-text">Вітаємо наших учасників!</p>'
+                ]
+            },
+            "2018": {
+                head: "ХПКК: перше місце у обласному англомовному брейн-ринзі з комп’ютерних наук",
+                text: [
+                    "<p class=\"sub-main-text\">1 лютого 2018 р.</p>",
+                    "<p class=\"sub-main-text\">Команда Харківського патентно – комп’ютерного коледжу ” Sunny Side” посіла I місце у обласному англомовному брейн-ринзі з комп’ютерних наук. Захід проходив на базі ХРТТ,    у грі приймали участь 10-ть команд від ВНЗ І-ІІ рівнів акредитації.  </p>",
+                    "<p class=\"sub-main-text\">Вільне володіння англійською, професійні знання, командна згуртованість, позитивний настрій та віра у власні сили привели до перемоги нашу команду.   </p>",
+                    '<p class="sub-main-text">Члени команди</p>',
+                    '<p class="sub-main-text">Книш Олексій (П71) капітан команди  </p>',
+                    '<p class="sub-main-text">Євтушенко Сергій (П62) </p>',
+                    '<p class="sub-main-text">Півень Назар (П71) </p>',
+                    '<p class="sub-main-text">Григоров Єгор (П71) </p>',
+                    '<p class="sub-main-text">Касумов Богдан (П62) </p>',
+                    '<p class="sub-main-text">Анахін Георгій (П62) </p>',
+                    '<p class="sub-main-text">У четвертому раунді команда “Sunny Side” виборола право змагатися у фіналі гри. </p>',
+                    `<img src=${ach1} alt="ach1" />`,
+                    '<p class="sub-main-text">Фінальна гра. Напруження та зосередженість. </p>',
+                    `<img src=${ach2} alt="ach2" />`,
+                    '<p class="sub-main-text">Нагородження команди. Грамота та солодкі подарунки. </p>',
+                    `<img src=${ach3} alt="ach3" />`,
+                    '<p class="sub-main-text">Фінальне фото на згадку про приємні та радісні емоції. </p>',
+                    `<img src=${ach4} alt="ach4" />`,
+                ]
+            },
+            "2019": {
+                head: "Літературно-мовний конкурс імені Тараса Шевченка",
+                text: [
+                    '<p class="sub-main-text">На базі Харківського патентно-комп’ютерного коледжу пройшов обласний етап X-го міжнародного літературно-мовного конкурсу імені Тараса Шевченка.</p>'
+                ]
+            }
         }
     },
     EN: {
@@ -1047,6 +1094,49 @@ const initialState = {
                 text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus officia a aperiam reiciendis provident enim. Tenetur rerum reprehenderit deserunt dolorem earum vitae? Ipsum quaerat corrupti voluptates reiciendis corporis cupiditate molestias consectetur quod porro iste architecto, culpa, tempora laborum. In dolorem asperiores excepturi ipsam culpa minus iusto porro accusamus illum voluptates suscipit vitae inventore error facilis, dignissimos corrupti unde! Nesciunt ipsam sapiente aperiam laudantium? Magni corrupti nisi quia natus temporibus in exercitationem veritatis reprehenderit esse? Modi ad repudiandae molestias asperiores non odit incidunt! Error aut, odio officia dignissimos obcaecati, ipsa nam vitae atque qui maiores nostrum ipsam soluta rerum illum.',
                 year: 2015
             }
+        }
+    },
+    achievementsPage: {
+        "2017": {
+            head: "Участь у Міжнародній олімпіаді з програмування Кубок Вєкуа",
+            text: [
+                '<p class="sub-main-text">28-29 жовтня 2017 року студенти коледжу приймали участь у Міжнародній олімпіаді з програмування «Кубок «Вєкуа»».</p>',
+                '<p class="sub-main-text">Олімпіада проводилася в 2 тури: індивідуальний та командний. В олімпіаді приймали участь студенти Вищих навчальних закладів Грузії, України, Білорусі, Азербайджану, Росії. Харківським студентам базову площадку для участі в олімпіаді надав ХНУРЕ.</p>',
+                '<p class="sub-main-text">Студенти патентно-комп’ютерного коледжу приймали участь в обох турах та показали чудові результати.</p>',
+                '<p class="sub-main-text">В індивідуальному турі студенти Дмитро Дородних (гр.П-41), Костянтин Кравчик (гр.П-41), В’ячеслав Коцюба (гр.П-52), Константинов Владислав (гр.П-52), Марина Кудрявцева (гр.П-42) увійшли до сотні кращих.</p>',
+                '<p class="sub-main-text">В командному турі від коледжу приймали участь 4 команди: DeusVult (Кравчик Костянтин, Дородних Дмитро та Радченко Владислава), GoldSun (Коцюба В’ячеслав, Константинов Владислав та Мусієнко Олексій), HPPTeam (Мамедов Тимур, Кудрявцева Марина, Кіяшкін Максим), CyberCloud (Хамідов Далер , Подопригора Данило).</p>',
+                '<p class="sub-main-text">Наші команди DeusVult та GoldSun випередили команди НТУ «ХПІ» та ХНЕУ та всього на дві позиції відстали від команди ХНУРЕ «ZeroDay».</p>',
+                '<p class="sub-main-text">Вітаємо наших учасників!</p>'
+            ]
+        },
+        "2018": {
+            head: "ХПКК: перше місце у обласному англомовному брейн-ринзі з комп’ютерних наук",
+            text: [
+                "<p class=\"sub-main-text\">1 лютого 2018 р.</p>",
+                "<p class=\"sub-main-text\">Команда Харківського патентно – комп’ютерного коледжу ” Sunny Side” посіла I місце у обласному англомовному брейн-ринзі з комп’ютерних наук. Захід проходив на базі ХРТТ,    у грі приймали участь 10-ть команд від ВНЗ І-ІІ рівнів акредитації.  </p>",
+                "<p class=\"sub-main-text\">Вільне володіння англійською, професійні знання, командна згуртованість, позитивний настрій та віра у власні сили привели до перемоги нашу команду.   </p>",
+                '<p class="sub-main-text">Члени команди</p>',
+                '<p class="sub-main-text">Книш Олексій (П71) капітан команди  </p>',
+                '<p class="sub-main-text">Євтушенко Сергій (П62) </p>',
+                '<p class="sub-main-text">Півень Назар (П71) </p>',
+                '<p class="sub-main-text">Григоров Єгор (П71) </p>',
+                '<p class="sub-main-text">Касумов Богдан (П62) </p>',
+                '<p class="sub-main-text">Анахін Георгій (П62) </p>',
+                '<p class="sub-main-text">У четвертому раунді команда “Sunny Side” виборола право змагатися у фіналі гри. </p>',
+                `<img src=${ach1} alt="ach1" />`,
+                '<p class="sub-main-text">Фінальна гра. Напруження та зосередженість. </p>',
+                `<img src=${ach2} alt="ach2" />`,
+                '<p class="sub-main-text">Нагородження команди. Грамота та солодкі подарунки. </p>',
+                `<img src=${ach3} alt="ach3" />`,
+                '<p class="sub-main-text">Фінальне фото на згадку про приємні та радісні емоції. </p>',
+                `<img src=${ach4} alt="ach4" />`,
+            ]
+        },
+        "2019": {
+            head: "Літературно-мовний конкурс імені Тараса Шевченка",
+            text: [
+                '<p class="sub-main-text">На базі Харківського патентно-комп’ютерного коледжу пройшов обласний етап X-го міжнародного літературно-мовного конкурсу імені Тараса Шевченка.</p>'
+            ]
         }
     }
 }

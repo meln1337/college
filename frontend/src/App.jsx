@@ -42,6 +42,7 @@ import ConsultationContainer from './containers/ConsultationContainer/Consultati
 import { connect } from 'react-redux';
 import { isAuth } from './redux/actions/auth.actions';
 import { useEffect } from 'react';
+import AchievmentsPage from './components/AchievmentsPage/AchievmentsPage';
 
 const App = ({ isAuth }) => {
 	useEffect(() => {
@@ -206,6 +207,9 @@ const App = ({ isAuth }) => {
 			</Route>
 			<Route path="/profilaction">
 				<Profilcation />
+			</Route>
+			<Route path="/achievementsModal">
+				<AchievmentsPage />
 			</Route>
 			<Redirect to="/404" />
 		</Switch>

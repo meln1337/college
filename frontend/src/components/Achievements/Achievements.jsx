@@ -3,20 +3,6 @@ import './Achievements.css'
 import { Link } from 'react-router-dom'
 
 class achievements extends React.Component {
-    state = {
-        data: [
-            {
-                year: "2020",
-                link: ""
-            }, {
-                year: "2020",
-                link: ""
-            }, {
-                year: "2020",
-                link: ""
-            },
-        ]
-    }
     render() {
         return (
             <div className="achievments">
@@ -27,23 +13,15 @@ class achievements extends React.Component {
                     <p className="main-text">Останні досягнення</p>
                     <div className="padd-block ach-padd-block">
                         <p className="main-text">2019 рік</p>
-                        <Link className="button" to="/">Перейти</Link>
+                        <Link className="button" to="/achievementsModal?year=2019">Перейти</Link>
                     </div>
                     <div className="padd-block ach-padd-block">
                         <p className="main-text">2018 рік</p>
-                        <Link className="button" to="/">Перейти</Link>
+                        <Link className="button" to="/achievementsModal?year=2018">Перейти</Link>
                     </div>
                     <div className="padd-block ach-padd-block">
                         <p className="main-text">2017 рік</p>
-                        <Link className="button" to="/">Перейти</Link>
-                    </div>
-                    <div className="padd-block ach-padd-block">
-                        <p className="main-text">2016 рік</p>
-                        <Link className="button" to="/">Перейти</Link>
-                    </div>
-                    <div className="padd-block ach-padd-block">
-                        <p className="main-text">2015 рік</p>
-                        <Link className="button" to="/">Перейти</Link>
+                        <Link className="button" to="/achievementsModal?year=2017">Перейти</Link>
                     </div>
                 </div>
             </div>
