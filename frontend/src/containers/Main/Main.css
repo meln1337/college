@@ -131,7 +131,7 @@
 
 @media screen and (max-width: 1400px) {
     .bottom-text p {
-        max-width: 535px;
+        max-width: calc(100vw - 935px);
     }
 }
 
