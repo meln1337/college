@@ -82,7 +82,7 @@
 
 .bottom-text p {
     font-size: 24px;
-    max-width: 735px;
+    max-width: calc(100vw - 935px);
 }
 
 .icons-block {
@@ -131,7 +131,7 @@
 
 @media screen and (max-width: 1400px) {
     .bottom-text p {
-        max-width: calc(100vw - 935px);
+        max-width: 535px;
     }
 }
 
