@@ -12,18 +12,18 @@ const FinancialReport = ({ data, addLink, admin, uploadFile }) => {
         uploadFile({ file, text: form })
     }
 
-    const onChange = e => setForm({ ...form, [e.target.id]: e.target.value });
+    // const onChange = e => setForm({ ...form, [e.target.id]: e.target.value });
 
-    const AddLink = () => {
-        if (form.financial_text !== '' && form.financial_link !== '') {
-            addLink({ link: form.financial_link, text: form.financial_text });
-            form.financial_link = '';
-            form.financial_text = '';
-        }
-        else {
-            console.log('incorrect data');
-        }
-    };
+    // const AddLink = () => {
+    //     if (form.financial_text !== '' && form.financial_link !== '') {
+    //         addLink({ link: form.financial_link, text: form.financial_text });
+    //         form.financial_link = '';
+    //         form.financial_text = '';
+    //     }
+    //     else {
+    //         console.log('incorrect data');
+    //     }
+    // };
 
     return (
         <div className="financial-report">
@@ -37,7 +37,7 @@ const FinancialReport = ({ data, addLink, admin, uploadFile }) => {
                 {admin && <Fragment>
                     <p className="sub-head-text">Добавити документ</p>
                     <p>text</p>
-                    <input type="text" placeholder="text" value={form.financial_text} onChange={e => setForm(e.target)} />
+                    <input type="text" placeholder="text" value={form.financial_text} onChange={e => setForm(e.target.value)} />
                     <div className="financial-report__add-link">
                         <input type="file" onChange={e => setFile(e.target.files[0])} />
                         <button onClick={upload} className="financial-report__add-link__submit">send file</button>
