@@ -43,6 +43,7 @@ import { connect } from 'react-redux';
 import { isAuth } from './redux/actions/auth.actions';
 import { useEffect } from 'react';
 import AchievmentsPage from './components/AchievmentsPage/AchievmentsPage';
+import RightsContainer from './containers/Rights/RightsContainer';
 
 const App = ({ isAuth }) => {
 	useEffect(() => {
@@ -108,7 +109,7 @@ const App = ({ isAuth }) => {
 			</Route>
 			<Route path="/rights">
 				<Layout>
-					<Rights />
+					<RightsContainer />
 				</Layout>
 			</Route>
 			<Route path="/replacements">

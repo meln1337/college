@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { setFinancialLinksThunk, addFinancialLinksThunk } from '../../redux/actions/financialreport.actions';
 import FinancialReport from '../../components/FinancialReport/FinancialReport';
+import { uploadFileThunk } from '../../redux/actions/uploads.actions';
 
 class FinancialReportContainer extends React.Component {
     componentDidMount() {
@@ -12,7 +13,13 @@ class FinancialReportContainer extends React.Component {
     }
 
     render() {
-        return this.props.data.length !== 0 ? <FinancialReport admin={this.props.admin} addLink={this.props.addFinancialLinks} data={this.props.data} /> : <div className="container">Loading...</div> 
+        return this.props.data.length !== 0 ? 
+                                                <FinancialReport 
+                                                    uploadFile={this.props.uploadFile} 
+                                                    admin={this.props.admin} 
+                                                    addLink={this.props.addFinancialLinks} 
+                                                    data={this.props.data} 
+                                                /> : <div className="container">Loading...</div> 
     }
 }
 
@@ -23,7 +30,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
     setFinancialLinks: () => setFinancialLinksThunk(),
-    addFinancialLinks: ({ link, text }) => addFinancialLinksThunk({ link, text })
+    addFinancialLinks: ({ link, text }) => addFinancialLinksThunk({ link, text }),
+    uploadFile: ({ file, text }) => uploadFileThunk({ file, text })
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(FinancialReportContainer);

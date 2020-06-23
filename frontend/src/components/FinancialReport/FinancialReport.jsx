@@ -1,11 +1,16 @@
 import React, { useState, Fragment } from 'react';
 import './FinancialReport.css';
 
-const FinancialReport = ({ data, addLink, admin }) => {
-    const [form, setForm] = useState({
-        financial_text: '',
-        financial_link: ''
-    });
+const FinancialReport = ({ data, addLink, admin, uploadFile }) => {
+    debugger
+    const [form, setForm] = useState('');
+
+    const [file, setFile] = useState({})
+
+    const upload = () => {
+        console.log(file)
+        uploadFile({ file, text: form })
+    }
 
     const onChange = e => setForm({ ...form, [e.target.id]: e.target.value });
 
@@ -26,21 +31,16 @@ const FinancialReport = ({ data, addLink, admin }) => {
                 <h1 className="head-text">Фінансова звітність</h1>
                 <div className="financial-report-list">
                     {data.map((el, i) => (
-                        <a key={i} className="link-to-document" href={el.link}>{el.text}</a>
+                        <a key={i} className="link-to-document" href={`/api/uploads/${el.link}`}>{el.text}</a>
                     ))}
                 </div>
                 {admin && <Fragment>
-                    <p className="sub-head-text">Добавити посилання</p>
+                    <p className="sub-head-text">Добавити документ</p>
+                    <p>text</p>
+                    <input type="text" placeholder="text" value={form.financial_text} onChange={e => setForm(e.target)} />
                     <div className="financial-report__add-link">
-                        <div className="financial-report__add-link__text">
-                            <span>Text</span>
-                            <input id="financial_text" placeholder="text" type="text" onChange={onChange} />
-                        </div>
-                        <div className="financial-report__add-link__link">
-                            <span>Link</span>
-                            <input id="financial_link" placeholder="link" type="text" onChange={onChange} />
-                        </div>
-                        <button onClick={AddLink} className="financial-report__add-link__submit">Добавити</button>
+                        <input type="file" onChange={e => setFile(e.target.files[0])} />
+                        <button onClick={upload} className="financial-report__add-link__submit">send file</button>
                     </div>
                 </Fragment>}
             </div>

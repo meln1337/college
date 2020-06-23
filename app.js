@@ -34,7 +34,9 @@ app.use('/api', require('./routes/post.routes'));
 app.use('/auth', require('./routes/user.routes'));
 app.use('/api', require('./routes/schedule.routes'));
 app.use('/api', require('./routes/zaminy.routes'));
-app.use('/api', require('./routes/cons.routes'))
+app.use('/api', require('./routes/cons.routes'));
+app.use('/api', require('./routes/upload.routes'));
+app.use('/api', require('./routes/right.routes'));
 
 if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static('frontend/build'))

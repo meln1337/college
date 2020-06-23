@@ -7,6 +7,7 @@ import scheduleReducer from './reducers/schedule.reducer';
 import zaminyReducer from './reducers/zaminy.reducer';
 import authReducer from './reducers/auth.reducer';
 import consultationReducer from './reducers/consultation.reducer';
+import rightReducer from './reducers/rights.reducer';
 
 const rootReducer = combineReducers({
     languageReducer,
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
     scheduleReducer,
     zaminyReducer,
     authReducer,
-    consultationReducer
+    consultationReducer,
+    rightReducer
 })
 
 const composeEnhancers =
