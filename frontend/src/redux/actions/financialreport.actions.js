@@ -13,3 +13,8 @@ export const addFinancialLinksThunk = ({ text, link }) => async dispatch => {
     });
     dispatch(setFinancialLinksThunk());
 };
+
+export const deleteFinancialLinksThunk = ({ id }) => async dispatch => {
+    await axios.delete(`/api/financial-links/${id}`);
+    dispatch(setFinancialLinksThunk());
+};

@@ -11,3 +11,8 @@ export const addRight = right => async dispatch => {
     const response = await axios.post('/api/rights', right)
     dispatch(setRights())
 }
+
+export const deleteRightThunk = ({ id }) => async dispatch => {
+    await axios.delete(`/api/rights/${id}`);
+    dispatch(setRights());
+};

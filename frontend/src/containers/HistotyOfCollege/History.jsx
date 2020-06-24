@@ -6,17 +6,28 @@ import rightArrow from '../../public/arrow-point-to-left-red.svg'
 import activeOval from '../../public/fill-oval.svg'
 import oval from '../../public/oval.svg'
 import arrow from '../../public/arrow-to-right.svg'
+import { connect } from 'react-redux'
 
 class History extends Component {
     state = {
-        historyLine: [
-            'Заснування Раднаркомом України технологічного технікуму для підготовки фахівців на рівні середньотехнічної освіти у місті Києві.',
-            'Технікум переведено з Києва до Харкова. Спочатку технікум був підпорядкований Укрпромраді, а потім управлінню кадрами Харківської ради народного господарства.',
-            'Технікум перепрофільовано на підготовку фахівців для електротехнічної галузі. З цього часу навчальний заклад одержав назву Харківського електротехнічного технікуму і підпорядкований Міністерству електротехнічної промисловості СРСР.',
-            'технікум починає підготовлювати фахівців за заочною формою навчання',
-            'технікум стає Харківським патентно-комп’ютерним коледжем. З 1991 року і до цього часу Харківський патентно-комп’ютерний коледж підпорядковано Міністерству освіти і науки, молоді та спорту України.',
-            'Харківский патентно - комп’ютерний коледж готує кваліфікованих молодших спеціалістів, які легко можуть знайти роботу за фахом та продовжити навчання у вищих навчальних закладах.'
-        ],
+        historyLine: {
+            "UA": [
+                'Заснування Раднаркомом України технологічного технікуму для підготовки фахівців на рівні середньотехнічної освіти у місті Києві.',
+                'Технікум переведено з Києва до Харкова. Спочатку технікум був підпорядкований Укрпромраді, а потім управлінню кадрами Харківської ради народного господарства.',
+                'Технікум перепрофільовано на підготовку фахівців для електротехнічної галузі. З цього часу навчальний заклад одержав назву Харківського електротехнічного технікуму і підпорядкований Міністерству електротехнічної промисловості СРСР.',
+                'Технікум починає підготовлювати фахівців за заочною формою навчання',
+                'Технікум стає Харківським патентно-комп’ютерним коледжем. З 1991 року і до цього часу Харківський патентно-комп’ютерний коледж підпорядковано Міністерству освіти і науки, молоді та спорту України.',
+                'Харківский патентно - комп’ютерний коледж готує кваліфікованих молодших спеціалістів, які легко можуть знайти роботу за фахом та продовжити навчання у вищих навчальних закладах.'
+            ],
+            "EN": [
+                "Establishment of a technological technical school by the People's Commissar of Ukraine for training specialists at the level of secondary technical education in the city of Kyiv.",
+                "The technical school was transferred from Kyiv to Kharkiv. Initially, the college was subordinated to Ukrpromrad, and then to the personnel department of the Kharkiv Council of National Economy.",
+                'The technical school has been re-profiled to train specialists for the electrical engineering industry. Since then, the school has been called the Kharkiv Electrotechnical College and is subordinated to the Ministry of Electrical Industry of the USSR.',
+                'The technical school begins to train specialists by correspondence',
+                'The technical school becomes Kharkiv Patent and Computer College. Since 1991, the Kharkiv Patent and Computer College has been subordinated to the Ministry of Education and Science, Youth and Sports of Ukraine.',
+                'Kharkiv Patent and Computer College trains qualified junior specialists who can easily find a job in their specialty and continue their studies in higher educational institutions.'
+            ]
+        },
         historyLineYears: [
             '1922', '1934', '1962', '1988', '1991', '2020'
         ],
@@ -73,7 +84,7 @@ class History extends Component {
             return <div className="line-block">
                 <span className="active-history-line">{this.state.historyLineYears[num - 1]}</span>
                 <div className="history-padd-block padd-block">
-                    <p className="history-text">{this.state.historyLine[this.state.activeHistoryLine - 1]}</p>
+                    <p className="history-text">{this.state.historyLine[this.props.from][this.state.activeHistoryLine - 1]}</p>
                 </div>
             </div>
         }
@@ -99,23 +110,8 @@ class History extends Component {
                     </div>
                 </div>
                 <div className="container">
-                    <h1 className="history-of-college-text head-text">Історія коледжу</h1>
+                    <h1 className="history-of-college-text head-text">{this.props.lan.history}</h1>
                     <p className="sub-history-of-college-text sub-main-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                    {/* <div className="HistoryLine">
-                        <img src={img}></img>
-                        {this.state.activeHistory === 1 ? <span className="Hspan" onClick={() => { this.setState({ activeHistory: 1 }) }}>1922</span> : <span onClick={() => { this.setState({ activeHistory: 1 }) }}>1922</span>}
-                        {this.state.activeHistory === 2 ? <span className="Hspan" onClick={() => { this.setState({ activeHistory: 2 }) }}>1934</span> : <span onClick={() => { this.setState({ activeHistory: 2 }) }}>1934</span>}
-                        {this.state.activeHistory === 3 ? <span className="Hspan" onClick={() => { this.setState({ activeHistory: 3 }) }}>1942</span> : <span onClick={() => { this.setState({ activeHistory: 3 }) }}>1942</span>}
-                        {this.state.activeHistory === 4 ? <span className="Hspan" onClick={() => { this.setState({ activeHistory: 4 }) }}>1952</span> : <span onClick={() => { this.setState({ activeHistory: 4 }) }}>1952</span>}
-                        {this.state.activeHistory === 5 ? <span className="Hspan" onClick={() => { this.setState({ activeHistory: 5 }) }}>1974</span> : <span onClick={() => { this.setState({ activeHistory: 5 }) }}>1974</span>}
-                        {this.state.activeHistory === 6 ? <span className="Hspan" onClick={() => { this.setState({ activeHistory: 6 }) }}>2020</span> : <span onClick={() => { this.setState({ activeHistory: 6 }) }}>2020</span>}
-
-                    </div>
-                    <div className="HistoryInfoBlock">
-                        <p>
-                            {this.state.info[this.state.activeHistory - 1].content}
-                        </p>
-                    </div> */}
                     <div className="history-line">
                         {this.setLine(1)}
                         {this.setLine(2)}
@@ -133,4 +129,10 @@ class History extends Component {
         )
     }
 }
-export default History
+
+const mapStateToProps = ({ languageReducer }) => ({
+    lan: languageReducer[languageReducer.from].historyPage,
+    from: languageReducer.from
+});
+
+export default connect(mapStateToProps, null)(History);

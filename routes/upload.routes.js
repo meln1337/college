@@ -2,6 +2,7 @@ const { Router } = require('express');
 const multer = require('multer');
 const moment = require('moment');
 const path = require('path');
+const fs = require('fs');
 const Link = require('../models/link.model');
 
 const router = Router();
@@ -39,14 +40,12 @@ const upload = multer({
 });
 
 router.post('/upload', upload.single('image'), async (req, res) => {
-    console.log(req)
     const right = new Link({ link: nameOfPdf, text: req.body.text })
     await right.save()
     res.json(right)
 })
 
-router.get('/uploads/:name', (req, res) => {
-    
+router.get('/uploads/:name', (req, res) => {  
     res.sendFile(path.join(__dirname, '../', `/uploads/${req.params.name}`));
 })
 

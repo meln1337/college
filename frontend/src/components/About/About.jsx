@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './About.css'
 import RevievList from '../../components/RevievList/RevievList'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 const college_pic = './college-pic.png'
 const face1 = './face1.png'
@@ -29,7 +30,7 @@ class Autoblock extends Component {
 				img: face4,
 				description: "Люблю свій рідний ХПКК!  Мені тут подобається абсолютно все, хороша атмосфера, професіні викладачі і зручне місце розташування! Я дуже рада що обрала саме Харківський патентно- комп’ютерний коледж серед всіх інших коледжів Харкова.",
 				idreview: "1"
-			}, 
+			},
 			{
 				FIO: "Ім'я Прізвище",
 				img: face3,
@@ -44,22 +45,27 @@ class Autoblock extends Component {
 		return (
 			<div className="main">
 				<div className="container">
-					<h1 className="about-college head-text can-be-edited">Про коледж</h1>
+					<h1 className="about-college head-text can-be-edited">{this.props.lan.head}</h1>
 					<img alt="college-pic" src={college_pic} className="college-pic" />
-					<h2 className="why-go-to-college sub-head-text">Чому вступати до ХПКК?</h2>
-					<p>Ми переконані, якщо ви оберете навчання саме у Харківському патентно- комп’ютерному коледжі, то ваше сумлінне ставлення до навчання, цілеспрямованість у поєднанні з нашою матеріальною базою та методичним забезпеченням, кадровим педагогічним потенціалом і багаторічним досвідом освітянської діяльності забезпечать вам конкурентоспроможний рівень професійної підготовки і для фахової діяльності, і для продовження навчання. Підтвердженням цьому є відгуки наших випускників.</p>
-					<h2 className="famous-graduates sub-head-text">Відгуки випускників ХПКК</h2>
+					<h2 className="why-go-to-college sub-head-text">{this.props.lan.why}</h2>
+					<p>{this.props.lan.whySub}</p>
+					<h2 className="famous-graduates sub-head-text">{this.props.lan.responses}</h2>
 					<div className="main-review">
 						<RevievList graduateData={this.state.graduateData} />
 					</div>
 					<div className="wanna-go-college padd-block">
-						<p className="wanna-go-college-text tac">Бажаєте вступити до коледжу?</p>
-						<p className="tac">Відвідайте розділ "Абітурієнтам" щоб дізнатися як вступити до коледжу, ознайомитися з правилами прийому та документацією</p>
-						<Link to="/vstup" className="wanna-go-college-button">Перейти</Link>
+						<p className="wanna-go-college-text tac">{this.props.lan.wannaGo}</p>
+						<p className="tac">{this.props.lan.wannaText}</p>
+						<Link to="/vstup" className="wanna-go-college-button">{this.props.lan.go}</Link>
 					</div>
 				</div>
 			</div>
 		)
 	}
 }
-export default Autoblock
+
+const mapStateToProps = ({ languageReducer }) => ({
+	lan: languageReducer[languageReducer.from].aboutPage
+})
+
+export default connect(mapStateToProps, null)(Autoblock);

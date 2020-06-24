@@ -16,6 +16,27 @@
     content: "> ";
 } */
 
+.financial-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.financial-input {
+    width: 200px;
+    padding: 5px 8px;
+    margin-bottom: 15px;
+}
+
+.financial-input-file {
+    margin-bottom: 15px;
+}
+
+.financial-flex img {
+    width: 25px;
+    cursor: pointer;
+}
+
 .financial-report-list {
     display: flex;
     flex-direction: column;
@@ -46,4 +67,9 @@
     background:#0995E5;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.financial-report__add-link {
+    display: flex;
+    flex-direction: column;
 }

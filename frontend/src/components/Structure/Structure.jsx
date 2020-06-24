@@ -1,85 +1,93 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Structure.css'
+import { connect } from 'react-redux'
 const director = './001 (1).jpg'
 const nau = './Наугольна.jpg'
 const net = './Photo_Net_ZhNN.jpg'
-const photo1  = './002.jpg'
-const photo2  = './003.jpg'
-const photo3  = './005.jpg'
-const photo4  = './006.jpg'
-const photo5  = './007.jpg'
-const photo6  = './008.jpg'
-const photo7  = './0010.jpg'
-const photo8  = './0011.jpg'
-const photo9  = './0012.jpg'
-const photo10 = './0013.jpg'
-const photo11 = './0016.jpg'
-const photo12 = './0017.jpg'
-const photo13 = '/0018.jpg'
-const photo14 = './0019.jpg'
-const photo15 = './0020.jpg'
-const fur = './Fursov2.jpg'
-const gry = './Gryshenko.jpg'
-const kos = './Kosturina.jpg'
-const kov = './LRM_EXPORT_199738343304520_20190604_211343484.jpeg'
-const kor = './LRM_EXPORT_199997970777411_20190604_211803111.jpeg'
-const sal = './LRM_EXPORT_200001587526485_20190604_211806728.jpeg'
-const pod = './Poddyakonova.jpg'
+// const photo1 = './002.jpg'
+// const photo2 = './003.jpg'
+// const photo3 = './005.jpg'
+// const photo4 = './006.jpg'
+// const photo5 = './007.jpg'
+// const photo6 = './008.jpg'
+// const photo7 = './0010.jpg'
+// const photo8 = './0011.jpg'
+// const photo9 = './0012.jpg'
+// const photo10 = './0013.jpg'
+// const photo11 = './0016.jpg'
+// const photo12 = './0017.jpg'
+// const photo13 = '/0018.jpg'
+// const photo14 = './0019.jpg'
+// const photo15 = './0020.jpg'
+// const fur = './Fursov2.jpg'
+// const gry = './Gryshenko.jpg'
+// const kos = './Kosturina.jpg'
+// const kov = './LRM_EXPORT_199738343304520_20190604_211343484.jpeg'
+// const kor = './LRM_EXPORT_199997970777411_20190604_211803111.jpeg'
+// const sal = './LRM_EXPORT_200001587526485_20190604_211806728.jpeg'
+// const pod = './Poddyakonova.jpg'
 const gam = './Gamaliy.jpg'
-const tes = '2020-06-11 23.15.30.jpg'
+// const tes = '2020-06-11 23.15.30.jpg'
 
-export default () => {
+const Structure = ({ lan }) => {
     return (
         <div className="structure">
             <div className="container">
-                <h1 className="head-text">Cтруктура коледжу</h1>
+                <h1 className="head-text">{lan.structureHead}</h1>
                 <div className="admin-of-college-padd-block padd-block">
-                    <h2 className="sub-head-text">Адміністрація коледжу</h2>
+                    <h2 className="sub-head-text">{lan.adminsHead}</h2>
                     <div className="admin-of-college-grid">
                         <div className="admin-icon director">
                             <img className="director" src={director} alt="director" />
-                            <p className="sub-main-text">Луценко Сергій Степанович</p>
-                            <p className="sub-text">Луценко Сергій Степанович</p>
+                            <p className="sub-main-text">{lan.admins.mainAdmin.fio}</p>
+                            <p className="sub-text">{lan.admins.mainAdmin.pos}</p>
                         </div>
                         <div className="admin-icon admin-icon1">
                             <img src={nau} alt="adminPhoto1" />
-                            <p className="sub-main-text">Наугольна</p>
-                            <p className="sub-text">заступник директора</p>
+                            <p className="sub-main-text">{lan.admins.fAdmin.fio}</p>
+                            <p className="sub-text">{lan.admins.mainAdmin.pos}</p>
                         </div>
                         <div className="admin-icon admin-icon2">
                             <img src={net} alt="adminPhoto2" />
-                            <p className="sub-main-text">Ім'я Прізвище По-батькові</p>
-                            <p className="sub-text">заступник директора з чогось</p>
+                            <p className="sub-main-text">{lan.admins.sAdmin.fio}</p>
+                            <p className="sub-text">{lan.admins.mainAdmin.pos}</p>
                         </div>
                         <div className="admin-icon admin-icon3">
                             <img src={gam} alt="teachers-icon" />
-                            <p className="sub-main-text">Гамалєй Володимир Васильович</p>
-                            <p className="sub-text">заступник директора з адміністративно-господарської роботи</p>
+                            <p className="sub-main-text">{lan.admins.tAdmin.fio}</p>
+                            <p className="sub-text">{lan.admins.mainAdmin.pos}</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="chairmans-padd-block padd-block">
-                    <h2 className="sub-head-text">Завідуючі відділення</h2>
+                    <h2 className="sub-head-text">{lan.heads}</h2>
                     <div className="chairmans-block">
                         <div className="chairmans-icon">
                             <img src={director} alt="director" />
-                            <p className="sub-main-text">Ім'я Прізвище По-батькові</p>
-                            <p className="sub-text">завідуюча відділенням з ІПЗ</p>
+                            <p className="sub-main-text">{lan.chairmans[0].fio}</p>
+                            <p className="sub-text">{lan.chairmans[0].pos}</p>
                         </div>
                         <div className="chairmans-icon">
                             <img src={director} alt="director" />
-                            <p className="sub-main-text">Ім'я Прізвище По-батькові</p>
-                            <p className="sub-text">завідуюча відділенням з ІПЗ</p>
+                            <p className="sub-main-text">{lan.chairmans[1].fio}</p>
+                            <p className="sub-text">{lan.chairmans[1].pos}</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="teachers-padd-block">
-                    <h2 className="sub-head-text">Викладачі коледжу</h2>
+                    <h2 className="sub-head-text">{lan.teachersHead}</h2>
                     <div className="teachers-block">
-                        <div className="teachers-icon">
+                        {lan.teachers.map((el, i) => (
+                            <div className="teachers-icon" key={i}>
+                                <img src={el.img} alt="teachers-icon" />
+                                <p className="sub-main-text">{el.fio}</p>
+                                <p className="sub-text">{el.pos}</p>
+                            </div>
+                        ))}
+                        {/* <div className="teachers-icon">
                             <img src={photo1} alt="teachers-icon" />
                             <p className="sub-main-text">Усачьова Світлана Григорівна</p>
                             <p className="sub-text">викладач фізики</p>
@@ -198,7 +206,7 @@ export default () => {
                             <img src={net} alt="teachers-icon" />
                             <p className="sub-main-text">Прізвище ім'я по-батькові </p>
                             <p className="sub-text">викладач з чогось</p>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="mobile-teachers-block">
                         <div className="mobile-teachers-icon padd-block">
@@ -236,3 +244,9 @@ export default () => {
 
     )
 }
+
+const mapStateToProps = ({ languageReducer }) => ({
+    lan: languageReducer[languageReducer.from].structurePage
+})
+
+export default connect(mapStateToProps, null)(Structure)

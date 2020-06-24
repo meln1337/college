@@ -1,7 +1,9 @@
 import React, { useState, Fragment } from 'react'
 import './Rights.css'
 
-export default ({ data, admin, addRight }) => {
+const deleteSvg = './delete.svg'
+
+export default ({ data, admin, addRight, deleteRight }) => {
     const [form, setForm] = useState({
         link: '',
         text: ''
@@ -16,7 +18,12 @@ export default ({ data, admin, addRight }) => {
             <div className="container">
                 <h1 className="head-text">Правова інформація</h1>
                 <div className="rights-list">
-                    {data.map((el, i) => (
+                    {admin ? data.map((el, i) => (
+                        <div className="financial-flex">
+                            <a key={i} className="link-to-document" href={`\\${el.link}`}>{el.text}</a>
+                            <img onClick={() => deleteRight({ id: el._id })} src={deleteSvg} alt="delete" />
+                        </div>
+                    ))  : data.map((el, i) => (
                         <a key={i} className="link-to-document" href={`\\${el.link}`}>{el.text}</a>
                     ))}
                     {admin && <Fragment>
