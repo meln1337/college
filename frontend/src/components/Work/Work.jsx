@@ -1,19 +1,26 @@
 import React from 'react'
 import './Work.css'
 import PartnersBlock from '../PartnersBlock/PartnersBlock'
+import { connect } from 'react-redux'
 
-export default () => (
+const Work = ({ lan }) => (
     <div className="Work">
         <div className="container">
-            <h1 className="head-text">Працевлаштування</h1>
-            <p className="sub-main-text">Робота з працевлаштування випускників коледжу починається з зарахування студентів нового прийому. Студенти, які поступили на навчання на місця державного фінансування укладають угоди про працевлаштування після завершення навчання в коледжі.</p>
-            <p className="sub-main-text">Для координації діяльності з працевлаштування у коледжі створена комісія з працевлаштування.</p>
-            <p className="sub-main-text">Розроблено Положення про комісію Харківського патентно-комп’ютерного коледжу щодо сприяння працевлаштуванню студентів і випускників.Це Положення регламентує діяльність комісії коледжу щодо сприяння працевлаштуванню студентів і випускників з метою сприяння реалізації права студентів і випускників на працю та забезпеченню випускників першим робочим місцем.</p>
-            <h1 className="head-text">Основні партнери</h1>
+            <h1 className="head-text">{lan.head}</h1>
+            <p className="sub-main-text">{lan.textF}</p>
+            <p className="sub-main-text">{lan.textS}</p>
+            <p className="sub-main-text">{lan.textT}</p>
+            <h1 className="head-text">{lan.bPartners}</h1>
             <PartnersBlock type={1} />
-            <p className="sub-main-text">Комісія щодо сприяння працевлаштуванню студентів і випускників коледжу здійснює: налагодження ділових стосунків зі службами зайнятості населення, підприємствами, установами та організаціями (роботодавцями) з питань професійної підготовки та працевлаштування студентів і випускників; вивчення динаміки попиту на відповідних фахівців на ринку праці, надання відповідних пропозицій керівництву вищого навчального закладу; співпрацю з іншими підприємствами з питань працевлаштування студентів та випускників; надання консультацій студентам і випускникам з питань оформлення власного резюме; організацію практики студентів, щодо пошуку підприємств, установ та організацій (роботодавців).</p>
-            <h1 className="head-text">Наші партнери</h1>
+            <p className="sub-main-text">{lan.comision}</p>
+            <h1 className="head-text">{lan.oPartners}</h1>
             <PartnersBlock type={2} />
         </div>
     </div>
 )
+
+const mapStateToProps = ({ languageReducer }) => ({
+    lan: languageReducer[languageReducer.from].workPage
+})
+
+export default connect(mapStateToProps, null)(Work);

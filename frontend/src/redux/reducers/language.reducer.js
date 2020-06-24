@@ -201,6 +201,37 @@ const initialState = {
                 },
             ]
         },
+        achievements: {
+            head: 'Досягнення коледжу',
+            textF: 'Вже багато років поспіль наші учні демонструють успіхи на міжобласних та всеукраїнських змаганнях. Харківський патентно комп’ютерний коледж– це навчальний заклад, головним завданням якого є забезпечення підготовки конкурентоспроможного на ринку праці фахівця. У сфері провадження освітньої діяльності результат досягається високою професійною активністю педагогічних працівників: курсова передпідготовка, методична діяльність (методичні об ’єднання, творчі групи, тренінги, семінари), вивчення передового досвіду, проведення відкритих занять, взаємовідвідування занять, навчально-методична діяльність, самоосвіта, участь у предметних комісіях із загально-освітніх дисциплін.',
+            textS: 'З метою вдосконалення фахової підготовки педагогічних кадрів проводиться методична робота, яка спонукає кожного педагога до підвищення свого фахового рівня. У процесі методичної роботи здійснюються підвищення наукового рівня педагогічного працівника, його підготовка до засвоєння змісту нових програм, постійне ознайомлення з досягненнями методик викладання, збагачення прогресивними методами та засобами навчання.',
+            sub: 'Останні досягнення',
+            years: [
+                {
+                    year: 2019,
+                    yearText: '2019 рік',
+                    go: 'Перейти'
+                },
+                {
+                    year: 2018,
+                    yearText: '2018 рік',
+                    go: 'Перейти'
+                },{
+                    year: 2017,
+                    yearText: '2017 рік',
+                    go: 'Перейти'
+                }
+            ]
+        },
+        workPage: {
+            head: 'Працевлаштування',
+            textF: 'Робота з працевлаштування випускників коледжу починається з зарахування студентів нового прийому. Студенти, які поступили на навчання на місця державного фінансування укладають угоди про працевлаштування після завершення навчання в коледжі.',
+            textS: 'Для координації діяльності з працевлаштування у коледжі створена комісія з працевлаштування.',
+            textT: 'Розроблено Положення про комісію Харківського патентно-комп’ютерного коледжу щодо сприяння працевлаштуванню студентів і випускників.Це Положення регламентує діяльність комісії коледжу щодо сприяння працевлаштуванню студентів і випускників з метою сприяння реалізації права студентів і випускників на працю та забезпеченню випускників першим робочим місцем.',
+            bPartners: 'Основні партнери',
+            comision: 'Комісія щодо сприяння працевлаштуванню студентів і випускників коледжу здійснює: налагодження ділових стосунків зі службами зайнятості населення, підприємствами, установами та організаціями (роботодавцями) з питань професійної підготовки та працевлаштування студентів і випускників; вивчення динаміки попиту на відповідних фахівців на ринку праці, надання відповідних пропозицій керівництву вищого навчального закладу; співпрацю з іншими підприємствами з питань працевлаштування студентів та випускників; надання консультацій студентам і випускникам з питань оформлення власного резюме; організацію практики студентів, щодо пошуку підприємств, установ та організацій (роботодавців).',
+            oPartnets: 'Наші партнери'
+        },
         historyPage: {
             history: 'Історія коледжу'
         },
@@ -1131,6 +1162,28 @@ const initialState = {
                 ["#ХКФК", " - it is a success"]
             ]
         },
+        achievements: {
+            head: 'College achievements',
+            textF: 'For many years in a row, our students have demonstrated success in interregional and national competitions. Kharkiv Patent Computer College is an educational institution whose main task is to provide training for a competitive specialist in the labor market. In the field of educational activities the result is achieved by high professional activity of teachers: course preparation, methodical activities (methodical associations, creative groups, trainings, seminars), study of best practices, conducting open classes, mutual attendance, educational and methodical activities, self-education, participation in subject commissions on general educational disciplines.',
+            textS: 'In order to improve the professional training of teachers, methodical work is carried out, which encourages each teacher to improve their professional level. In the process of methodical work the scientific level of the pedagogical worker is raised, his preparation for mastering the content of new programs, constant acquaintance with the achievements of teaching methods, enrichment with progressive methods and teaching aids.',
+            sub: 'Recent achievements',
+            years: [
+                {
+                    year: 2019,
+                    yearText: '2019 year',
+                    go: 'Go'
+                },
+                {
+                    year: 2018,
+                    yearText: '2018 year',
+                    go: 'Go'
+                },{
+                    year: 2017,
+                    yearText: '2017 year',
+                    go: 'Go'
+                }
+            ]
+        },
         structureModalPage: {
             headMain: {
                 img: r36,
@@ -1175,6 +1228,15 @@ const initialState = {
                     back: 'Back text'
                 }
             ]
+        },
+        workPage: {
+            head: 'Employment',
+            textF: 'Work on employment of college graduates begins with enrollment of students of a new reception. Students who enroll in state-funded places enter into employment agreements after graduating from college.',
+            textS: 'An employment commission has been set up to coordinate employment activities at the college.',
+            textT: 'Regulations on the commission of the Kharkiv Patent and Computer College to promote the employment of students and graduates have been developed.',
+            bPartners: 'Main partners',
+            comision: "The Commission for the Promotion of Employment of Students and Alumni of the College carries out: establishing business relations with employment services, enterprises, institutions and organizations (employers) on training and employment of students and graduates; study of the dynamics of demand for relevant specialists in the labor market, providing appropriate proposals to the management of higher education; cooperation with other enterprises on employment of students and graduates; providing advice to students and graduates on the preparation of their own resume; organization of students' practice in search of enterprises, institutions and organizations (employers).",
+            oPartnets: 'Our partners'
         },
         coursePage: {
             "121": {
