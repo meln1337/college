@@ -1,26 +1,32 @@
 import React from 'react'
 import './PublicInfo.css'
+import { connect } from 'react-redux'
 
-export default () => (
+const PublicInfo = ({ lan }) => (
 	<div className="public-info">
 		<div className="container">
-			<h1 className="head-text">Доступ до публічної інформації</h1>
+			<h1 className="head-text">{lan.head}</h1>
 			<p className="sub-main-text">
-				Метою Закону України «Про доступ до публічної інформації» є забезпечення прозорості та відкритості суб’єктів владних повноважень і створення механізмів реалізації права кожного на доступ до публічної інформації.
+				{lan.text1}
 			</p>
 			<p className="sub-main-text">
-			Відповідно до Закону України «Про доступ до публічної інформації» публічна інформація ‑ це відображена та задокументована будь-якими засобами та на будь-яких носіях інформація, що була отримана або створена в процесі виконання суб’єктами владних повноважень своїх обов’язків, передбачених чинним законодавством, або яка знаходиться у володінні суб’єктів владних повноважень, інших розпорядників публічної інформації, визначених цим Законом.
-
+				{lan.text2}
 			</p>
 			<p className="sub-main-text">
-			Цей Закон не поширюється на відносини щодо отримання інформації суб’єктами владних повноважень при здійсненні ними своїх функцій, а також на відносини у сфері звернень громадян, які регулюються спеціальним законом.
+				{lan.text3}
 			</p>
 			<p className="sub-main-text">
-			Публічна інформація, створена в процесі діяльності Міністерства освіти і науки України, надається у відповідь на запит на отримання публічної інформації.
+				{lan.text4}
 			</p>
 			<a className="link-to-document" href="https://file-examples.com/wp-content/uploads/2017/02/file-sample_100kB.doc">
-				Документ 1
+				{lan.text5}
 			</a>
 		</div>
 	</div>
 )
+
+const mapStateToProps = ({ languageReducer }) => ({
+	lan: languageReducer[languageReducer.from].publicPage
+})
+
+export default connect(mapStateToProps, null)(PublicInfo)

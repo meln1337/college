@@ -5,18 +5,18 @@ import { parse } from 'qs'
 import './Zaminy.css'
 const back = './back.svg';
 
-const ZaminyModal = ({ data, course }) => {
+const ZaminyModal = ({ data, course, from }) => {
     debugger
     return (
         <div className="course-modal">
             <div className="container">
                 <div className="padd-block course-modal_padd-block">
                     <Link className="back-to-news" to="/replacements"><img src={back} alt="back" /></Link>
-                    <p className="main-text">{course} курс</p>
+                    {from === 'UA' ? <p className="main-text">{course} курс</p> : <p className="main-text">{course} course</p>}
                     {Object.keys(data).map((unit, i) => (
                         <div key={i} className="padd-block course__padd-block">
-                            <p className="sub-main-text course-name">П-{unit}</p>
-                            <Link to={data[unit]} className="button">Перейти</Link>
+                            {from === 'UA' ? <p className="sub-main-text course-name">П-{unit}</p> : <p className="sub-main-text course-name">Group {unit}</p>}
+                            {from === 'UA' ? <Link to={data[unit]} className="button">Перейти</Link> : <Link to={data[unit]} className="button">Go</Link>}
                         </div>
                     ))}
                 </div>
@@ -33,7 +33,8 @@ const mapStateToProps = ({ languageReducer }, { location }) => {
     return {
         data: languageReducer[languageReducer.from].zaminyPage[part][course],
         course,
-        part
+        part,
+        from: languageReducer.from
     };
 }
 

@@ -41,6 +41,203 @@ const tes = '2020-06-11 23.15.30.jpg'
 const initialState = {
     from: "UA",
     UA: {
+        examPage: {
+            head: 'Розклад іспитів',
+            sub1: '121 "Інженерія програмного забезпечення"',
+            text2: '1 курс',
+            text3: '2 курс',
+            text4: '3 курс',
+            text5: '4 курс',
+            text2A: 'Перейти',
+            text3A: 'Перейти',
+            text4A: 'Перейти',
+            text5A: 'Перейти',
+            sub3: '123 "Комп\'ютерна інженерія"',
+            text6: '1 курс',
+            text7: '2 курс',
+            text8: '3 курс',
+            text9: '4 курс',
+            text6A: 'Перейти',
+            text7A: 'Перейти',
+            text8A: 'Перейти',
+            text9A: 'Перейти'
+        },
+        znoPage: {
+            head: 'ЗНО 2020 року',
+            text: 'ЗНО'
+        },
+        zaminy: {
+            head: 'Заміни у розкладі занять',
+            sub1: '121 "Інженерія програмного забезпечення"',
+            text2: '1 курс',
+            text3: '2 курс',
+            text4: '3 курс',
+            text5: '4 курс',
+            text2A: 'Перейти',
+            text3A: 'Перейти',
+            text4A: 'Перейти',
+            text5A: 'Перейти',
+            sub3: '123 "Комп\'ютерна інженерія"',
+            text6: '1 курс',
+            text7: '2 курс',
+            text8: '3 курс',
+            text9: '4 курс',
+            text6A: 'Перейти',
+            text7A: 'Перейти',
+            text8A: 'Перейти',
+            text9A: 'Перейти'
+        },
+        daySchedulePage: {
+            head: 'Розклад навчальних занять',
+            sub1: 'Студентів денної форми навчання на період з 1 лютого до 31 червня 2020 року',
+            pdfText: 'Графік навчального процесу',
+            sub2: '121 "Інженерія програмного забезпечення"',
+            text2: '1 курс',
+            text3: '2 курс',
+            text4: '3 курс',
+            text5: '4 курс',
+            text2A: 'Перейти',
+            text3A: 'Перейти',
+            text4A: 'Перейти',
+            text5A: 'Перейти',
+            sub3: '123 "Комп\'ютерна інженерія"',
+            text6: '1 курс',
+            text7: '2 курс',
+            text8: '3 курс',
+            text9: '4 курс',
+            text6A: 'Перейти',
+            text7A: 'Перейти',
+            text8A: 'Перейти',
+            text9A: 'Перейти'
+        },
+        ratingPage: {
+            head: 'Cтипендіальний рейтинг',
+            pdfText: 'Положення про стипендіальне забезпечення ХПКК',
+            sub1: '121 "Інженерія програмного забезпечення"',
+            text1: 'Останне оновлення 20.20.2020',
+            text2: '1 курс',
+            text3: '2 курс',
+            text4: '3 курс',
+            text5: '4 курс',
+            text2A: 'Перейти',
+            text3A: 'Перейти',
+            text4A: 'Перейти',
+            text5A: 'Перейти',
+            sub2: '123 "Комп\'ютерна інженерія"',
+            text10: 'Останне оновлення 20.20.2020',
+            text6: '1 курс',
+            text7: '2 курс',
+            text8: '3 курс',
+            text9: '4 курс',
+            text6A: 'Перейти',
+            text7A: 'Перейти',
+            text8A: 'Перейти',
+            text9A: 'Перейти'
+        },
+        publicPage: {
+            head: 'Доступ до публічної інформації',
+            text1: 'Метою Закону України «Про доступ до публічної інформації» є забезпечення прозорості та відкритості суб’єктів владних повноважень і створення механізмів реалізації права кожного на доступ до публічної інформації.',
+            text2: 'Відповідно до Закону України «Про доступ до публічної інформації» публічна інформація ‑ це відображена та задокументована будь-якими засобами та на будь-яких носіях інформація, що була отримана або створена в процесі виконання суб’єктами владних повноважень своїх обов’язків, передбачених чинним законодавством, або яка знаходиться у володінні суб’єктів владних повноважень, інших розпорядників публічної інформації, визначених цим Законом.',
+            text3: 'Цей Закон не поширюється на відносини щодо отримання інформації суб’єктами владних повноважень при здійсненні ними своїх функцій, а також на відносини у сфері звернень громадян, які регулюються спеціальним законом.',
+            text4: 'Публічна інформація, створена в процесі діяльності Міністерства освіти і науки України, надається у відповідь на запит на отримання публічної інформації.',
+            text5: 'Документ 1'
+        },
+        consultationPage: {
+            head: 'Консультації до вступу',
+            text1: 'Українська мова',
+            text2: 'Математика',
+            text3: 'Зручний графік',
+            text4: 'Поруч із метро',
+            text5: 'Привабливі умови',
+            text6: 'Якісна освіта',
+            text7: 'Підготовчі курси для вступу в Коледж – це сприятливий старт для комфортного навчання в подальшому. Оскільки ми не повинні забувати про той факт, що майбутні студенти Коледжу насамперед є дітьми підліткового віку і дуже важливо не упустити період адаптації в новому навчальному середовищі, можливості впровадження варіативних навчальних методик в освітній процес, призвичаїтися до методики викладання викладачів вищого навчального закладу, що використовується на практиці в Коледжі до моменту вступу.',
+            text8: 'Департамент довузівської підготовки пропонує Вам навчання на підготовчих курсах два рази на тиждень. Кількість слухачів у групах – до 30-ти осіб. Заняття проводять висококваліфіковані викладачі ХПКК. Вони допомагають абітурієнтам систематизувати шкільну програму та засвоїти новий навчальний матеріал, а також успішно підготуватися до в',
+            text9: 'Розклад консультацій',
+            text10: 'П-1',
+            text10A: 'Розгорнути',
+            text10: 'П-2',
+            text10A: 'Розгорнути',
+            text10: 'П-3',
+            text10A: 'Розгорнути',
+            text10: 'П-4',
+            text10A: 'Розгорнути'
+        },
+        contractPage: {
+            head: 'Реквізити для сплати контракту',
+            text1Bold: 'Код отримувача',
+            text1: '123456789',
+            text2Bold: 'Р/р отримувача',
+            text2: '123456789',
+            text3Bold: 'Банк отримувача',
+            text3: 'Bank of Ukraine'
+        },
+        specialtyPage: {
+            head: 'Спеціальності',
+            sub1: '121 «Інженерія програмного забезпечення',
+            text1: 'Програма спеціальності 121 «Інженерія програмного забезпечення» орієнтована на підготовку кваліфікованих фахівців в галузі інженерії програмного забезпечення, котра спрямована на розробку програмних систем, які працюють надійно та ефективно, вартість розробки та супроводу яких є доступною, і які задовольняють вимогам, висунутим до них замовниками. Сьогодні фахівці з інженерії програмного забезпечення є найбільш затребуваними на ринку праці серед інших фахівців з інформаційних технологій, вони приймають участь у розробці вітчизняних і міжнародних програмних проектів, і мають достойну оплату своєї праці. Попит на фахівців з інженерії програмного забезпечення у майбутньому буде тільки зростати.',
+            text2: 'Основні спеціалізації:',
+            text3: 'Прикладне програмування (з поглибленим вивченням спеціалізованих дисциплін)',
+            text4: 'Web-програмування: розробка сайтів',
+            text5: 'Блокчейн та прикладне програмне забезпечення',
+            sub2: "123 \"Комп'ютерна інженерія\"",
+            text6: 'Технологічна сфера: знання комп’ютерів, їх збирання, тестування та ремонту, програмування, інтернет-сервісів і мобільних технологій.',
+            text7: 'Математична сфера: проектування програмних додатків і розумних апаратних пристроїв, кібер-безпека, антивіруси, проектування цифрових систем на кристалах і комп’ютерних мереж.',
+            text8: 'Сфера програмування для ринку праці: C ++, Java, Python, .NET, C #, VHDL, Verilog, System C.',
+            text9: 'Вміння і компетентності, якими буде володіти випускник за спеціальністю Комп’ютерна інженерія:',
+            text10: '1. Розробка і обслуговування систем і мереж під управлінням Windows, Unix, Linux;',
+            text11: '2. Створення бездротових засобів комунікації, розробка програмних продуктів за допомогою мовних засобів високого і низького рівнів C ++, С #, Java, Python, Assembler і мікромініатюрних цифрових систем на кристалах;',
+            text12: '3. Розробка користувальницьких і системних інтерфейсів, апаратних і програмних компіляторів, інтелектуальних систем програмування та проектування баз знань;',
+            text13: '4. Аналітика великих даних;',
+            text14: '5. Проектування хмарних сервісів і мобільних додатків, розумних пристроїв, інтегрованих з Інтернет мережами.'
+        },
+        vstupPage: {
+            head: 'Вступ на програми молодшого спеціаліста',
+            text1: 'Харківський патентно- комп’ютерний коледж запрошує Вас продовжити навчання в нашому навчальному закладі. Ми пропонуємо Вам отримати професії, які користуються великим попитом в розробці програмного забезпечення та комп’ютерних – провідних галузях економіки нашої держави.',
+            text2: 'За додатковою інформацією, будь ласка, звертайтесь до розділу ',
+            text2A: '«Контакти»',
+            text3: 'або завітайте на ',
+            text3A: '«День відкритих дверей»',
+            text4: 'Всім, хто прийде до нас на навчання, ми гарантуємо якісну загальноосвітню, загальнотехнічну та професійну підготовку, що дасть змогу кожному стати кваліфікованим, конкурентоспроможним робітником та майстром своєї справи.',
+            icon1: {
+                frontText: 'Форма навчання',
+                backText: 'Денна форма навчання, пари проходять у коледжі'
+            },
+            icon2: {
+                frontText: 'Спеціальності',
+                backText: '“121”- Інженерія програмного забезпечення “123” - Комп’ютерна інженерія'
+            },
+            icon3: {
+                frontText: 'Тривалість навчання',
+                backText: 'Навчання триває 4 академічні роки'
+            },
+            icon4: {
+                frontText: 'Правила прийому',
+                backText1: 'З правилами прийому ви може ознайомитися на сторінці ',
+                backText1A: '"Вступ на Програму молодшого спеціаліста"'
+            },
+            text5: 'Навчання в коледжі можливе за спеціальностями',
+            text6: '121 «Інженерія програмного забезпечення» ',
+            text6A: 'Вартість навчання',
+            text6: "123 «Комп'ютерна інженерія» ",
+            text6A: 'Вартість навчання',
+            sub: 'Графік проведення вступної компанії',
+            text7: 'Денна форма навчання (на основі базової та повної загальної середньої освіти)',
+            text8: 'з 1 липня до 2 серпня 2020 року',
+            text9: 'Бажаєте вступити до коледжу?',
+            text10: 'Відвідайте розділ «Абітурієнтам» щоб дізнатися як вступити до коледжу, ознайомитися з правиламу прийому та документацією',
+            text11: 'Перейти'
+        },
+        openDay: {
+            head: 'День відкритих дверей',
+            sub: 'Запрошуємо',
+            text1: 'День відкритих дверей — це традиційний захід, у рамках якого вступники мають змогу отримати необхідну інформацію про навчання в коледжі та зробити перший крок до своєї освіти в Харківському патентно- комп’ютерний коледжі.',
+            text2: 'У ході Дня відкритих дверей абітурієнти мають можливість дізнатися про напрями, за якими здійснюється підготовка в коледжі, та Правила прийому від представників Приймальної комісії. Вступники також отримують інформацію про особливості зовнішнього незалежного оцінювання в поточному навчальному році. Також проводяться зустрічі абітурієнтів та їхніх батьків із адміністрацією та вчителями, під час яких відвідувачі одержують детальну інформацію щодо наявних напрямів, дізнаються про навчальний процес та практики, перспективи працевлаштування випускників, організацію дозвілля та побуту студентів.',
+            text3: 'Шановні абітурієнти!Справжній успіх приносить лише та робота, яку обирають за власним бажанням, відповідно до інтересів та здібностей. Сподіваємось, що Ви отримаете вичерпну інформацію про коледж та можливості, які отримує кожен його студент після навчання.',
+            text4: 'На даному етапі Вашого життя важливо, бути активними і креативними у виборі професії та майбутнього.',
+            text5: 'Місце проведення: ',
+            text5Bold: 'м.Харків, вул.Ярослава Мудрого 18',
+            text6: 'Додаткова інформація за телефонами:'
+        },
         structurePage: {
             structureHead: 'Структура коледжу',
             adminsHead: 'Адміністрація коледжу',
@@ -206,8 +403,7 @@ const initialState = {
             textF: 'Вже багато років поспіль наші учні демонструють успіхи на міжобласних та всеукраїнських змаганнях. Харківський патентно комп’ютерний коледж– це навчальний заклад, головним завданням якого є забезпечення підготовки конкурентоспроможного на ринку праці фахівця. У сфері провадження освітньої діяльності результат досягається високою професійною активністю педагогічних працівників: курсова передпідготовка, методична діяльність (методичні об ’єднання, творчі групи, тренінги, семінари), вивчення передового досвіду, проведення відкритих занять, взаємовідвідування занять, навчально-методична діяльність, самоосвіта, участь у предметних комісіях із загально-освітніх дисциплін.',
             textS: 'З метою вдосконалення фахової підготовки педагогічних кадрів проводиться методична робота, яка спонукає кожного педагога до підвищення свого фахового рівня. У процесі методичної роботи здійснюються підвищення наукового рівня педагогічного працівника, його підготовка до засвоєння змісту нових програм, постійне ознайомлення з досягненнями методик викладання, збагачення прогресивними методами та засобами навчання.',
             sub: 'Останні досягнення',
-            years: [
-                {
+            years: [{
                     year: 2019,
                     yearText: '2019 рік',
                     go: 'Перейти'
@@ -216,7 +412,7 @@ const initialState = {
                     year: 2018,
                     yearText: '2018 рік',
                     go: 'Перейти'
-                },{
+                }, {
                     year: 2017,
                     yearText: '2017 рік',
                     go: 'Перейти'
@@ -832,6 +1028,203 @@ const initialState = {
         },
     },
     EN: {
+        examPage: {
+            head: 'Exam schedule',
+            sub1: '121 "Software Engineering"',
+            text2: '1 course',
+            text3: '2 course',
+            text4: '3 course',
+            text5: '4 course',
+            text2A: 'Go',
+            text3A: 'Go',
+            text4A: 'Go',
+            text5A: 'Go',
+            sub2: '123 "Computer Engineering"',
+            text6: '1 course',
+            text7: '2 course',
+            text8: '3 course',
+            text9: '4 course',
+            text6A: 'Go',
+            text7A: 'Go',
+            text8A: 'Go',
+            text9A: 'Go'
+        },
+        znoPage: {
+            head: 'Exams',
+            text: 'Exams'
+        },
+        zaminy: {
+            head: 'Substitutions in the class schedule',
+            sub1: '121 "Software Engineering"',
+            text2: '1 course',
+            text3: '2 course',
+            text4: '3 course',
+            text5: '4 course',
+            text2A: 'Go',
+            text3A: 'Go',
+            text4A: 'Go',
+            text5A: 'Go',
+            sub2: '123 "Computer Engineering"',
+            text6: '1 course',
+            text7: '2 course',
+            text8: '3 course',
+            text9: '4 course',
+            text6A: 'Go',
+            text7A: 'Go',
+            text8A: 'Go',
+            text9A: 'Go'
+        },
+        daySchedulePage: {
+            head: 'Class schedule',
+            sub1: 'Full-time students for the period from February 1 to June 31, 2020',
+            pdfText: 'Schedule of the educational process',
+            sub2: '121 "Software Engineering"',
+            text2: '1 course',
+            text3: '2 course',
+            text4: '3 course',
+            text5: '4 course',
+            text2A: 'Go',
+            text3A: 'Go',
+            text4A: 'Go',
+            text5A: 'Go',
+            sub3: '123 "Computer Engineering"',
+            text6: '1 course',
+            text7: '2 course',
+            text8: '3 course',
+            text9: '4 course',
+            text6A: 'Go',
+            text7A: 'Go',
+            text8A: 'Go',
+            text9A: 'Go'
+        },
+        ratingPage: {
+            head: 'Scholarship rating',
+            pdfText: 'Provisions on scholarships KPCC',
+            sub1: '121 "Software Engineering"',
+            text1: 'Last update 20.20.2020',
+            text2: '1 course',
+            text3: '2 course',
+            text4: '3 course',
+            text5: '4 course',
+            text2A: 'Go',
+            text3A: 'Go',
+            text4A: 'Go',
+            text5A: 'Go',
+            sub2: '123 "Computer Engineering"',
+            text10: 'Last update 20.20.2020',
+            text6: '1 course',
+            text7: '2 course',
+            text8: '3 course',
+            text9: '4 course',
+            text6A: 'Go',
+            text7A: 'Go',
+            text8A: 'Go',
+            text9A: 'Go'
+        },
+        publicPage: {
+            head: 'Access to public information',
+            text1: 'The purpose of the Law of Ukraine "On Access to Public Information" is to ensure transparency and openness of the subjects of power and to create mechanisms for the exercise of the right of everyone to access public information.',
+            text2: 'According to the Law of Ukraine "On Access to Public Information", public information is information reflected and documented by any means and on any media, which was received or created in the process of performing by the subjects of power their duties under the current legislation, or which is in the possession of subjects of power, other managers of public information, defined by this Law.',
+            text3: 'This Law does not apply to relations concerning the receipt of information by subjects of power in the exercise of their functions, as well as to relations in the field of citizens\' appeals, which are regulated by a special law.',
+            text4: 'Public information created in the course of the activity of the Ministry of Education and Science of Ukraine is provided in response to a request for public information.',
+            text5: 'Document 1'
+        },
+        consultationPage: {
+            head: 'Advice before joining',
+            text1: 'Ukrainian language',
+            text2: 'Math',
+            text3: 'Convenient schedule',
+            text4: 'Near the subway',
+            text5: 'Attractive conditions',
+            text6: 'Quality education',
+            text7: 'Preparatory courses for admission to the College are a good start for comfortable learning in the future. Since we must not forget the fact that future students of the College are primarily adolescents and it is very important not to miss the period of adaptation in the new learning environment, the possibility of implementing variable teaching methods in the educational process, get used to the teaching methods used by higher education teachers. to practice at the College until admission.',
+            text8: 'The pre-university training department offers you training courses twice a week. Number of students in groups - up to 30 people. Classes are conducted by highly qualified teachers of COD. They help entrants to systematize the school curriculum and learn new learning materials, as well as to successfully prepare for',
+            text9: 'Consultation schedule',
+            text10: 'Group 1',
+            text10A: 'Go',
+            text11: 'Group 2',
+            text11A: 'Go',
+            text12: 'Group 3',
+            text12A: 'Go',
+            text13: 'Group 4',
+            text13A: 'Go'
+        },
+        contractPage: {
+            head: 'Details for contract payment',
+            text1Bold: 'Recipient\'s code',
+            text1: '123456789',
+            text2Bold: "Beneficiary's account",
+            text2: '123456789',
+            text3Bold: "Beneficiary's bank",
+            text3: 'Bank of Ukraine'
+        },
+        specialtyPage: {
+            head: 'Specialties',
+            sub1: '121 "Software Engineering',
+            text1: 'The program of specialty 121 "Software Engineering" focuses on the training of qualified specialists in software engineering, which aims to develop software systems that work reliably and efficiently, the cost of development and maintenance of which is affordable, and which meet the requirements of customers. Today, software engineers are the most in demand in the labor market among other IT professionals, they participate in the development of domestic and international software projects, and have a decent pay for their work. The demand for software engineering professionals will only grow in the future.',
+            text2: 'Main specializations:',
+            text3: 'Applied programming (with in-depth study of specialized disciplines)',
+            text4: 'Web-programming: site development',
+            text5: 'Blockchain and application software',
+            sub2: '123 "Computer Engineering"',
+            text6: 'Technology: knowledge of computers, their assembly, testing and repair, programming, Internet services and mobile technologies.',
+            text7: 'Mathematics: design of software applications and smart hardware, cyber security, antivirus, design of digital systems on crystals and computer networks.',
+            text8: 'Field of programming for the labor market: C ++, Java, Python, .NET, C #, VHDL, Verilog, System C.',
+            text9: 'Skills and competencies that a graduate in Computer Engineering will have:',
+            text10: '1. Development and maintenance of systems and networks running Windows, Unix, Linux;',
+            text11: '2. Creation of wireless means of communication, development of software products by means of language means of high and low levels of C ++, C #, Java, Python, Assembler and microminiature digital systems on crystals;',
+            text12: '3. Development of user and system interfaces, hardware and software compilers, intelligent programming systems and knowledge base design;',
+            text13: '4. Big data analysis;',
+            text14: '5. Design of cloud services and mobile applications, smart devices integrated with Internet networks.'
+        },
+        vstupPage: {
+            head: 'Admission to the programs of young specialists',
+            text1: 'Kharkiv Patent and Computer College invites you to continue your studies at our educational institution. We offer you professions that are in great demand in software development and computer - the leading sectors of our economy.',
+            text2: 'For more information, please refer to the section ',
+            text2A: '«Contacts»',
+            text3: 'or visit at ',
+            text3A: '«Open Day»',
+            text4: 'To all who come to us for training, we guarantee quality general education, general technical and professional training, which will allow everyone to become a skilled, competitive worker and master of their craft.',
+            icon1: {
+                frontText: 'Form of study',
+                backText: 'Full-time, couples attend college'
+            },
+            icon2: {
+                frontText: 'Specialties',
+                backText: '"121" - Software Engineering "123" - Computer Engineering'
+            },
+            icon3: {
+                frontText: 'Duration of training',
+                backText: 'The training lasts 4 academic years'
+            },
+            icon4: {
+                frontText: 'Admission rules',
+                backText1: 'You can read the rules of admission on the page',
+                backText1A: '"Admission to the Junior Specialist Program"'
+            },
+            text5: 'College education is possible in specialties',
+            text6: '121 "Software Engineering"',
+            text6A: 'Cost of education',
+            text12: '123 "Computer Engineering"',
+            text12A: 'Cost of education',
+            sub: 'Schedule of the introductory campaign',
+            text7: 'Full-time education (based on basic and complete general secondary education)',
+            text8: 'from July 1 to August 2, 2020',
+            text9: 'Want to go to college?',
+            text10: 'Visit the "Applicants" section to learn how to enter the college, read the rules of admission and documentation',
+            text11: 'Go'
+        },
+        openDay: {
+            head: 'Open Day',
+            sub: 'Welcome',
+            text1: 'The Open Day is a traditional event, in which entrants have the opportunity to get the necessary information about studying at the college and take the first step towards their education at the Kharkiv Patent and Computer College.',
+            text2: 'During the Open Day, entrants have the opportunity to learn about the areas in which training is carried out in the college, and the Rules of Admission from the representatives of the Admissions Committee. Applicants also receive information about the features of external independent assessment in the current academic year. There are also meetings of applicants and their parents with the administration and teachers, during which visitors receive detailed information on available areas, learn about the educational process and practices, employment prospects of graduates, organization of leisure and life of students.',
+            text3: 'Dear entrants, real success is brought only by the work that is chosen at will, according to interests and abilities. We hope that you will receive comprehensive information about the college and the opportunities that each of its students receives after their studies.',
+            text4: 'At this stage of your life it is important to be active and creative in choosing a profession and the future.',
+            text5: 'Venue',
+            text5Bold: 'Kharkiv, 18 Yaroslava Mudryho Street',
+            text6: 'Additional information by phone:'
+        },
         structurePage: {
             structureHead: 'Structure of the college',
             adminsHead: 'College administration',
@@ -1082,7 +1475,7 @@ const initialState = {
                     },
                     {
                         link: "/specialty",
-                        label: 'Іpecialty'
+                        label: 'Specialty'
                     },
                     {
                         link: "/contract",
@@ -1167,8 +1560,7 @@ const initialState = {
             textF: 'For many years in a row, our students have demonstrated success in interregional and national competitions. Kharkiv Patent Computer College is an educational institution whose main task is to provide training for a competitive specialist in the labor market. In the field of educational activities the result is achieved by high professional activity of teachers: course preparation, methodical activities (methodical associations, creative groups, trainings, seminars), study of best practices, conducting open classes, mutual attendance, educational and methodical activities, self-education, participation in subject commissions on general educational disciplines.',
             textS: 'In order to improve the professional training of teachers, methodical work is carried out, which encourages each teacher to improve their professional level. In the process of methodical work the scientific level of the pedagogical worker is raised, his preparation for mastering the content of new programs, constant acquaintance with the achievements of teaching methods, enrichment with progressive methods and teaching aids.',
             sub: 'Recent achievements',
-            years: [
-                {
+            years: [{
                     year: 2019,
                     yearText: '2019 year',
                     go: 'Go'
@@ -1177,7 +1569,7 @@ const initialState = {
                     year: 2018,
                     yearText: '2018 year',
                     go: 'Go'
-                },{
+                }, {
                     year: 2017,
                     yearText: '2017 year',
                     go: 'Go'
@@ -1539,49 +1931,91 @@ const initialState = {
                 text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus officia a aperiam reiciendis provident enim. Tenetur rerum reprehenderit deserunt dolorem earum vitae? Ipsum quaerat corrupti voluptates reiciendis corporis cupiditate molestias consectetur quod porro iste architecto, culpa, tempora laborum. In dolorem asperiores excepturi ipsam culpa minus iusto porro accusamus illum voluptates suscipit vitae inventore error facilis, dignissimos corrupti unde! Nesciunt ipsam sapiente aperiam laudantium? Magni corrupti nisi quia natus temporibus in exercitationem veritatis reprehenderit esse? Modi ad repudiandae molestias asperiores non odit incidunt! Error aut, odio officia dignissimos obcaecati, ipsa nam vitae atque qui maiores nostrum ipsam soluta rerum illum.',
                 year: 2015
             }
-        }
-    },
-    achievementsPage: {
-        "2017": {
-            head: "Участь у Міжнародній олімпіаді з програмування Кубок Вєкуа",
-            text: [
-                '<p class="sub-main-text">28-29 жовтня 2017 року студенти коледжу приймали участь у Міжнародній олімпіаді з програмування «Кубок «Вєкуа»».</p>',
-                '<p class="sub-main-text">Олімпіада проводилася в 2 тури: індивідуальний та командний. В олімпіаді приймали участь студенти Вищих навчальних закладів Грузії, України, Білорусі, Азербайджану, Росії. Харківським студентам базову площадку для участі в олімпіаді надав ХНУРЕ.</p>',
-                '<p class="sub-main-text">Студенти патентно-комп’ютерного коледжу приймали участь в обох турах та показали чудові результати.</p>',
-                '<p class="sub-main-text">В індивідуальному турі студенти Дмитро Дородних (гр.П-41), Костянтин Кравчик (гр.П-41), В’ячеслав Коцюба (гр.П-52), Константинов Владислав (гр.П-52), Марина Кудрявцева (гр.П-42) увійшли до сотні кращих.</p>',
-                '<p class="sub-main-text">В командному турі від коледжу приймали участь 4 команди: DeusVult (Кравчик Костянтин, Дородних Дмитро та Радченко Владислава), GoldSun (Коцюба В’ячеслав, Константинов Владислав та Мусієнко Олексій), HPPTeam (Мамедов Тимур, Кудрявцева Марина, Кіяшкін Максим), CyberCloud (Хамідов Далер , Подопригора Данило).</p>',
-                '<p class="sub-main-text">Наші команди DeusVult та GoldSun випередили команди НТУ «ХПІ» та ХНЕУ та всього на дві позиції відстали від команди ХНУРЕ «ZeroDay».</p>',
-                '<p class="sub-main-text">Вітаємо наших учасників!</p>'
-            ]
         },
-        "2018": {
-            head: "ХПКК: перше місце у обласному англомовному брейн-ринзі з комп’ютерних наук",
-            text: [
-                "<p class=\"sub-main-text\">1 лютого 2018 р.</p>",
-                "<p class=\"sub-main-text\">Команда Харківського патентно – комп’ютерного коледжу ” Sunny Side” посіла I місце у обласному англомовному брейн-ринзі з комп’ютерних наук. Захід проходив на базі ХРТТ,    у грі приймали участь 10-ть команд від ВНЗ І-ІІ рівнів акредитації.  </p>",
-                "<p class=\"sub-main-text\">Вільне володіння англійською, професійні знання, командна згуртованість, позитивний настрій та віра у власні сили привели до перемоги нашу команду.   </p>",
-                '<p class="sub-main-text">Члени команди</p>',
-                '<p class="sub-main-text">Книш Олексій (П71) капітан команди  </p>',
-                '<p class="sub-main-text">Євтушенко Сергій (П62) </p>',
-                '<p class="sub-main-text">Півень Назар (П71) </p>',
-                '<p class="sub-main-text">Григоров Єгор (П71) </p>',
-                '<p class="sub-main-text">Касумов Богдан (П62) </p>',
-                '<p class="sub-main-text">Анахін Георгій (П62) </p>',
-                '<p class="sub-main-text">У четвертому раунді команда “Sunny Side” виборола право змагатися у фіналі гри. </p>',
-                `<img src=${ach1} alt="ach1" />`,
-                '<p class="sub-main-text">Фінальна гра. Напруження та зосередженість. </p>',
-                `<img src=${ach2} alt="ach2" />`,
-                '<p class="sub-main-text">Нагородження команди. Грамота та солодкі подарунки. </p>',
-                `<img src=${ach3} alt="ach3" />`,
-                '<p class="sub-main-text">Фінальне фото на згадку про приємні та радісні емоції. </p>',
-                `<img src=${ach4} alt="ach4" />`,
-            ]
+        zaminyPage: {
+            "121": {
+                "1": {
+                    "1": "/replacementPage?course=1&group=1",
+                    "2": "/replacementPage?course=1&group=2",
+                    "3": "/replacementPage?course=1&group=3",
+                },
+                "2": {
+                    "1": "/replacementPage?course=2&group=1",
+                    "2": "/replacementPage?course=2&group=2",
+                    "3": "/replacementPage?course=2&group=3",
+                },
+                "3": {
+                    "1": "/replacementPage?course=3&group=1",
+                    "2": "/replacementPage?course=3&group=2",
+                    "3": "/replacementPage?course=3&group=3",
+                },
+                "4": {
+                    "1": "/replacementPage?course=4&group=1",
+                    "2": "/replacementPage?course=4&group=2",
+                    "3": "/replacementPage?course=4&group=3",
+                }
+            },
+            "123": {
+                "1": {
+                    "4": "/replacementPage?course=1&group=4",
+                    "5": "/replacementPage?course=1&group=5",
+                },
+                "2": {
+                    "4": "/replacementPage?course=2&group=4",
+                    "5": "/replacementPage?course=2&group=5",
+                },
+                "3": {
+                    "4": "/replacementPage?course=3&group=4",
+                    "5": "/replacementPage?course=3&group=5",
+                },
+                "4": {
+                    "4": "/replacementPage?course=4&group=4",
+                    "5": "/replacementPage?course=4&group=5",
+                }
+            }
         },
-        "2019": {
-            head: "Літературно-мовний конкурс імені Тараса Шевченка",
-            text: [
-                '<p class="sub-main-text">На базі Харківського патентно-комп’ютерного коледжу пройшов обласний етап X-го міжнародного літературно-мовного конкурсу імені Тараса Шевченка.</p>'
-            ]
+        achievementsPage: {
+            "2017": {
+                head: "Participation in the International Programming Olympiad Vekua Cup",
+                text: [
+                    '<p class="sub-main-text">On October 28-29, 2017, college students took part in the International Programming Olympiad "Vecua Cup".</p>',
+                    '<p class="sub-main-text">The Olympiad was held in 2 rounds: individual and team. Students of Higher Educational Institutions of Georgia, Ukraine, Belarus, Azerbaijan, and Russia took part in the Olympiad. Kharkiv students were provided with a basic platform for participation in the Olympiad by KNURE.</p>',
+                    '<p class="sub-main-text">Patent and Computer College students took part in both rounds and showed excellent results.</p>',
+                    '<p class="sub-main-text">In the individual round students Dmitry Dorodnykh (group P-41), Konstantin Kravchik (group P-41), Vyacheslav Kotsyuba (group P-52), Konstantinov Vladislav (group P-52), Marina Kudryavtseva .P-42) entered the hundred best.</p>',
+                    '<p class="sub-main-text">4 teams from the college took part in the team tour: DeusVult (Kravchyk Konstantin, Dorodnykh Dmytro and Radchenko Vladyslava), GoldSun (Kotsyuba Vyacheslav, Konstantinov Vladislav and Musienko Oleksiy), HPPTeam (Mamedov Timur, Kudryavtseva Marina, Kiyakin) Hamidov Daler, Podoprigora Danilo).</p>',
+                    '<p class="sub-main-text">Our teams DeusVult and GoldSun were ahead of the teams of NTU "KhPI" and KhNEU and were only two positions behind the team of KNURE "ZeroDay".</p>',
+                    '<p class="sub-main-text">Congratulations to our participants!</p>'
+                ]
+            },
+            "2018": {
+                head: "KPCC: first place in the regional English-language brainstorming ring in computer science",
+                text: [
+                    "<p class=\"sub-main-text\">1 February 2018 year</p>",
+                    "<p class=\"sub-main-text\">The team of Kharkiv Patent and Computer College \"Sunny Side\" took the first place in the regional English-language brain-ring in computer science. The event was held on the basis of KRTT, the game was attended by 10 teams from universities of I-II levels of accreditation.</p>",
+                    "<p class=\"sub-main-text\">Fluency in English, professional knowledge, team cohesion, positive mood and self-confidence led to the victory of our team.</p>",
+                    '<p class="sub-main-text">Team members</p>',
+                    '<p class="sub-main-text">Knysh Oleksiy (P71) is the team captain  </p>',
+                    '<p class="sub-main-text">Yevtushenko Sergey (P62)</p>',
+                    '<p class="sub-main-text">Nazar\'s Rooster (P71)</p>',
+                    '<p class="sub-main-text">Grigorov Egor (P71)</p>',
+                    '<p class="sub-main-text">Kasumov Bogdan (P62)</p>',
+                    '<p class="sub-main-text">Anakhin George (P62)</p>',
+                    '<p class="sub-main-text">In the fourth round, the Sunny Side team won the right to compete in the final of the game.</p>',
+                    `<img src=${ach1} alt="ach1" />`,
+                    '<p class="sub-main-text">The final game. Tension and concentration.</p>',
+                    `<img src=${ach2} alt="ach2" />`,
+                    '<p class="sub-main-text">Rewarding the team. Diploma and sweet gifts.</p>',
+                    `<img src=${ach3} alt="ach3" />`,
+                    '<p class="sub-main-text">The final photo in memory of pleasant and joyful emotions. </p>',
+                    `<img src=${ach4} alt="ach4" />`,
+                ]
+            },
+            "2019": {
+                head: "Taras Shevchenko Literary and Language Competition",
+                text: [
+                    '<p class="sub-main-text">The regional stage of the 10th Taras Shevchenko International Literary and Linguistic Competition was held on the basis of the Kharkiv Patent and Computer College.</p>'
+                ]
+            }
         }
     },
 }

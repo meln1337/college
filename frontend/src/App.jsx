@@ -44,10 +44,12 @@ import { isAuth } from './redux/actions/auth.actions';
 import { useEffect } from 'react';
 import AchievmentsPage from './components/AchievmentsPage/AchievmentsPage';
 import RightsContainer from './containers/Rights/RightsContainer';
+import { initSetLanguageThunk } from './redux/actions/language.actions';
 
-const App = ({ isAuth }) => {
+const App = ({ isAuth, setLanguage }) => {
 	useEffect(() => {
 		isAuth();
+		setLanguage();
 	}, [])
 
 	return (
@@ -218,7 +220,8 @@ const App = ({ isAuth }) => {
 }
 
 const mapDispatchToProps = {
-	isAuth: () => isAuth()
+	isAuth: () => isAuth(),
+	setLanguage: () => initSetLanguageThunk()
 }
 
 export default connect(null, mapDispatchToProps)(App);

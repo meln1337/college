@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './Header.css';
-import { setLanguage } from '../../redux/actions/language.actions';
+import { setLanguageThunk } from '../../redux/actions/language.actions';
 import search from '../../public/icons8-search.svg'
 import arrow from '../../public/arrow-point-to-right.svg'
 
@@ -21,22 +21,6 @@ const Header = ({ data, setLanguage, from }) => {
 
     return (
         <header className="header">
-            {/* <div className="mobile-sidebar" style={width < 768 && showMenu ? { display: 'flex' } : { display: 'none' }}>
-                {Object.keys(data[data.from].header).map((el, i) => (
-                    <h1 key={i}>{el}
-                        <div className="submenu">
-                            {data[data.from].header[el].map((_el, index) => (
-                                <Fragment key={index}>
-                                    <Link to={_el.link} onClick={handleClick}>{_el.label}</Link>
-                                </Fragment>
-                            ))}
-                        </div>
-                    </h1>
-                ))}
-                <h1>
-                    <Link to={data[data.from].headerContacts.link}>{data[data.from].headerContacts.label}</Link>
-                </h1>
-            </div> */}
             <div className="container header-container">
                 <div className="left">
                     <div className="left-wrapper">
@@ -140,9 +124,6 @@ const Header = ({ data, setLanguage, from }) => {
                                 </div>
                             ))
                         }
-                        {/* {Object.keys(data[data.from].header).map((el, i) => (
-                            <h1 className="mobile-menu-h1" key={i}>{el}</h1>
-                        ))} */}
                         {firstLayer === true && <h1>
                             <Link 
                                 onClick={() => { setShowMenu(!showMenu); setFirstLayer(true); }} 
@@ -150,15 +131,6 @@ const Header = ({ data, setLanguage, from }) => {
                                 to={data.headerContacts.link}>{data.headerContacts.label}
                             </Link>
                         </h1>}
-                        {/* {Object.keys(data[data.from].header).map((el, i) => (
-                            <div key={i} className="mobile-submenu">
-                                {data[data.from].header[el].map((_el, index) => (
-                                    <Fragment key={index}>
-                                        <Link to={_el.link}>{_el.label}</Link>
-                                    </Fragment>
-                                ))}
-                            </div>
-                        ))} */}
                     </nav>
                 </div>}
         </header>
@@ -171,7 +143,7 @@ const mapStateToProps = ({ languageReducer }) => ({
 })
 
 const mapDispatchToProps = {
-    setLanguage: (languageName) => setLanguage(languageName)
+    setLanguage: lan => setLanguageThunk(lan)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header)

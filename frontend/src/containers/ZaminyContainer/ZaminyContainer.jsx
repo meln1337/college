@@ -21,6 +21,7 @@ class ZaminyContainer extends React.Component {
                                     group={this.props.group}
                                     changeZaminy={this.props.changeZaminy}
                                     admin={this.props.admin}
+                                    lan={this.props.lan}
                                 /> : <div className="container">Loading...</div>
     }
 }

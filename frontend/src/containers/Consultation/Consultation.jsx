@@ -6,52 +6,59 @@ import time from '../../public/time.svg'
 import subway from '../../public/subway.svg'
 import smile from '../../public/smile.svg'
 import mortarboard from '../../public/mortarboard.svg'
+import { connect } from 'react-redux'
 
-export default () => {
+const Consultation = ({ lan }) => {
 	return (
 		<div className="consultation">
 			<div className="container">
-				<h1 className="head-text">Консультації до вступу</h1>
-				<p className="lesson main-text"><img src={arrow} alt="arrow" />Українська мова</p>
-				<p className="lesson main-text"><img src={arrow} alt="arrow" />Математика</p>
+				<h1 className="head-text">{lan.head}</h1>
+				<p className="lesson main-text"><img src={arrow} alt="arrow" />{lan.text1}</p>
+				<p className="lesson main-text"><img src={arrow} alt="arrow" />{lan.text2}</p>
 				<div className="padd-icon-block">
 					<div className="padd-icon">
 						<img src={time} alt="padd-icon" />
-						<p className="sub-main-text">Зручний графік</p>
+						<p className="sub-main-text">{lan.text3}</p>
 					</div>
 					<div className="padd-icon">
 						<img src={subway} alt="padd-icon" />
-						<p className="sub-main-text">Поруч із метро</p>
+						<p className="sub-main-text">{lan.text4}</p>
 					</div>
 					<div className="padd-icon">
 						<img src={smile} alt="padd-icon" />
-						<p className="sub-main-text">Привабливі умови</p>
+						<p className="sub-main-text">{lan.text5}</p>
 					</div>
 					<div className="padd-icon">
 						<img src={mortarboard} alt="padd-icon" />
-						<p className="sub-main-text">Якісна освіта</p>
+						<p className="sub-main-text">{lan.text6}</p>
 					</div>
 				</div>
-				<p className="sub-main-text">Підготовчі курси для вступу в Коледж – це сприятливий старт для комфортного навчання в подальшому. Оскільки ми не повинні забувати про той факт, що майбутні студенти Коледжу насамперед є дітьми підліткового віку і дуже важливо не упустити період адаптації в новому навчальному середовищі, можливості впровадження варіативних навчальних методик в освітній процес, призвичаїтися до методики викладання викладачів вищого навчального закладу, що використовується на практиці в Коледжі до моменту вступу.</p>
-				<p className="sub-main-text">Департамент довузівської підготовки пропонує Вам навчання на підготовчих курсах два рази на тиждень. Кількість слухачів у групах – до 30-ти осіб. Заняття проводять висококваліфіковані викладачі ХПКК. Вони допомагають абітурієнтам систематизувати шкільну програму та засвоїти новий навчальний матеріал, а також успішно підготуватися до в</p>
-				<h2 className="schedule-cons-text sub-head-text">Розклад консультацій</h2>
+				<p className="sub-main-text">{lan.text7}</p>
+				<p className="sub-main-text">{lan.text8}</p>
+				<h2 className="schedule-cons-text sub-head-text">{lan.text9}</h2>
 				<div className="schedule-cons">
-					<p className="main-text">П-1</p>
-					<Link to="/consultationModal?group=1" className="cons-button">Розгорнути</Link>
+					<p className="main-text">{lan.text10}</p>
+					<Link to="/consultationModal?group=1" className="cons-button">{lan.text10A}</Link>
 				</div>
 				<div className="schedule-cons">
-					<p className="main-text">П-2</p>
-					<Link to="/consultationModal?group=2" className="cons-button">Розгорнути</Link>
+					<p className="main-text">{lan.text11}</p>
+					<Link to="/consultationModal?group=2" className="cons-button">{lan.text11A}</Link>
 				</div>
 				<div className="schedule-cons">
-					<p className="main-text">П-3</p>
-					<Link to="/consultationModal?group=3" className="cons-button">Розгорнути</Link>
+					<p className="main-text">{lan.text12}</p>
+					<Link to="/consultationModal?group=3" className="cons-button">{lan.text12A}</Link>
 				</div>
 				<div className="schedule-cons">
-					<p className="main-text">П-4</p>
-					<Link to="/consultationModal?group=4" className="cons-button">Розгорнути</Link>
+					<p className="main-text">{lan.text13}</p>
+					<Link to="/consultationModal?group=4" className="cons-button">{lan.text13A}</Link>
 				</div>
 			</div>
 		</div>
 	)
 }
+
+const mapStateToProps = ({ languageReducer }) => ({
+	lan: languageReducer[languageReducer.from].consultationPage
+})
+
+export default connect(mapStateToProps, null)(Consultation)
