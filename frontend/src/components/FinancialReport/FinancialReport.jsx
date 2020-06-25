@@ -3,7 +3,7 @@ import './FinancialReport.css';
 
 const deleteSvg = './delete.svg';
 
-export default ({ data, admin, uploadFile, deleteLink }) => {
+export default ({ data, admin, uploadFile, deleteLink, from }) => {
     debugger
     const [form, setForm] = useState('');
 
@@ -17,7 +17,7 @@ export default ({ data, admin, uploadFile, deleteLink }) => {
     return (
         <div className="financial-report">
             <div className="container">
-                <h1 className="head-text">Фінансова звітність</h1>
+                <h1 className="head-text">{from === 'UA' ? 'Фінансова звітність' : 'Financial Statements'}</h1>
                 <div className="financial-report-list">
                     {!admin ? data.map((el, i) => (
                         <a key={i} className="link-to-document" href={`/api/uploads/${el.link}`}>{el.text}</a>
@@ -31,11 +31,11 @@ export default ({ data, admin, uploadFile, deleteLink }) => {
                     }
                 </div>
                 {admin && <Fragment>
-                    <p className="sub-head-text">Добавити документ</p>
+                    <p className="sub-head-text">{from === 'UA' ? 'Добавити документ' : 'Add document'}</p>
                     <input className="financial-input" type="text" placeholder="text" value={form.financial_text} onChange={e => setForm(e.target.value)} />
                     <div className="financial-report__add-link">
                         <input className="financial-input-file" type="file" onChange={e => setFile(e.target.files[0])} />
-                        <button onClick={upload} className="financial-report__add-link__submit">send file</button>
+                        <button onClick={upload} className="financial-report__add-link__submit">{from === 'UA' ? 'Надіслати файл' : 'Send file'}</button>
                     </div>
                 </Fragment>}
             </div>

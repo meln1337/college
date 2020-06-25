@@ -6,13 +6,13 @@ import './ResponseModal.css'
 import tail from '../../public/Tail.svg'
 const back = './back.svg';
 
-const ResponseModal = ({ data }) => {
+const ResponseModal = ({ data, from }) => {
     return (
         <div className="modal">
             <div className="container">
                 <div className="response-padd-block padd-block">
-                    <Link className="back-to-news" to="/about"><img src={back} alt="back"/></Link>
-                    <p className="main-text">Відгук випускника</p>
+                    <Link className="back-to-news" to="/about"><img src={back} alt="back" /></Link>
+                    <p className="main-text">{from === 'UA' ? 'Відгук випускника' : 'Graduate feedback'} </p>
                     <div className="response-block">
                         <p className="response-text">{data.text}</p>
                         <img className="tail" src={tail} alt="tail" />
@@ -20,8 +20,8 @@ const ResponseModal = ({ data }) => {
                     <div className="response-bottom">
                         <img src={data.img} alt="photo" />
                         <div className="fio-and-desc">
-                            <p>Ім'я Прізвище</p>
-                            <p>опис Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora eius beatae ipsam iusto atque voluptatibus optio cumque quas iure fuga.</p>
+                            <p>{from === 'UA' ? "Ім'я Прізвище" : 'Full name'}</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora eius beatae ipsam iusto atque voluptatibus optio cumque quas iure fuga.</p>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,8 @@ const mapStateToProps = ({ languageReducer }, { location }) => {
     })
 
     return {
-        data: languageReducer[languageReducer.from].responsePage[parseInt(post) - 1]
+        data: languageReducer[languageReducer.from].responsePage[parseInt(post) - 1],
+        from: languageReducer.from
     }
 }
 

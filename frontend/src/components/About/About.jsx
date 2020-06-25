@@ -37,6 +37,32 @@ class Autoblock extends Component {
 				description: "ХПКК мені подобається. Випустилась рік тому. Головне влитися в навчальний процес. Тоді все буде: знання, успішність, упевненість в майбутньому. Пари проходять цікаво, професійні викладачі, цікаво спілкуватися з такими людьми. Взагалі все в колледжі классно !!! Якість навчання на гідному рівні, ХПКК рекомендую. Взагалі, все залежить тільки від вас самих: ніхто за вас не буде вивчати матеріал, складати іспити. Всім удачі!",
 				idreview: "1"
 			}
+		],
+		graduateDataEn: [
+			{
+				FIO: "Full name",
+				img: face2,
+				description: 'Graduated in 2012 with a degree in "Maintenance of computer systems and networks." I joined KHAI as a "software engineer" and have been working in the "institute" specialty ever since. What can I say from my own experience: those who do not want to learn will not study anywhere. Those who want to learn will be taught. There is not enough space here to fully express myself, but even now at work I periodically touch on the material that was taught in college and I am very sorry that I did not spend more time studying',
+				idreview: "1"
+			},
+			{
+				FIO: "Full name",
+				img: face1,
+				description: "College is getting better. Fortunately, the people who come here are trying to tell students the truth newer than those that the students studied 3 years ago. It is easy to study here, the main thing is the desire to do so. Most teachers are good professionals and wonderful people. College gave me the required minimum. Good teachers, if you do not understand something will explain during a break or after a couple. Explain well. Many computers, not like in other colleges, have 3 people.",
+				idreview: "1"
+			},
+			{
+				FIO: "Full name",
+				img: face4,
+				description: "I love my native KPCC! I like absolutely everything here, good atmosphere, professional teachers and convenient location! I am very glad that I chose Kharkiv Patent and Computer College among all other colleges in Kharkiv.",
+				idreview: "1"
+			},
+			{
+				FIO: "Full name",
+				img: face3,
+				description: "I like KPCC. Released a year ago. The main thing is to join the learning process. Then everything will be: knowledge, success, confidence in the future. Couples are interesting, professional teachers, interesting to communicate with such people. In general, everything in college is great !!! The quality of training is at a decent level, I recommend COD. In general, everything depends only on yourself: no one will study the material for you, take exams. Good luck to all!",
+				idreview: "1"
+			}
 		]
 	}
 
@@ -51,7 +77,7 @@ class Autoblock extends Component {
 					<p>{this.props.lan.whySub}</p>
 					<h2 className="famous-graduates sub-head-text">{this.props.lan.responses}</h2>
 					<div className="main-review">
-						<RevievList graduateData={this.state.graduateData} />
+						<RevievList from={this.props.from} graduateData={this.props.from === 'UA' ? this.state.graduateData : this.state.graduateDataEn} />
 					</div>
 					<div className="wanna-go-college padd-block">
 						<p className="wanna-go-college-text tac">{this.props.lan.wannaGo}</p>
@@ -65,7 +91,8 @@ class Autoblock extends Component {
 }
 
 const mapStateToProps = ({ languageReducer }) => ({
-	lan: languageReducer[languageReducer.from].aboutPage
+	lan: languageReducer[languageReducer.from].aboutPage,
+	from: languageReducer.from
 })
 
 export default connect(mapStateToProps, null)(Autoblock);

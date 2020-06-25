@@ -37,6 +37,12 @@ app.use('/api', require('./routes/zaminy.routes'));
 app.use('/api', require('./routes/cons.routes'));
 app.use('/api', require('./routes/upload.routes'));
 app.use('/api', require('./routes/right.routes'));
+app.use('/api', require('./routes/postEn.routes'));
+app.use('/api', require('./routes/consen.routes'));
+app.use('/api', require('./routes/scheduleEn.routes'));
+app.use('/api', require('./routes/zaminyEn.routes'));
+app.use('/api', require('./routes/linkEn.routes'));
+app.use('/api', require('./routes/rightEn.routes'));
 
 if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static('frontend/build'))

@@ -22,6 +22,7 @@ class ZaminyContainer extends React.Component {
                                     changeZaminy={this.props.changeZaminy}
                                     admin={this.props.admin}
                                     lan={this.props.lan}
+                                    from={this.props.from}
                                 /> : <div className="container">Loading...</div>
     }
 }
@@ -36,7 +37,8 @@ const mapStateToProps = (state, { location }) => {
         data: state.zaminyReducer.zaminy?.[course]?.[group],
         admin: state.authReducer.user.admin,
         course,
-        group
+        group,
+        from: state.languageReducer.from
     }
 };
 

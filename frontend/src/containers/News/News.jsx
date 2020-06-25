@@ -21,16 +21,17 @@ class News extends Component {
         return (
             <div className="news">
                 <div className="container">
-                    <h1 className="head-text">Новини</h1>
-                    {this.props.posts ? <Posts posts={this.props.posts} /> : 'Loading...'}
+                    <h1 className="head-text">{this.props.from === 'UA' ? 'Новини' : 'News'}</h1>
+                    {this.props.posts ? <Posts from={this.props.from} posts={this.props.posts} /> : 'Loading...'}
                 </div>
             </div>
         )
     }
 }
 
-const mapStateToProps = ({ newsReducer }) => ({
-    posts: newsReducer.posts
+const mapStateToProps = ({ newsReducer, languageReducer }) => ({
+    posts: newsReducer.posts,
+    from: languageReducer.from
 })
 
 const mapDispatchToProps = {

@@ -6,7 +6,7 @@ const back = './back.svg';
 const deleteIcon = './delete.svg';
 const plus = './plus.svg';
 
-export default ({ data, course, group, changeZaminy, admin }) => {
+export default ({ data, course, group, changeZaminy, admin, from }) => {
     const [active, setActive] = useState({
         0: false,
         1: false,
@@ -51,7 +51,7 @@ export default ({ data, course, group, changeZaminy, admin }) => {
             <div className="container">
                 <div className="padd-block">
                     <Link className="back-to-news" to={`/zaminy?part=${part(group)}&course=${course}`}><img src={back} alt="back" /></Link>
-                    <p className="unit-modal__head">Курс - {course} &nbsp; Група - {group}</p>
+                    {from === 'UA' ? <p className="unit-modal__head">Курс - {course} &nbsp; Група - {group}</p> : <p className="unit-modal__head">Course - {course} &nbsp; Group - {group}</p>}
                     <div className="unit-schedule-block">
                         {admin ? 
                             data.map((el, i) => {

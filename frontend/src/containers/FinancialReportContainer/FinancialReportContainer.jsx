@@ -23,13 +23,15 @@ class FinancialReportContainer extends React.Component {
                                                     addLink={this.props.addFinancialLinks} 
                                                     data={this.props.data} 
                                                     deleteLink={this.props.deleteFinancialLink}
+                                                    from={this.props.from}
                                                 /> : <div className="container">Loading...</div> 
     }
 }
 
 const mapStateToProps = state => ({
     data: state.financialReportReducer.links,
-    admin: state.authReducer.user.admin
+    admin: state.authReducer.user.admin,
+    from: state.languageReducer.from
 });
 
 const mapDispatchToProps = {

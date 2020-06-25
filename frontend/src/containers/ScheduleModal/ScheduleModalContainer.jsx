@@ -20,6 +20,7 @@ class ScheduleModalContainer extends React.Component {
                                     group={this.props.group}
                                     admin={this.props.admin}
                                     changeSchedules={this.props.changeSchedules}
+                                    from={this.props.from}
                                 /> : <div className="container">Loading...</div>
     }
 }
@@ -34,7 +35,8 @@ const mapStateToProps = (state, { location }) => {
         data: state.scheduleReducer.schedules?.[course]?.[group],
         admin: state.authReducer.user.admin,
         course,
-        group
+        group,
+        from: state.languageReducer.from
     }
 };
 
