@@ -41,6 +41,18 @@ const tes = '2020-06-11 23.15.30.jpg'
 const initialState = {
     from: "UA",
     UA: {
+        contacts: {
+            head: 'Контакти',
+            text1: 'Зв\'яжітся з нами сьогодні',
+            text2: 'У вас є питання, у нас відповідь. Просто подзвоніть за вказаними номерами телефону, крім вихідних та святкових днів',
+            text3: 'Наша адреса',
+            text4: '61002, м.Харків, вул. Ярослава Мудрого 18',
+            text5: 'Зв\'язок за телефонами',
+            text6: '(050) 700-48-15',
+            text7: '(050) 700-48-15',
+            text8: 'Робочі години',
+            text9: 'Понеділок- П\'ятниця з 8:00 до 16:30'
+        },
         examPage: {
             head: 'Розклад іспитів',
             sub1: '121 "Інженерія програмного забезпечення"',
@@ -1028,6 +1040,18 @@ const initialState = {
         },
     },
     EN: {
+        contacts: {
+            head: 'Contacts',
+            text1: 'Contact us today',
+            text2: 'You have a question, we have the answer. Just call the listed phone numbers, except weekends and holidays',
+            text3: 'Our address',
+            text4: '61002, Kharkiv, street Yaroslav the Wise 18',
+            text5: 'Communication by phone',
+            text6: '(050) 700-48-15',
+            text7: '(050) 700-48-15',
+            text8: 'Working hours',
+            text9: 'Monday-Friday from 8:00 to 16:30'
+        },
         examPage: {
             head: 'Exam schedule',
             sub1: '121 "Software Engineering"',
